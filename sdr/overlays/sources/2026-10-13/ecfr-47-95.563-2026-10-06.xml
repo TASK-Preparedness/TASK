@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<DIV8 N="95.563" TYPE="SECTION" hierarchy_metadata="{&quot;path&quot;:&quot;/on/_SUBSTITUTE_DATE_/title-47/section-95.563&quot;,&quot;citation&quot;:&quot;47 CFR 95.563&quot;}">
+<HEAD>§ 95.563 FRS channels.</HEAD>
+<P>The FRS is allotted 22 channels, each having a channel bandwidth of 12.5 kHz. All of the FRS channels are also allotted to the General Mobile Radio Service (GMRS) on a shared basis. The FRS channel center frequencies are set forth in the following table:</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<THEAD>
+<TR>
+<TH class="center border-top-single border-bottom-single border-right-single">Channel No.</TH>
+<TH class="center border-top-single border-bottom-single">Center <br></br>frequency <br></br>(MHz)</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">1</TD>
+<TD class="right">462.5625</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2</TD>
+<TD class="right">462.5875</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">3</TD>
+<TD class="right">462.6125</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">4</TD>
+<TD class="right">462.6375</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">5</TD>
+<TD class="right">462.6625</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">6</TD>
+<TD class="right">462.6875</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">7</TD>
+<TD class="right">462.7125</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">8</TD>
+<TD class="right">467.5625</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">9</TD>
+<TD class="right">467.5875</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">10</TD>
+<TD class="right">467.6125</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">11</TD>
+<TD class="right">467.6375</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">12</TD>
+<TD class="right">467.6625</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">13</TD>
+<TD class="right">467.6875</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">14</TD>
+<TD class="right">467.7125</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">15</TD>
+<TD class="right">462.5500</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">16</TD>
+<TD class="right">462.5750</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">17</TD>
+<TD class="right">462.6000</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">18</TD>
+<TD class="right">462.6250</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">19</TD>
+<TD class="right">462.6500</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">20</TD>
+<TD class="right">462.6750</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">21</TD>
+<TD class="right">462.7000</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">22</TD>
+<TD class="right border-bottom-single">462.7250</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV></DIV>
+</DIV8>

@@ -1,0 +1,14 @@
+api: 1
+id: sdr
+name: SDR
+version: 0.1.0
+summary: Receive-only software radio.
+requires: []
+capabilities:
+  requires: [radio.rx]
+logical_devices: [sdr.primary]
+permissions:
+  public: []
+  operator: []
+  administrator: []
+systemd: []

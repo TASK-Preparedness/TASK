@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-platform"
+version = "0.1.0.dev0"
+description = "T.A.S.K. cross-platform abstractions (paths, serial discovery, processes, notifications, services) - EXPERIMENTAL"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+dependencies = []
+
+[project.optional-dependencies]
+windows = ["pyserial>=3.5"]
+
+[tool.setuptools]
+packages = ["task_platform"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,37 @@
+task-maps (0.1.1) unstable; urgency=medium
+
+  * Phase 4C: automatic online tiles for permitted sources (USGS), visible
+    area + 1-tile margin, rate-limited, Retry-After back-off, automatic
+    offline/online switching; separate LRU auto-cache cache/<source>.mbtiles
+    (never touches maps/ or imported files); read-only APRS/Mesh/GMRS
+    geofeed overlays (Mesh off by default); Clear cache button.
+  * Saved 0.1.0 settings, MBTiles, jobs and waypoints are used as-is;
+    rollback to 0.1.0 keeps all offline maps.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Mon, 12 Oct 2026 09:00:00 +0000
+
+task-maps (0.1.0) unstable; urgency=medium
+
+  * Phase 4B: first release of T.A.S.K. Maps & GPS, the native map app
+    started by the launcher's Maps & GPS tile (/usr/bin/task-maps).
+  * Own QWidget raster renderer for MBTiles (no QtLocation, no
+    QtWebEngine): smooth pan, kinetic flick, wheel/pinch/button zoom,
+    scale bar, cursor coordinates (decimal/DMS), attribution, bounded
+    tile cache, off-thread decoding, marked overzoom, hatched
+    "No offline coverage", live download states.
+  * Download Maps mode: editable rectangle, zoom range, live tile count,
+    size and storage estimate, progress/rate/ETA, pause/resume/cancel,
+    retry failed, tiles appear while downloading, resumable after
+    restart or power loss.
+  * Source policy: TOML source definitions; only sources with cited,
+    verified terms (USGS The National Map) are marked offline-approved;
+    tile.openstreetmap.org is always refused; user-attested sources and
+    offline MBTiles import are always available.
+  * MBTiles 1.3 storage with WAL, single writer, batched transactions,
+    duplicate skipping, tile validation, disk-full pause without
+    corruption.
+  * GPS from gpsd (read-only); rain-core gps.position capability shown.
+  * Waypoints and tracks in SQLite; GPX 1.1 import/export with the
+    urn:rain:task:gpx-ext:1 extension namespace.
+
+ -- Joshua Sturtz <TODO-maintainer-email>  Sat, 10 Oct 2026 12:00:00 +0000

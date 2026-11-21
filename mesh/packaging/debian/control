@@ -1,0 +1,41 @@
+Source: task-mesh
+Section: hamradio
+Priority: optional
+Maintainer: T.A.S.K. Mesh Operations maintainers <maintainer@example.invalid>
+Build-Depends: debhelper-compat (= 13), dh-python, python3:any
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://example.invalid/task-mesh
+Vcs-Browser: https://example.invalid/task-mesh
+
+Package: task-mesh
+# "any": all code is pure Python; this yields amd64 on a PC and arm64 on the Pi.
+Architecture: any
+Depends: ${misc:Depends},
+         python3 (>= 3.11),
+         python3-pyside6.qtcore (>= 6.8),
+         python3-pyside6.qtgui (>= 6.8),
+         python3-pyside6.qtwidgets (>= 6.8),
+         python3-serial (>= 3.5),
+         python3-pubsub (>= 4.0.3),
+         python3-protobuf (>= 3.21.12),
+         python3-pyudev (>= 0.24.3),
+         python3-requests,
+         python3-tabulate,
+         python3-yaml,
+         python3-packaging,
+         python3-pycryptodome (>= 3.20),
+         python3-jeepney (>= 0.8),
+         qt6-wayland
+Recommends: qt6-qpa-plugins, fonts-dejavu-core
+Suggests: notification-daemon | xfce4-notifyd | dunst
+Description: T.A.S.K. Mesh Operations - native field station for Meshtastic radios
+ A native Qt (PySide6) desktop application for a Raspberry Pi field station.
+ Version 0.1.0 connects to a Meshtastic radio over USB serial, shows the
+ connection state, the local device and port, and a live table of mesh nodes,
+ and stores node data locally in SQLite.
+ .
+ Bundles the meshtastic Python library 2.7.11 (GPL-3.0-only) privately under
+ /usr/lib/task-mesh; all other dependencies come from Debian.
+ .
+ Development package; not a release artefact.

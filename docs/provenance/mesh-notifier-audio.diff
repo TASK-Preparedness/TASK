@@ -1,0 +1,38 @@
+--- /usr/lib/task-mesh/task_mesh/hub/notifier.py.pre-audio-backup	2026-11-08 11:03:01.673045719 -0500
++++ /usr/lib/task-mesh/task_mesh/hub/notifier.py	2026-11-08 11:04:04.147213084 -0500
+@@ -216,10 +216,7 @@
+     if show_preview. Locked/unknown: generic body. Burst (>1 recent): one grouped notification with a count."""
+     from task_comms import notifications as nt
+     hints = {"urgency": 2 if m.priority else 1, "category": "im.received", "desktop-entry": "task-mesh"}
+-    if settings.sound:
+-        hints["sound-name"] = "message-new-instant"
+-    else:
+-        hints["suppress-sound"] = True
++    hints["suppress-sound"] = True  # Audio handled directly to avoid duplicate alerts
+     summary = TITLE + (" [PRIORITY]" if m.priority else "")
+     if burst > 1:
+         body = f"{burst} new mesh messages" + ("" if locked else " — open T.A.S.K. Mesh to read")
+@@ -291,6 +288,22 @@
+             self._burst = 0
+             args = format_notification(m, s, locked)
+             rkey = "generic" if locked else f"{m.protocol}|{m.conversation}"
++        if s.sound:
++            try:
++                import subprocess
++                from pathlib import Path
++                alert = Path.home() / ".local/share/task-mesh/sounds/mesh-alert.wav"
++                if alert.is_file():
++                    subprocess.Popen(
++                        ["/usr/bin/paplay", str(alert)],
++                        stdin=subprocess.DEVNULL,
++                        stdout=subprocess.DEVNULL,
++                        stderr=subprocess.DEVNULL,
++                        start_new_session=True,
++                        close_fds=True,
++                    )
++            except Exception:
++                log.exception("mesh notification audio failed")
+         nid = self.sender(args, self._replace.get(rkey, 0))
+         if nid:
+             self._replace[rkey] = nid
+

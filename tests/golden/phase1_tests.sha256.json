@@ -1,0 +1,25 @@
+{
+ "deploy": {
+  "deploy/pi-install.sh": "6501b6bcbe69683894c6f63933d4fa0c779c752c530b962f62d61336ce6f6cf3",
+  "deploy/rain-core.service": "55cb1524fa375684c66e39195fdfbfaa8ab0524479879f0c6cec97d0ab15f2c4",
+  "deploy/rain-smoke.py": "c498c667ba7138fc988c89598db415830bcb8f4e4cd21017d10382ec29a4e380",
+  "deploy/tmpfiles.d/rain.conf": "a472a775fe87abe82fc5602987ac350ffdc7341b5c49a4fed7a654b7e21e7308"
+ },
+ "files": {
+  "conftest.py": "041640fb8679884b2bd298ff05ea65952bf05651268daf33e7aad5de34fa4b3e",
+  "test_assign.py": "dd1a3f9060f9285bd7366be4f5b5cd08f9fe94a35a6ce33ea59dabcffeca0a7a",
+  "test_auth.py": "e06b3b6164259239953c5e4b01830fe3ac15ced29d2e829888fbc0083ae9e237",
+  "test_boot.py": "f88329e735d3a3c6aefe9f863c06a8225e3ec7ec334f8ee4b3a163e3e405dd33",
+  "test_capabilities.py": "0d7f85c876c587c51198ff2ec1ecb5bf276b3382fa08b6b4a791defc517e67a4",
+  "test_enumerator.py": "4197553c07826734cbb2ac790644c16b662bde6e59d639fbd3155c7e5b585a0a",
+  "test_hotplug_parent_dedup.py": "e580d1077f49fa96f95743171fed89ce49036711e2dd1f1f2206efd46bcd9312",
+  "test_identity.py": "d0b5c7d618a809d08dd65cab5d00c8ec90e9d8084634fb36e53c991bbf0907dd",
+  "test_manifests.py": "6465d37a7d04242b11115eef3c35c0560cac9b23688ef26edcbf4d3f6a6f14fd",
+  "test_medical_absent.py": "6dc1f6a45640b49612667c5c4234f7f5d9d2c7b0041cffebd5d440ea51c99649",
+  "test_not_root.py": "242fda12e17cf79c46a00813d463dedd309143c8e9e01c642da3bc9c15790bdf",
+  "test_persist.py": "23e5c0f9c12a9653cfca0f911300c94b90bbfd5435d48f3798a112ce383800e8",
+  "test_protocol.py": "596e9bd7e53d94768f1b0a5c443feb4f8d759aa6b390d97eeb46579b5deb61f9",
+  "test_rules.py": "3d040765719667d9c05294a39ae16fb6f4ca96478d4bdfe831e2c51c636b2df8"
+ },
+ "recorded_from": "tag phase1-accepted (b12e5fd); test_not_root.py with the single 0.2.1 version literal"
+}

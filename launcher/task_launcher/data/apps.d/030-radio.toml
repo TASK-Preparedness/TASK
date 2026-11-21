@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.radio"
+name = "Radio / APRS"
+version = "0.3.0"
+description = "Opens T.A.S.K. APRS (task-aprs): two-way APRS through the existing Direwolf (transmit only by explicit operator action) and the separate GMRS data profile. Without task-aprs, the built-in receive-only monitor opens."
+icon = "radio-tower"
+order = 30
+min_platform = "0.2.0"
+readiness = "direwolf"
+status_note = "task-aprs or built-in receive-only monitor"
+single_instance = true
+
+[launch]
+builtin = "radio"
+exec = ["/usr/bin/task-aprs"]
+
+[requires]
+debian = ["direwolf"]

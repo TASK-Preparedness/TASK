@@ -1,0 +1,14 @@
+api: 1
+id: gps
+name: GPS
+version: 0.1.0
+summary: Position from the logical GPS.
+requires: []
+capabilities:
+  requires: [gps.position]
+logical_devices: [gps.primary]
+permissions:
+  public: []
+  operator: [gps.position.read]
+  administrator: []
+systemd: []

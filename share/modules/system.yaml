@@ -1,0 +1,14 @@
+api: 1
+id: system
+name: System
+version: 0.1.0
+summary: Station status. No hardware is required.
+requires: []
+capabilities:
+  requires: []
+logical_devices: []
+permissions:
+  public: []
+  operator: []
+  administrator: []
+systemd: []

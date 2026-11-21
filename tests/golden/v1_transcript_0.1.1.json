@@ -1,0 +1,3760 @@
+{
+ "recorded_with": "0.1.1",
+ "transcript": [
+  {
+   "client": "public",
+   "reply": {
+    "id": "sync",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "core.health sync"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "sync",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "core.health sync"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "sync",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "core.health sync"
+  },
+  {
+   "devices_json": "startup",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid json"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "not json\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid json"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "\ufffd\ufffd\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid json"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "request must be a json object"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "[1,2]\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "request must be a json object"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "\"text\"\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "request must be a json object"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "42\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "request must be a json object"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "null\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":7,\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":null,\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":0,\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":\"1\",\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":3,\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":2.0,\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "unsupported version"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":\"2\",\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "a",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\":true,\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "a",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\":1.0,\"id\":\"a\",\"method\":\"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing method"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":\"a\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing method"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":\"a\",\"method\":5}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid params"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":\"a\",\"method\":\"core.health\",\"params\":[]}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid params"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":\"a\",\"method\":\"core.health\",\"params\":\"x\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "a",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\":1,\"id\":\"a\",\"method\":\"no.such\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.health\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "modules": [
+      {
+       "capabilities": {
+        "requires": [
+         "gps.position"
+        ]
+       },
+       "id": "gps",
+       "logical_devices": [
+        "gps.primary"
+       ],
+       "name": "GPS",
+       "permissions": {
+        "administrator": [],
+        "operator": [
+         "gps.position.read"
+        ],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Position from the logical GPS.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "medical",
+       "logical_devices": [],
+       "name": "Medical",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": [
+         "medical.reference.read"
+        ]
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Medical reference. Loading this manifest does not open private records.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "mesh.messaging",
+         "mesh.position"
+        ]
+       },
+       "id": "mesh",
+       "logical_devices": [
+        "mesh.primary"
+       ],
+       "name": "Meshtastic",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Mesh messaging and positions from the logical mesh device.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "radio",
+       "logical_devices": [
+        "radio.primary"
+       ],
+       "name": "Radio",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Audio or TNC radio. Transmit is not required to load.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "sdr",
+       "logical_devices": [
+        "sdr.primary"
+       ],
+       "name": "SDR",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Receive-only software radio.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "system",
+       "logical_devices": [],
+       "name": "System",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Station status. No hardware is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "weather.products"
+        ]
+       },
+       "id": "weather",
+       "logical_devices": [],
+       "name": "Weather",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Locally stored weather products. No radio is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"module.list\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "capabilities": [
+      {
+       "kind": "device-backed",
+       "name": "gps.position",
+       "status": "no-provider"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.rx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.tx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.messaging",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.position",
+       "status": "no-device"
+      },
+      {
+       "kind": "provider-only",
+       "name": "weather.products",
+       "status": "no-provider"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"capability.list\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.list requires operator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.get requires operator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"id\": \"dev_74a462923d20f21e\"}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "events.recent requires operator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.recent\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.assign requires administrator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.unassign requires administrator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"sdr.primary\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.health\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "modules": [
+      {
+       "capabilities": {
+        "requires": [
+         "gps.position"
+        ]
+       },
+       "id": "gps",
+       "logical_devices": [
+        "gps.primary"
+       ],
+       "name": "GPS",
+       "permissions": {
+        "administrator": [],
+        "operator": [
+         "gps.position.read"
+        ],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Position from the logical GPS.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "medical",
+       "logical_devices": [],
+       "name": "Medical",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": [
+         "medical.reference.read"
+        ]
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Medical reference. Loading this manifest does not open private records.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "mesh.messaging",
+         "mesh.position"
+        ]
+       },
+       "id": "mesh",
+       "logical_devices": [
+        "mesh.primary"
+       ],
+       "name": "Meshtastic",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Mesh messaging and positions from the logical mesh device.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "radio",
+       "logical_devices": [
+        "radio.primary"
+       ],
+       "name": "Radio",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Audio or TNC radio. Transmit is not required to load.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "sdr",
+       "logical_devices": [
+        "sdr.primary"
+       ],
+       "name": "SDR",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Receive-only software radio.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "system",
+       "logical_devices": [],
+       "name": "System",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Station status. No hardware is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "weather.products"
+        ]
+       },
+       "id": "weather",
+       "logical_devices": [],
+       "name": "Weather",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Locally stored weather products. No radio is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"module.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "capabilities": [
+      {
+       "kind": "device-backed",
+       "name": "gps.position",
+       "status": "no-provider"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.rx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.tx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.messaging",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.position",
+       "status": "no-device"
+      },
+      {
+       "kind": "provider-only",
+       "name": "weather.products",
+       "status": "no-provider"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"capability.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": true,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": true,
+       "devnode": "/dev/ttyACM0",
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device": {
+      "alias": "smoke",
+      "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+      "class": "gps",
+      "connected": true,
+      "devnode": "/dev/ttyACM0",
+      "id": "dev_74a462923d20f21e",
+      "identity_stable": true,
+      "logical": "gps.primary",
+      "manufacturer": "u-blox AG - www.u-blox.com",
+      "pid": "01a7",
+      "potential": [
+       "gps.position"
+      ],
+      "product": "u-blox 7 - GPS/GNSS Receiver",
+      "serial": null,
+      "subsystem": "usb-serial",
+      "vid": "1546"
+     }
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"id\": \"dev_74a462923d20f21e\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "events": [
+      {
+       "data": {
+        "id": "gps"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "mesh"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "radio"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "sdr"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "weather"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {},
+       "id": "<evt>",
+       "source": "core",
+       "time": "<time>",
+       "topic": "core.started",
+       "v": 1
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.recent\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.assign requires administrator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.unassign requires administrator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"sdr.primary\"}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.health\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "modules": [
+      {
+       "capabilities": {
+        "requires": [
+         "gps.position"
+        ]
+       },
+       "id": "gps",
+       "logical_devices": [
+        "gps.primary"
+       ],
+       "name": "GPS",
+       "permissions": {
+        "administrator": [],
+        "operator": [
+         "gps.position.read"
+        ],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Position from the logical GPS.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "medical",
+       "logical_devices": [],
+       "name": "Medical",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": [
+         "medical.reference.read"
+        ]
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Medical reference. Loading this manifest does not open private records.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "mesh.messaging",
+         "mesh.position"
+        ]
+       },
+       "id": "mesh",
+       "logical_devices": [
+        "mesh.primary"
+       ],
+       "name": "Meshtastic",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Mesh messaging and positions from the logical mesh device.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "radio",
+       "logical_devices": [
+        "radio.primary"
+       ],
+       "name": "Radio",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Audio or TNC radio. Transmit is not required to load.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "sdr",
+       "logical_devices": [
+        "sdr.primary"
+       ],
+       "name": "SDR",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Receive-only software radio.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "system",
+       "logical_devices": [],
+       "name": "System",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Station status. No hardware is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "weather.products"
+        ]
+       },
+       "id": "weather",
+       "logical_devices": [],
+       "name": "Weather",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Locally stored weather products. No radio is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"module.list\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "capabilities": [
+      {
+       "kind": "device-backed",
+       "name": "gps.position",
+       "status": "no-provider"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.rx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.tx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.messaging",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.position",
+       "status": "no-device"
+      },
+      {
+       "kind": "provider-only",
+       "name": "weather.products",
+       "status": "no-provider"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"capability.list\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": true,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": true,
+       "devnode": "/dev/ttyACM0",
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device": {
+      "alias": "smoke",
+      "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+      "class": "gps",
+      "connected": true,
+      "devnode": "/dev/ttyACM0",
+      "id": "dev_74a462923d20f21e",
+      "identity_stable": true,
+      "logical": "gps.primary",
+      "manufacturer": "u-blox AG - www.u-blox.com",
+      "pid": "01a7",
+      "potential": [
+       "gps.position"
+      ],
+      "product": "u-blox 7 - GPS/GNSS Receiver",
+      "serial": null,
+      "subsystem": "usb-serial",
+      "vid": "1546"
+     }
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"id\": \"dev_74a462923d20f21e\"}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "events": [
+      {
+       "data": {
+        "id": "gps"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "mesh"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "radio"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "sdr"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "weather"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {},
+       "id": "<evt>",
+       "source": "core",
+       "time": "<time>",
+       "topic": "core.started",
+       "v": 1
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.recent\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "alias": null,
+     "device_id": "dev_ca4a208a9242de2c",
+     "logical": "sdr.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device_id": null,
+     "logical": "sdr.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"sdr.primary\"}}\n"
+  },
+  {
+   "devices_json": "after admin sdr round trip",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"medical.patients.list\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"medical.patients.get\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.protocol\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.counts\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.login\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.logout\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.whoami\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.subscribe\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.since\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"medical.patients.list\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"medical.patients.get\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.protocol\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.counts\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.login\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.logout\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"session.whoami\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.subscribe\", \"params\": {}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown method"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.since\", \"params\": {}}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.list requires operator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\", \"params\": {}, \"session\": \"abc\"}\n"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "error": {
+     "code": "forbidden",
+     "message": "device.list requires operator"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\", \"params\": {}, \"auth\": {\"token\": \"x\"}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": true,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": true,
+       "devnode": "/dev/ttyACM0",
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\", \"params\": {}, \"session\": \"abc\", \"auth\": {\"token\": \"x\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device": {
+      "alias": "smoke",
+      "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+      "class": "gps",
+      "connected": true,
+      "devnode": "/dev/ttyACM0",
+      "id": "dev_74a462923d20f21e",
+      "identity_stable": true,
+      "logical": "gps.primary",
+      "manufacturer": "u-blox AG - www.u-blox.com",
+      "pid": "01a7",
+      "potential": [
+       "gps.position"
+      ],
+      "product": "u-blox 7 - GPS/GNSS Receiver",
+      "serial": null,
+      "subsystem": "usb-serial",
+      "vid": "1546"
+     }
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"logical\": \"gps.primary\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"logical\": \"mesh.primary\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"logical\": \"bogus\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "not-found",
+     "message": "unknown device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"id\": \"dev_0000000000000000\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"id\": \"\"}}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "missing id"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.get\", \"params\": {\"logical\": \"\"}}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"bogus\", \"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": \"dev_ca4a208a9242de2c\", \"logical\": \"bogus\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": 5, \"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": \"dev_ca4a208a9242de2c\", \"logical\": 5}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"device_id\": \"dev_ca4a208a9242de2c\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": \"dev_ca4a208a9242de2c\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "unknown-device",
+     "message": "unknown device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "unknown-device",
+     "message": "unknown device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": 5}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": 5, \"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "unknown-device",
+     "message": "unknown device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_0000000000000000\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": \"dev_0000000000000000\", \"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "invalid alias"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_ca4a208a9242de2c\", \"alias\": 5}}\n"
+  },
+  {
+   "devices_json": "after assign {\"alias\": 5, \"device_id\": \"dev_ca4a208a9242de2c\", \"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "alias": "sdr",
+     "device_id": "dev_ca4a208a9242de2c",
+     "logical": "sdr.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"sdr.primary\", \"device_id\": \"dev_ca4a208a9242de2c\", \"alias\": \"sdr\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"alias\": \"sdr\", \"device_id\": \"dev_ca4a208a9242de2c\", \"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "alias": "x",
+     "device_id": "dev_ccbc25d5a4210a5a",
+     "logical": "gps.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"gps.primary\", \"device_id\": \"dev_ccbc25d5a4210a5a\", \"alias\": \"x\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"alias\": \"x\", \"device_id\": \"dev_ccbc25d5a4210a5a\", \"logical\": \"gps.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"gps.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": \"x\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "alias": null,
+     "device_id": "dev_ccbc25d5a4210a5a",
+     "logical": "mesh.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"mesh.primary\", \"device_id\": \"dev_ccbc25d5a4210a5a\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"device_id\": \"dev_ccbc25d5a4210a5a\", \"logical\": \"mesh.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "alias": "smoke",
+     "device_id": "dev_74a462923d20f21e",
+     "logical": "gps.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.assign\", \"params\": {\"logical\": \"gps.primary\", \"device_id\": \"dev_74a462923d20f21e\", \"alias\": \"smoke\"}}\n"
+  },
+  {
+   "devices_json": "after assign {\"alias\": \"smoke\", \"device_id\": \"dev_74a462923d20f21e\", \"logical\": \"gps.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"bogus\"}}\n"
+  },
+  {
+   "devices_json": "after unassign {\"logical\": \"bogus\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {}}\n"
+  },
+  {
+   "devices_json": "after unassign {}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "error": {
+     "code": "invalid-logical-device",
+     "message": "invalid logical device"
+    },
+    "id": "1",
+    "ok": false,
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": 3}}\n"
+  },
+  {
+   "devices_json": "after unassign {\"logical\": 3}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device_id": null,
+     "logical": "radio.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"radio.primary\"}}\n"
+  },
+  {
+   "devices_json": "after unassign {\"logical\": \"radio.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    },\n    \"mesh.primary\": {\n      \"device_id\": \"dev_ccbc25d5a4210a5a\",\n      \"alias\": null\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device_id": null,
+     "logical": "mesh.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"mesh.primary\"}}\n"
+  },
+  {
+   "devices_json": "after unassign {\"logical\": \"mesh.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    },\n    \"sdr.primary\": {\n      \"device_id\": \"dev_ca4a208a9242de2c\",\n      \"alias\": \"sdr\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "device_id": null,
+     "logical": "sdr.primary"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.unassign\", \"params\": {\"logical\": \"sdr.primary\"}}\n"
+  },
+  {
+   "devices_json": "after unassign {\"logical\": \"sdr.primary\"}",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": false,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": false,
+       "devnode": null,
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": true,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB1",
+       "id": "dev_69a08d076e9a7590",
+       "identity_stable": false,
+       "logical": null,
+       "manufacturer": null,
+       "pid": "7523",
+       "potential": [],
+       "product": null,
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1a86"
+      },
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": true,
+       "devnode": "/dev/ttyACM0",
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "assignments": {
+      "gps.primary": {
+       "alias": "smoke",
+       "connected": true,
+       "device_id": "dev_74a462923d20f21e"
+      }
+     },
+     "devices": [
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "unknown",
+       "connected": false,
+       "devnode": null,
+       "id": "dev_69a08d076e9a7590",
+       "identity_stable": false,
+       "logical": null,
+       "manufacturer": null,
+       "pid": "7523",
+       "potential": [],
+       "product": null,
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1a86"
+      },
+      {
+       "alias": "smoke",
+       "by_id": "/dev/serial/by-id/usb-u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver-if00",
+       "class": "gps",
+       "connected": true,
+       "devnode": "/dev/ttyACM0",
+       "id": "dev_74a462923d20f21e",
+       "identity_stable": true,
+       "logical": "gps.primary",
+       "manufacturer": "u-blox AG - www.u-blox.com",
+       "pid": "01a7",
+       "potential": [
+        "gps.position"
+       ],
+       "product": "u-blox 7 - GPS/GNSS Receiver",
+       "serial": null,
+       "subsystem": "usb-serial",
+       "vid": "1546"
+      },
+      {
+       "alias": null,
+       "by_id": null,
+       "class": "sdr",
+       "connected": true,
+       "devnode": "/dev/bus/usb/003/002",
+       "id": "dev_ca4a208a9242de2c",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "RTLSDRBlog",
+       "pid": "2838",
+       "potential": [
+        "radio.rx"
+       ],
+       "product": "Blog V4",
+       "serial": "00000001",
+       "subsystem": "usb",
+       "vid": "0bda"
+      },
+      {
+       "alias": null,
+       "by_id": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+       "class": "unknown",
+       "connected": true,
+       "devnode": "/dev/ttyUSB0",
+       "id": "dev_ccbc25d5a4210a5a",
+       "identity_stable": true,
+       "logical": null,
+       "manufacturer": "Silicon Labs",
+       "pid": "ea60",
+       "potential": [],
+       "product": "CP2102 USB to UART Bridge Controller",
+       "serial": "0001",
+       "subsystem": "usb-serial",
+       "vid": "10c4"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"device.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "capabilities": [
+      {
+       "kind": "device-backed",
+       "name": "gps.position",
+       "status": "no-provider"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.rx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "radio.tx",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.messaging",
+       "status": "no-device"
+      },
+      {
+       "kind": "device-backed",
+       "name": "mesh.position",
+       "status": "no-device"
+      },
+      {
+       "kind": "provider-only",
+       "name": "weather.products",
+       "status": "no-provider"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"capability.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "modules": [
+      {
+       "capabilities": {
+        "requires": [
+         "gps.position"
+        ]
+       },
+       "id": "gps",
+       "logical_devices": [
+        "gps.primary"
+       ],
+       "name": "GPS",
+       "permissions": {
+        "administrator": [],
+        "operator": [
+         "gps.position.read"
+        ],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Position from the logical GPS.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "medical",
+       "logical_devices": [],
+       "name": "Medical",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": [
+         "medical.reference.read"
+        ]
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Medical reference. Loading this manifest does not open private records.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "mesh.messaging",
+         "mesh.position"
+        ]
+       },
+       "id": "mesh",
+       "logical_devices": [
+        "mesh.primary"
+       ],
+       "name": "Meshtastic",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Mesh messaging and positions from the logical mesh device.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "radio",
+       "logical_devices": [
+        "radio.primary"
+       ],
+       "name": "Radio",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Audio or TNC radio. Transmit is not required to load.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "radio.rx"
+        ]
+       },
+       "id": "sdr",
+       "logical_devices": [
+        "sdr.primary"
+       ],
+       "name": "SDR",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Receive-only software radio.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": []
+       },
+       "id": "system",
+       "logical_devices": [],
+       "name": "System",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "ready",
+       "summary": "Station status. No hardware is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      },
+      {
+       "capabilities": {
+        "requires": [
+         "weather.products"
+        ]
+       },
+       "id": "weather",
+       "logical_devices": [],
+       "name": "Weather",
+       "permissions": {
+        "administrator": [],
+        "operator": [],
+        "public": []
+       },
+       "reason": null,
+       "requires": [],
+       "state": "inactive",
+       "summary": "Locally stored weather products. No radio is required.",
+       "systemd": [],
+       "version": "0.1.0"
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"module.list\"}\n"
+  },
+  {
+   "client": "operator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "events": [
+      {
+       "data": {
+        "id": "gps"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "mesh"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "radio"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "sdr"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "weather"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {},
+       "id": "<evt>",
+       "source": "core",
+       "time": "<time>",
+       "topic": "core.started",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": "mesh.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.messaging",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "radio.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "mesh.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.messaging",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.disappeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_69a08d076e9a7590",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_69a08d076e9a7590",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.disappeared",
+       "v": 1
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.recent\"}\n"
+  },
+  {
+   "client": "administrator",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "events": [
+      {
+       "data": {
+        "id": "gps"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "mesh"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "radio"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "sdr"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "weather"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.loaded",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "medical",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "system",
+        "state": "ready"
+       },
+       "id": "<evt>",
+       "source": "modules",
+       "time": "<time>",
+       "topic": "module.state",
+       "v": 1
+      },
+      {
+       "data": {},
+       "id": "<evt>",
+       "source": "core",
+       "time": "<time>",
+       "topic": "core.started",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ca4a208a9242de2c",
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_ccbc25d5a4210a5a",
+        "logical": "mesh.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.messaging",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.assigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "radio.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "mesh.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.messaging",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "mesh.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "logical": "sdr.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.unassigned",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "radio.rx",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.disappeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-device"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_74a462923d20f21e",
+        "logical": "gps.primary"
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "kind": "device-backed",
+        "name": "gps.position",
+        "status": "no-provider"
+       },
+       "id": "<evt>",
+       "source": "capabilities",
+       "time": "<time>",
+       "topic": "capability.changed",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_69a08d076e9a7590",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.appeared",
+       "v": 1
+      },
+      {
+       "data": {
+        "id": "dev_69a08d076e9a7590",
+        "logical": null
+       },
+       "id": "<evt>",
+       "source": "devmgr",
+       "time": "<time>",
+       "topic": "device.disappeared",
+       "v": 1
+      }
+     ]
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"events.recent\"}\n"
+  },
+  {
+   "devices_json": "end",
+   "text": "{\n  \"v\": 1,\n  \"assignments\": {\n    \"gps.primary\": {\n      \"device_id\": \"dev_74a462923d20f21e\",\n      \"alias\": \"smoke\"\n    }\n  }\n}\n"
+  },
+  {
+   "client": "oversize",
+   "closed": true,
+   "reply": {
+    "error": {
+     "code": "bad-request",
+     "message": "request too large"
+    },
+    "id": null,
+    "ok": false,
+    "v": 1
+   },
+   "send": "65586 x bytes"
+  },
+  {
+   "client": "public",
+   "reply": {
+    "id": "1",
+    "ok": true,
+    "result": {
+     "ok": true,
+     "uid": 993,
+     "uptime_seconds": "<uptime>",
+     "version": "0.1.1"
+    },
+    "v": 1
+   },
+   "send": "{\"v\": 1, \"id\": \"1\", \"method\": \"core.health\"}\n"
+  }
+ ]
+}

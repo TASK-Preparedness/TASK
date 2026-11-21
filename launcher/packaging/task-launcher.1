@@ -1,0 +1,58 @@
+.\" SPDX-License-Identifier: GPL-3.0-or-later
+.\" SPDX-FileCopyrightText: 2026 Joshua Sturtz
+.TH TASK-LAUNCHER 1 "October 2026" "task-launcher 0.2.0" "User Commands"
+.SH NAME
+task-launcher \- R.A.I.N./T.A.S.K. application launcher (rain-core client)
+.SH SYNOPSIS
+.B task-launcher
+[\fB\-\-socket\fR \fIPATH\fR] [\fB\-\-maximized\fR | \fB\-\-windowed\fR | \fB\-\-fullscreen\fR] [\fB\-\-version\fR]
+.SH DESCRIPTION
+Native Qt launcher showing the R.A.I.N. app tiles, the rain-core link state and the network
+state. It is an ordinary desktop window: it does not replace the compositor, the session or
+the login manager, and it never runs as root. The launcher itself never opens hardware and
+never transmits: device state comes from rain-core, and the field apps it starts (rain-mesh,
+FoxtrotGPS, SDR++, Gqrx) open their devices themselves.
+.PP
+Native windows: Library (discovers a local kiwix-serve; loopback only), Radio / APRS
+(Direwolf status and a receive-only KISS monitor), Weather (local tools and data age; no
+forecast) and Medical (offline reference finder; no patient data).
+.SH OPTIONS
+.TP
+.BR \-\-socket " " \fIPATH\fR
+rain-core socket (default /run/rain/core.sock).
+.TP
+.B \-\-maximized
+Start maximized (default unless changed in Settings).
+.TP
+.B \-\-windowed
+Start in a normal window.
+.TP
+.B \-\-fullscreen
+Start fullscreen. F11 toggles, Esc leaves fullscreen.
+.TP
+.B \-\-version
+Print the version and exit.
+.SH FILES
+.TP
+.I /usr/share/task-launcher/apps.d/*.toml
+Shipped app manifests.
+.TP
+.I /etc/task-launcher/apps.d/*.toml
+Administrator manifests (replace shipped ones with the same id).
+.TP
+.I ~/.local/share/task-launcher/apps.d/*.toml
+Per-user manifests (new ids only).
+.TP
+.I /etc/task-launcher/branding.toml
+System default branding (see /usr/share/doc/task-launcher/examples/branding.toml).
+.TP
+.I ~/.config/task-launcher/settings.json, tiles.json
+Per-user settings and tile layout.
+.TP
+.I ~/.config/task-launcher/reference.toml
+Optional folders for the Medical and Weather windows ([medical] dirs, [weather] dirs). Read only.
+.TP
+.I ~/.local/state/task-launcher/
+Launcher log and per-app logs.
+.SH SEE ALSO
+.BR rain-console (1)

@@ -1,0 +1,118 @@
+task-launcher (0.3.7) unstable; urgency=medium
+
+  * Phase 4F.3 crash repair: the idle/auto-lock input tracker is installed
+    on top-level windows instead of application-wide. An application-wide
+    Python event filter made PySide wrap a QWebEngineUrlRequestJob during
+    its C++ constructor, which segfaulted the launcher when the embedded
+    Medical WebEngine reader opened a ZIM (reproduced on x86).
+  * Medical passes a WebEngine crash guard to task-resources >= 0.2.4
+    (~/.local/state/task-launcher/medical-webengine-guard.json). Works
+    unchanged with task-resources 0.2.3 (no guard).
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Thu, 15 Oct 2026 22:00:00 -0400
+
+task-launcher (0.3.6) unstable; urgency=medium
+
+  * Phase 4F.3 r2: Medical Refresh re-opens the Resources index (renews the
+    read-only snapshot made by task-resources 0.2.3). Failure paths close
+    the index connection and the reader; shutdown is idempotent. Suggests
+    task-resources (>= 0.2.3).
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 22:00:00 -0400
+
+task-launcher (0.3.5) unstable; urgency=medium
+
+  * Phase 4F.3: the Medical view embeds T.A.S.K. Resources' own browser and
+    ZIM reader in-process (task-resources >= 0.2.2): browsing, metadata,
+    title/metadata and full-text search, embedded ZIM reading, back/forward,
+    bookmarks; filtered to medical resources by default. The Resources index
+    is opened read-only; bookmarks are kept in the launcher's private state
+    file. Lock clears the content. No exec, no second process.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 19:00:00 -0400
+
+task-launcher (0.3.4) unstable; urgency=medium
+
+  * Phase 4F.2: the Medical tile opens a native Medical view inside the
+    launcher window (view stack with Back/Home) instead of the detached
+    built-in window. It lists the T.A.S.K. Resources items in category
+    "Medical" (index opened read-only, never reindexed) plus Kiwix/IIAB/folder
+    items from the existing medical probe, with an empty state. Content
+    opens in the Kiwix viewer, the desktop reader or T.A.S.K. Resources.
+    Reopening reuses the single view. Legacy window kept as fallback.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 18:00:00 -0400
+
+task-launcher (0.3.3) unstable; urgency=medium
+
+  * Phase 4F: Mesh tile shows a read-only unread badge (combined, per protocol
+    Meshtastic/MeshCore, priority marker) from task-mesh-service's private
+    socket or, failing that, the comms notification store opened read-only.
+    The launcher never marks anything read. No other tile changes; all 12
+    tiles and the task.medical / task.library ids are unchanged.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 13:30:00 -0400
+
+task-launcher (0.3.2) unstable; urgency=medium
+
+  * Fix: the Library tile now starts task-resources when it is installed. In
+    0.3.1 MainWindow.activate() exempted only "radio" from the native-window
+    route, so Library always opened the built-in 4A viewer. The exemption now
+    covers ("radio", "library"). Without task-resources the 4A viewer opens.
+  * New regression tests drive the real shipped apps.d manifests through
+    Registry + MainWindow.activate() (0.3.1 tested the registry only).
+  * 050-library.toml unchanged.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 11:00:00 +0000
+
+task-launcher (0.3.1) unstable; urgency=medium
+
+  * Phase 4D: the Library tile opens T.A.S.K. Resources (/usr/bin/task-resources)
+    when it is installed; otherwise the built-in Phase 4A Kiwix viewer opens as
+    before. No other change.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 09:00:00 +0000
+
+task-launcher (0.3.0) unstable; urgency=medium
+
+  * Phase 4C: T.A.S.K. branding only (the R.A.I.N. preset is a legacy alias);
+    tile ids rain.* -> task.* with migration of saved order/hidden/enabled
+    state (12 tiles kept); module status cards (task-mesh, task-aprs,
+    task-sdr) in readiness; task-aprs / task-sdr / task-mesh preferred,
+    legacy rain-mesh and the built-in receive-only APRS monitor as
+    fallbacks, SDR++/Gqrx labelled External; Core socket /run/task first,
+    /run/rain fallback.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Mon, 12 Oct 2026 09:00:00 +0000
+
+task-launcher (0.2.0) unstable; urgency=medium
+
+  * Phase 4A. Tile ids and order unchanged; 0.1.0 user settings are read
+    as is and never rewritten.
+  * Manifest platform 0.2.0 (additive): readiness probes, status_note,
+    [launch.labels], [[actions]]; new builtins library, radio, weather,
+    medical. "Installed" is now shown as "Available".
+  * Mesh Network launches rain-mesh when installed; otherwise Unavailable
+    with a labelled temporary read-only status.
+  * Maps & GPS: task-maps when present, else FoxtrotGPS labelled as the
+    fallback; gpsmon/cgps actions in a terminal.
+  * SDR: SDR++ or Gqrx; RTL-SDR readiness from the rain-core device list
+    (display only); other SDR programs holding the dongle are flagged.
+  * Early start failures show the exit code, time and last output line.
+  * Native windows: Library (Kiwix discovery, collections, search,
+    viewer), Radio / APRS (Direwolf status and a receive-only KISS
+    monitor), Weather (local tools and data age, no forecast), Medical
+    (offline reference finder, no records).
+  * Background readiness probes, loopback only, with timeouts.
+  * Maintainer email is a TODO placeholder until Joshua provides one.
+
+ -- Joshua Sturtz <TODO-maintainer-email>  Sat, 10 Oct 2026 12:00:00 +0000
+
+task-launcher (0.1.0) unstable; urgency=medium
+
+  * Phase 3: first release. Native PySide6 launcher, manifest registry
+    (schema v1), XDG desktop-application tiles, horizontal paging,
+    rain-core link and sign-in, System / Devices / App Manager windows,
+    optional per-user autostart.
+
+ -- Joshua Sturtz <TODO-maintainer-email>  Fri, 09 Oct 2026 12:00:00 +0000

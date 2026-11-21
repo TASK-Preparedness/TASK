@@ -1,0 +1,115 @@
+[
+ {
+  "name": "01-upgrade-0.3.6+0.2.3",
+  "desc": "Pi state after the 4F.3 0.3.6-r2 release (the crashing build).",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.6_all.deb",
+   "task-resources_0.2.3_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb"
+  ],
+  "allow": [],
+  "expect": "pass"
+ },
+ {
+  "name": "02-upgrade-0.3.4+0.2.1",
+  "desc": "Recorded earlier Pi state (launcher 0.3.4, resources 0.2.1).",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.4_all.deb",
+   "task-resources_0.2.1_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb"
+  ],
+  "allow": [],
+  "expect": "pass"
+ },
+ {
+  "name": "03-fresh-resources",
+  "desc": "Pi state without task-resources (launcher 0.3.6).",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.6_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb"
+  ],
+  "allow": [],
+  "expect": "pass"
+ },
+ {
+  "name": "04-rollback-to-0.3.6+0.2.3",
+  "desc": "rollback.sh path.",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.6_all.deb",
+   "task-resources_0.2.3_all.deb"
+  ],
+  "allow": [
+   "task-launcher",
+   "task-resources"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "05-rollback-to-0.3.4+0.2.1",
+  "desc": "rollback.sh path.",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.4_all.deb",
+   "task-resources_0.2.1_all.deb"
+  ],
+  "allow": [
+   "task-launcher",
+   "task-resources"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "06-NEG-downgrade-not-allowed",
+  "desc": "NEGATIVE: older debs without allowance must FAIL.",
+  "before": [
+   "task-core_0.3.0_all.deb",
+   "python3-task-comms_0.3.1_all.deb",
+   "task-mesh_0.3.1_all.deb",
+   "task-launcher_0.3.7_all.deb",
+   "task-resources_0.2.4_all.deb",
+   "task-sdr_0.1.0_all.deb"
+  ],
+  "install": [
+   "task-launcher_0.3.6_all.deb",
+   "task-resources_0.2.3_all.deb"
+  ],
+  "allow": [],
+  "expect": "fail"
+ }
+]

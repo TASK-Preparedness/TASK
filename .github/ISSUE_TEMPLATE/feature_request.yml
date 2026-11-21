@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an improvement or new capability
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes: {label: What problem would this solve in an emergency or preparedness setting?}
+    validations: {required: true}
+  - type: textarea
+    id: idea
+    attributes: {label: Proposed solution}
+    validations: {required: true}
+  - type: dropdown
+    id: offline
+    attributes:
+      label: Does it work fully offline?
+      options: ["Yes", "Partly", "No — needs internet"]
+  - type: textarea
+    id: safety
+    attributes: {label: Any RF transmit, privacy or safety considerations?}

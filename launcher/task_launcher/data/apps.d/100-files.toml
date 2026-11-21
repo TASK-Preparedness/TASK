@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.files"
+name = "Files"
+version = "0.1.0"
+description = "Opens your home folder in the desktop's file manager (xdg-open, else pcmanfm/thunar/nautilus/…)."
+icon = "folder-open"
+order = 100
+single_instance = false
+
+[launch]
+builtin = "files"

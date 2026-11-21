@@ -1,0 +1,7 @@
+chan_fir 8.31
+fm 0.14
+audio_lp(complex) 1.94
+deemph 0.07
+resamp 0.05
+spectrum 0.04
+total 10.11

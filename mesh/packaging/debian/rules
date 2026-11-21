@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+# Debian packages + vendored meshtastic 2.7.11 (design report §2.3, option A).
+PKG := debian/task-mesh
+LIB := $(PKG)/usr/lib/task-mesh
+WHEEL := packaging/vendor/meshtastic-2.7.11-py3-none-any.whl
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_configure override_dh_auto_build override_dh_auto_test:
+	@echo "pure Python: nothing to build; tests run outside dpkg-buildpackage (see README)"
+
+override_dh_auto_install:
+	cd packaging/vendor && sha256sum -c SHA256SUMS
+	install -d $(LIB)
+	cp -a task_mesh $(LIB)/
+	find $(LIB) -name __pycache__ -prune -exec rm -rf {} +
+	python3 -m zipfile -e $(WHEEL) $(LIB)/task_mesh/_vendor/
+	# Not on the serial code path: upstream unit tests and the dash/plotly "analysis" web UI.
+	rm -rf $(LIB)/task_mesh/_vendor/meshtastic/tests $(LIB)/task_mesh/_vendor/meshtastic/analysis \
+	       $(LIB)/task_mesh/_vendor/meshtastic/.gitignore
+	install -D -m 0755 packaging/launcher/task-mesh $(PKG)/usr/bin/task-mesh
+	install -D -m 0644 packaging/debian/task-mesh.desktop $(PKG)/usr/share/applications/task-mesh.desktop
+	install -D -m 0644 packaging/debian/task-mesh.metainfo.xml $(PKG)/usr/share/metainfo/task-mesh.metainfo.xml
+	install -D -m 0644 assets/icons/task-mesh.svg $(PKG)/usr/share/icons/hicolor/scalable/apps/task-mesh.svg
+	for s in 48 64 128 256; do \
+	  install -D -m 0644 assets/icons/task-mesh-$$s.png $(PKG)/usr/share/icons/hicolor/$${s}x$${s}/apps/task-mesh.png; \
+	done
+	install -D -m 0644 README.md $(PKG)/usr/share/doc/task-mesh/README.md
+
+override_dh_python3:
+	dh_python3 /usr/lib/task-mesh
+
+# Vendored library keeps its own (identical) license file in dist-info; nothing to strip.
+override_dh_dwz override_dh_strip override_dh_shlibdeps:

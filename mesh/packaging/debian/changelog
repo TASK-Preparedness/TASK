@@ -1,0 +1,68 @@
+task-mesh (0.3.1) unstable; urgency=medium
+
+  * Phase 4F.1 corrective release.
+  * Fix: with task-mesh-service running, the window opened the serial port
+    itself on Connect/Retry and backed off with "Serial port is in use".
+    The window now attaches to the service (service-client mode) whenever
+    the service runs, also when the service starts after the window: it
+    releases its own ports, never opens one, shows the service's states,
+    receives live over the private socket and sends through the service
+    (explicit Send + Core sign-in). The service is the only writer. When
+    the service stops (after a 15 s grace for restarts) the window returns
+    to direct mode without reconnecting automatically.
+  * IPC: per-connection ids (client cannot spoof), live event stream with
+    reconnect, focus leases (15 s TTL, dropped on disconnect), stop closes
+    client connections. Still 0600 + same-uid peer credentials.
+  * Notifications: title "T.A.S.K. — New Mesh Message", protocol/sender/
+    preview only when allowed, generic when signed out, expire 5000 ms,
+    burst grouping, no pop-up while a Mesh window is focused (nothing is
+    marked read), click opens the conversation by internal id
+    (--open-message ID). Session bus found via DBUS_SESSION_BUS_ADDRESS or
+    $XDG_RUNTIME_DIR/bus.
+  * New task-mesh-notify-setup: read-only diagnosis; opt-in --enable writes a
+    user D-Bus activation file for notification-daemon (Debian's package has
+    none) and an LXDE login entry importing DISPLAY/XAUTHORITY.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 18:30:00 -0400
+
+task-mesh (0.3.0) unstable; urgency=medium
+
+  * Phase 4F: one app for Meshtastic and MeshCore. Tabs: All Messages,
+    Meshtastic, MeshCore, Devices, Network Status. Identities are never
+    merged across protocols.
+  * MeshCore companion (USB serial) via meshcore 2.3.15 (MIT, bundled with
+    pycayennelpp 2.4.0 and pyserial-asyncio-fast 0.16). Read-only session
+    commands; sending only from an explicit Send click.
+  * Optional background receiver task-mesh-service (systemd --user unit,
+    installed DISABLED, single instance, private 0600 socket). Without it
+    the window owns the radios as before.
+  * Per-device locks on /dev/serial/by-id; only user-assigned ports are
+    opened; read-only identify on click; never flashes or changes settings.
+  * Hub history (SQLite 0600), unread = live inbound only, explicit
+    mark-read, retention setting; freedesktop notifications with preview,
+    sound, per-protocol and per-conversation mute, quiet mode; generic
+    "New Mesh Message" while signed out or locked.
+  * Sending requires a Core session (operator or administrator).
+  * New Depends: python3-pycryptodome, python3-jeepney,
+    python3-task-comms (>= 0.3.1).
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 13:30:00 -0400
+
+task-mesh (0.2.0) unstable; urgency=medium
+
+  * Phase 4C: renamed from rain-mesh (Provides/Replaces/Breaks rain-mesh
+    << 0.2.0~; transitional rain-mesh 0.2.0); channel messages and DMs
+    with honest delivery states; private history behind a Core sign-in;
+    status card; opt-in Maps geofeed; legacy rain-mesh data copied (never
+    moved) on first start.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Mon, 12 Oct 2026 09:00:00 +0000
+
+task-mesh (0.1.0) unstable; urgency=medium
+
+  * Initial development release (v0.1.0 scope): USB serial discovery with
+    by-id preference and device picker, connection state machine with
+    backoff, watchdog and hot-plug, live node table, SQLite (WAL) storage.
+  * Bundles meshtastic 2.7.11 (hash-pinned wheel).
+
+ -- T.A.S.K. Mesh Operations maintainers <maintainer@example.invalid>  Mon, 05 Oct 2026 00:00:00 +0000

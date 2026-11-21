@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+*.deb
+*.zip
+*.tar.gz
+# never commit generated/derived or personal data
+mesh-alert.wav
+*.sqlite
+*.sqlite3
+*.sqlite-*
+radio-protocols.json
+*.mbtiles
+*.zim

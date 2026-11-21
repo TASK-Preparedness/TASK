@@ -1,0 +1,14 @@
+api: 1
+id: radio
+name: Radio
+version: 0.1.0
+summary: Audio or TNC radio. Transmit is not required to load.
+requires: []
+capabilities:
+  requires: [radio.rx]
+logical_devices: [radio.primary]
+permissions:
+  public: []
+  operator: []
+  administrator: []
+systemd: []

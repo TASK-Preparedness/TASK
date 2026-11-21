@@ -1,0 +1,21 @@
+# Classification only. A rule must not assign a logical device.
+rules:
+  - vid: "1546"
+    pid: "01a7"
+    class: gps
+    potential: [gps.position]
+  - vid: "0bda"
+    pid: "2838"
+    class: sdr
+    potential: [radio.rx]
+  - vid: "10c4"
+    pid: "ea60"
+    class: unknown
+    potential: []
+  - vid: "1a86"
+    pid: "7523"
+    class: unknown
+    potential: []
+  - subsystem: net
+    class: network
+    potential: []

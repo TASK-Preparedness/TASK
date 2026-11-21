@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. SDR
+Comment=Receive-only SDR (RTL-SDR)
+Exec=/usr/bin/task-sdr
+Icon=task-sdr
+Categories=Network;HamRadio;
+Terminal=false

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.system"
+name = "System"
+version = "0.1.0"
+description = "Host, load, memory, storage, temperature, task-core and network status (read-only)."
+icon = "monitor-cog"
+order = 110
+
+[launch]
+builtin = "system"

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2026 Joshua Sturtz -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- TESTDATA: shaped like kiwix-serve /search?...&format=xml (RSS 2.0 + OpenSearch). -->
+<rss version="2.0" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Search: water</title>
+    <link>/kiwix/search?books.name=testwiki_en_mini&amp;pattern=water&amp;format=xml</link>
+    <description>Search result for water</description>
+    <opensearch:totalResults>2</opensearch:totalResults>
+    <opensearch:startIndex>1</opensearch:startIndex>
+    <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+    <atom:link rel="search" type="application/opensearchdescription+xml" href="/kiwix/search/searchdescription.xml"/>
+    <opensearch:Query role="request" searchTerms="water" startIndex="1" count="25"/>
+    <item>
+      <title>Water purification</title>
+      <link>/kiwix/content/testwiki_en_mini/A/Water_purification</link>
+      <description>...methods of &lt;b&gt;water&lt;/b&gt; purification include boiling...</description>
+      <book><title>TESTDATA Wikipedia (mini)</title></book>
+      <wordCount>2345</wordCount>
+    </item>
+    <item>
+      <title>Water</title>
+      <link>/kiwix/content/testwiki_en_mini/A/Water</link>
+      <description>&lt;b&gt;Water&lt;/b&gt; is an inorganic compound...</description>
+      <book><title>TESTDATA Wikipedia (mini)</title></book>
+      <wordCount>9000</wordCount>
+    </item>
+  </channel>
+</rss>

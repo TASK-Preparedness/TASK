@@ -1,0 +1,10 @@
+{"sink_bytes": 4096, "gui_jitter_ms": 0, "played_fraction": 0.333, "gaps_per_s": 15.6, "discarded_fraction": 0.667}
+{"sink_bytes": 4096, "gui_jitter_ms": 20, "played_fraction": 0.333, "gaps_per_s": 15.6, "discarded_fraction": 0.667}
+{"sink_bytes": 8192, "gui_jitter_ms": 0, "played_fraction": 0.664, "gaps_per_s": 15.6, "discarded_fraction": 0.333}
+{"sink_bytes": 8192, "gui_jitter_ms": 20, "played_fraction": 0.664, "gaps_per_s": 15.6, "discarded_fraction": 0.333}
+{"sink_bytes": 12288, "gui_jitter_ms": 0, "played_fraction": 0.942, "gaps_per_s": 2.1, "discarded_fraction": 0.054}
+{"sink_bytes": 12288, "gui_jitter_ms": 20, "played_fraction": 0.839, "gaps_per_s": 4.4, "discarded_fraction": 0.157}
+{"sink_bytes": 19200, "gui_jitter_ms": 0, "played_fraction": 0.995, "gaps_per_s": 0.15, "discarded_fraction": 0.0}
+{"sink_bytes": 19200, "gui_jitter_ms": 20, "played_fraction": 0.98, "gaps_per_s": 2.0, "discarded_fraction": 0.015}
+{"sink_bytes": 38400, "gui_jitter_ms": 0, "played_fraction": 0.995, "gaps_per_s": 0.15, "discarded_fraction": 0.0}
+{"sink_bytes": 38400, "gui_jitter_ms": 20, "played_fraction": 0.994, "gaps_per_s": 0.25, "discarded_fraction": 0.0}

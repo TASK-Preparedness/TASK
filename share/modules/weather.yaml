@@ -1,0 +1,14 @@
+api: 1
+id: weather
+name: Weather
+version: 0.1.0
+summary: Locally stored weather products. No radio is required.
+requires: []
+capabilities:
+  requires: [weather.products]
+logical_devices: []
+permissions:
+  public: []
+  operator: []
+  administrator: []
+systemd: []

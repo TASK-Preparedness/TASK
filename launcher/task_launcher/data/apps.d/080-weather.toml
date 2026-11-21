@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.weather"
+name = "Weather"
+version = "0.2.0"
+description = "Honest status of installed weather decoders and local weather data with its age. No forecasts unless local data exists."
+icon = "cloud-sun"
+order = 80
+min_platform = "0.2.0"
+readiness = "weather"
+status_note = "local data status"
+
+[launch]
+builtin = "weather"
+
+[requires]
+core_capabilities = ["weather.products"]

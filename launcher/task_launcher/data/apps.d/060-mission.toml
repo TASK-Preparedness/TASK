@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.mission-planner"
+name = "Mission Planner"
+version = "0.0.0"
+description = "Plan and track missions, tasks and check-ins. One app of the platform, not T.A.S.K. itself."
+icon = "route"
+order = 60
+status = "planned"
+roadmap = "planned — interface: docs/MISSION-PLANNER-INTERFACE.md"

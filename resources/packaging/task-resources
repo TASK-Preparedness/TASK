@@ -1,0 +1,10 @@
+#!/usr/bin/python3 -I
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+"""task-resources command (Debian package: modules live in /usr/share/task-resources)."""
+import sys
+
+sys.path.insert(0, "/usr/share/task-resources")
+from task_resources.app import main  # noqa: E402
+
+sys.exit(main())

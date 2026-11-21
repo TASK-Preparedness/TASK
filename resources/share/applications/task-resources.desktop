@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. Resources
+GenericName=Offline library
+Comment=Native offline library and reader for ZIM, PDF, EPUB and text files (T.A.S.K. — Tactical Access Support Kit)
+Exec=task-resources
+Icon=task-resources
+Terminal=false
+Categories=Office;Education;Viewer;
+Keywords=zim;library;offline;wikipedia;pdf;epub;reader;task;
+StartupNotify=true
+StartupWMClass=task-resources
+SingleMainWindow=true

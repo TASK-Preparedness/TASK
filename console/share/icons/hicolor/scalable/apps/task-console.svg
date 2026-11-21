@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: 2026 Joshua Sturtz -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>R.A.I.N. Console</title>
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#182027" stroke="#3a4752" stroke-width="4"/>
+  <path d="M64 18 C64 18 30 60 30 82 a34 34 0 0 0 68 0 C98 60 64 18 64 18 Z" fill="#e3a33b"/>
+  <path d="M50 84 a14 14 0 0 0 14 14" fill="none" stroke="#0f1316" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.app-manager"
+name = "App Manager"
+version = "0.1.0"
+description = "Apps and tiles: status, enable/disable, add installed desktop applications, arrange the dashboard."
+icon = "layout-grid"
+order = 120
+
+[launch]
+builtin = "app-manager"

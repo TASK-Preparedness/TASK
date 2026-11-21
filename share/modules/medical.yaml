@@ -1,0 +1,14 @@
+api: 1
+id: medical
+name: Medical
+version: 0.1.0
+summary: Medical reference. Loading this manifest does not open private records.
+requires: []
+capabilities:
+  requires: []
+logical_devices: []
+permissions:
+  public: [medical.reference.read]
+  operator: []
+  administrator: []
+systemd: []

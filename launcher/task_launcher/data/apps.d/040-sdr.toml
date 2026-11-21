@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.sdr"
+name = "SDR"
+version = "0.3.0"
+description = "Opens T.A.S.K. SDR (task-sdr, native receive-only: WFM/NFM/AM/USB/LSB, spectrum, waterfall). SDR++ and Gqrx stay available as External apps. task-core only discovers and assigns the RTL-SDR."
+icon = "square-activity"
+order = 40
+min_platform = "0.2.0"
+readiness = "rtl-sdr"
+single_instance = true
+
+[launch]
+exec = ["/usr/bin/task-sdr"]
+exec_alternatives = [["/usr/bin/sdrpp"], ["/usr/local/bin/gqrx"]]
+
+[launch.labels]
+"/usr/bin/task-sdr" = "task-sdr"
+"/usr/bin/sdrpp" = "SDR++ (External)"
+"/usr/local/bin/gqrx" = "Gqrx (External)"
+
+[[actions]]
+id = "sdrpp"
+label = "Open SDR++ (External)"
+exec = ["/usr/bin/sdrpp"]
+
+[[actions]]
+id = "gqrx"
+label = "Open Gqrx (External)"
+exec = ["/usr/local/bin/gqrx"]
+
+[requires]
+hardware = ["RTL-SDR (0bda:2838)"]
+core_capabilities = ["radio.rx"]

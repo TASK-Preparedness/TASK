@@ -1,0 +1,90 @@
+task-resources (0.2.4) unstable; urgency=medium
+
+  * WebEngine crash guard: a marker is written before the first WebEngine
+    load and cleared after the first successful load. After a crash the
+    same configuration uses the lightweight reader automatically, with a
+    notice and a manual "Try enhanced reader" button. Never auto-retried.
+  * Lightweight reader: percent-encoded image/link paths are decoded before
+    resolving (fixes missing images such as "../I/A_%28b%29.jpg"); images
+    that cannot be shown get an alt-text placeholder (WebP/SVG without the
+    optional Qt image plugins is named); per-page image cache; wide images
+    fit the page; tables get borders/padding, infoboxes float right.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Thu, 15 Oct 2026 22:00:00 -0400
+
+task-resources (0.2.3) unstable; urgency=medium
+
+  * Read-only index access (used by the launcher's Medical view) no longer
+    creates -wal/-shm files next to the index: a verified private snapshot
+    when nobody has the index open, a live mode=ro connection (joining the
+    normal WAL locking) when T.A.S.K. Resources is running. New
+    rosnap.consistent_backup() for installers. Index.close() is idempotent.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 22:00:00 -0400
+
+task-resources (0.2.2) unstable; urgency=medium
+
+  * Phase 4F.3: Index/Library read_only mode (SQLite mode=ro + query_only; no
+    schema setup, no journal-mode change, no history writes) for embedders.
+  * New embeddable ui.browser (ResourceBrowser/ReaderPane, Scope filter, JSON
+    bookmark store, background search inside ZIMs); MainWindow now uses it.
+  * New classify module: medical rules (MDWiki, WikEM, MedlinePlus, Medicine
+    LibreTexts, Military Medicine, Medical Library, Hesperian, keywords,
+    explicit Medical category) reporting the matching rule.
+  * Clear errors for missing and corrupt files in the reader.
+  * Fix: closing the window stopped no WebEngine page (child views get no
+    closeEvent), which deadlocked later Qt event processing; viewers are now
+    reused on engine switch and closed on shutdown. The downloads window
+    stops polling once the manager is closed.
+  * Tests: per-test timeout, slow benchmark opt-in (-m slow).
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 19:00:00 -0400
+
+task-resources (0.2.1) unstable; urgency=medium
+
+  * 4E audit fix (defect): downloads and managed copies now default to the
+    per-user ~/.local/share/task-resources/downloads/<category>/. 0.2.0
+    defaulted to /library/task-resources. /library is a protected root
+    (setting protected_roots): downloads into it are refused and a configured
+    root under it falls back to the per-user directory. Saved settings that
+    still carry the old default are migrated (settings schema 2); an explicit
+    user choice elsewhere is kept. extra_storage is reserved for later.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 16:30:00 +0000
+
+task-resources (0.2.0) unstable; urgency=medium
+
+  * Phase 4E download manager:
+    - native browser over the official Kiwix OPDS catalog (opds.library.kiwix.org
+      /catalog/v2, verified against kiwix-serve docs): search title/description,
+      filter category/language/subject/size, publisher/format/installed columns,
+      on-disk cache for offline browsing, server-down handling;
+    - URL downloads (ZIM/PDF/EPUB/HTML/TXT/MD) with preview, destination choice,
+      several categories, free-space checks, progress/speed/ETA, pause/resume,
+      cancel/retry, persistent SQLite queue, power-loss recovery, Range +
+      If-Range resume with safe restart, .part files, atomic finalize after
+      size/sha256 (Kiwix meta4)/content/libzim Archive.check() verification;
+    - Downloads window (Active/Queued/Paused/Completed/Failed);
+    - SSRF-safe client: http/https only, ports 80/443, private/loopback/link-
+      local/CGNAT/ULA refused on every redirect hop, DNS pinned, TLS verified;
+    - managed-file deletion with confirmation; external files protected.
+  * Security fix (lightweight viewer): QTextDocument loaded file:// images
+    itself, bypassing loadResource(). The sanitiser now removes every non-
+    in-app resource reference (img/link/poster/CSS url()); Markdown goes
+    through the same sanitiser.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 14:00:00 +0000
+
+task-resources (0.1.0) unstable; urgency=medium
+
+  * Phase 4D: first release. Native offline library and reader on
+    python3-libzim (no Kiwix, no HTTP server, no browser): discovery of
+    existing ZIMs in place (read-only), SQLite index of references,
+    many-to-many categories, editable metadata, duplicate detection,
+    bookmarks, history, title vs full-text search, WebEngine viewer
+    (optional, zim:// scheme handler, network blocked) and lightweight
+    QTextBrowser viewer, QtPdf PDF viewer, EPUB adapter, TXT/MD/HTML.
+    Add Resource: "Import from Pi" works; Download and Online Catalog tabs
+    are disabled ("Available in Phase 4E").
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Tue, 13 Oct 2026 09:00:00 +0000

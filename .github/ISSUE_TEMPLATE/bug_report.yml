@@ -1,0 +1,32 @@
+name: Bug report
+description: Something in T.A.S.K. does not work as expected
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks! Please remove callsigns, locations, device serial numbers and messages from logs before posting."
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options: [Launcher, Mesh Network, Maps & GPS, Radio / APRS, SDR Studio, Library / Medical Reader, Devices, Core, Installer, Windows, Other]
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes: {label: Package version(s), description: "Output of: dpkg-query -W 'task-*' python3-task-comms"}
+    validations: {required: true}
+  - type: input
+    id: hardware
+    attributes: {label: Computer and OS, placeholder: "Raspberry Pi 5 8GB, Debian 13 trixie arm64"}
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes: {label: Steps to reproduce}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: What did you expect, and what happened instead?}
+    validations: {required: true}
+  - type: textarea
+    id: logs
+    attributes: {label: Logs (redacted), render: text}

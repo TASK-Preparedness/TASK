@@ -1,0 +1,50 @@
+.\" SPDX-License-Identifier: GPL-3.0-or-later
+.\" SPDX-FileCopyrightText: 2026 Joshua Sturtz
+.TH TASK-MAPS 1 "October 2026" "task-maps 0.1.0" "User Commands"
+.SH NAME
+task-maps \- T.A.S.K. Maps & GPS: offline maps, map downloads, GPS, waypoints and tracks
+.SH SYNOPSIS
+.B task-maps
+[\fB\-\-data\-dir\fR \fIPATH\fR] [\fB\-\-windowed\fR | \fB\-\-fullscreen\fR] [\fB\-\-version\fR]
+.SH DESCRIPTION
+Native Qt (PySide6) map application of T.A.S.K. \(em Tactical Access Support Kit. It renders
+raster MBTiles files offline with its own renderer, downloads map areas from tile sources whose
+terms permit offline use (rate-limited, resumable), imports MBTiles files without network, shows
+the GPS position from gpsd (read-only JSON on 127.0.0.1:2947; the serial device is never opened)
+and keeps waypoints and recorded tracks with GPX 1.1 import and export.
+.PP
+Bulk downloading from tile.openstreetmap.org is refused (OSMF Tile Usage Policy).
+It never runs as root and only one instance runs per user.
+.SH OPTIONS
+.TP
+.BR \-\-data\-dir " " \fIPATH\fR
+Absolute data folder for this run (maps, download jobs, waypoints).
+.TP
+.B \-\-windowed
+Start in a normal window (default: maximized).
+.TP
+.B \-\-fullscreen
+Start fullscreen.
+.TP
+.B \-\-version
+Print the version and exit.
+.SH FILES
+.TP
+.I ~/.local/share/task-maps/
+Default data folder ($XDG_DATA_HOME/task-maps): maps/*.mbtiles (downloaded, one file per source),
+maps/imported/*.mbtiles, jobs.sqlite, waypoints.sqlite. Kept on upgrade and on package removal.
+.TP
+.I ~/.config/task-maps/settings.json
+Settings (data folder, coordinate format, cache size).
+.TP
+.I ~/.config/task-maps/sources.d/*.toml
+User tile sources (see /usr/share/doc/task-maps/SOURCES-POLICY.md).
+.TP
+.I ~/.config/task-maps/keys.toml
+API keys (mode 0600; never logged).
+.TP
+.I /usr/share/task-maps/sources.d/*.toml
+Packaged tile sources.
+.SH SEE ALSO
+.BR gpsd (8),
+.BR task-launcher (1)

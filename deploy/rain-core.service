@@ -1,0 +1,20 @@
+[Unit]
+Description=R.A.I.N. core
+After=systemd-udevd.service
+
+[Service]
+Type=simple
+User=rain-core
+Group=rain-core
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/rain
+RuntimeDirectory=rain
+RuntimeDirectoryMode=0755
+ExecStart=/usr/bin/python3 -m rain_core --config /etc/rain/core.toml
+WorkingDirectory=/var/lib/rain
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:dc="http://purl.org/dc/terms/"
+      xmlns:opds="https://specs.opds.io/opds-1.2"
+      xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <id>5caf8951-c29f-20f7-68b9-f7ebee668a8c</id>
+
+  <link rel="self"
+        href="/catalog/v2/entries?count=-1"
+        type="application/atom+xml;profile=opds-catalog;kind=acquisition"/>
+  <link rel="start"
+        href="/catalog/v2/root.xml"
+        type="application/atom+xml;profile=opds-catalog;kind=navigation"/>
+  <link rel="up"
+        href="/catalog/v2/root.xml"
+        type="application/atom+xml;profile=opds-catalog;kind=navigation"/>
+
+  <title>Filtered Entries (count=-1)</title>
+  <updated>2026-10-13T14:33:09Z</updated>
+  <totalResults>8</totalResults>
+  <startIndex>0</startIndex>
+  <itemsPerPage>3638</itemsPerPage>
+  <entry>
+    <id>urn:uuid:0070e0bb-8440-ef6c-6389-d09b240dc990</id>
+    <title>Project Gutenberg Library</title>
+    <updated>2026-03-05T00:00:00Z</updated>
+    <summary>Indo-Iranian languages and literatures</summary>
+    <language>eng</language>
+    <name>gutenberg_en_lcc-pk</name>
+    <flavour></flavour>
+    <category>gutenberg</category>
+    <tags>_category:gutenberg;gutenberg;_ftindex:no;_pictures:yes;_videos:yes;_details:yes</tags>
+    <articleCount>111</articleCount>
+    <mediaCount>372</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/0070e0bb-8440-ef6c-6389-d09b240dc990/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/gutenberg_en_lcc-pk_2026-03" />
+    <author>
+      <name>gutenberg.org</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-03-05T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/gutenberg/gutenberg_en_lcc-pk_2026-03.zim.meta4" length="83982336" />
+  </entry>
+  <entry>
+    <id>urn:uuid:009d30eb-df67-e4e9-4341-3abe3c53f036</id>
+    <title>Вікіпедія</title>
+    <updated>2026-07-22T00:00:00Z</updated>
+    <summary>офлайн-версія Вікіпедії українською мовою</summary>
+    <language>ukr</language>
+    <name>wikipedia_uk_all</name>
+    <flavour>nopic</flavour>
+    <category>wikipedia</category>
+    <tags>wikipedia;_category:wikipedia;_pictures:no;_videos:no;_details:yes;_ftindex:yes</tags>
+    <articleCount>2526926</articleCount>
+    <mediaCount>147111</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/009d30eb-df67-e4e9-4341-3abe3c53f036/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/wikipedia_uk_all_nopic_2026-07" />
+    <author>
+      <name>Wikipedia</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-07-22T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/wikipedia/wikipedia_uk_all_nopic_2026-07.zim.meta4" length="10684796928" />
+  </entry>
+  <entry>
+    <id>urn:uuid:00b6ac31-cdc5-071b-ca47-008e74e0a4ee</id>
+    <title>Stellar Q&amp;A</title>
+    <updated>2026-08-07T00:00:00Z</updated>
+    <summary>Stack Exchange Q&amp;A for developers and users of Stellar blockchain and Exchange</summary>
+    <language>eng</language>
+    <name>stellar.stackexchange.com_en_all</name>
+    <flavour></flavour>
+    <category>stack_exchange</category>
+    <tags>_details:no;_category:stack_exchange;_videos:no;stack_exchange;_ftindex:yes;_pictures:yes</tags>
+    <articleCount>2625</articleCount>
+    <mediaCount>162</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/00b6ac31-cdc5-071b-ca47-008e74e0a4ee/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/stellar.stackexchange.com_en_all_2026-08" />
+    <author>
+      <name>Stack Exchange</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-08-07T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/stack_exchange/stellar.stackexchange.com_en_all_2026-08.zim.meta4" length="8136704" />
+  </entry>
+  <entry>
+    <id>urn:uuid:0141088b-66b9-692b-2221-2a5657bba245</id>
+    <title>足球维基百科</title>
+    <updated>2026-09-17T00:00:00Z</updated>
+    <summary>在足球的维基百科文章的选择</summary>
+    <language>zho</language>
+    <name>wikipedia_zh_football</name>
+    <flavour>maxi</flavour>
+    <category>wikipedia</category>
+    <tags>wikipedia;_category:wikipedia;_pictures:yes;_videos:no;_details:yes;_ftindex:yes</tags>
+    <articleCount>58813</articleCount>
+    <mediaCount>47219</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/0141088b-66b9-692b-2221-2a5657bba245/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/wikipedia_zh_football_maxi_2026-09" />
+    <author>
+      <name>Wikipedia</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-09-17T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/wikipedia/wikipedia_zh_football_maxi_2026-09.zim.meta4" length="461950976" />
+  </entry>
+  <entry>
+    <id>urn:uuid:01525ae1-a345-142e-caf0-11f9e443f1c2</id>
+    <title>Project Gutenberg Library</title>
+    <updated>2026-03-05T00:00:00Z</updated>
+    <summary>History of the Americas</summary>
+    <language>eng</language>
+    <name>gutenberg_en_lcc-f</name>
+    <flavour></flavour>
+    <category>gutenberg</category>
+    <tags>_category:gutenberg;gutenberg;_ftindex:no;_pictures:yes;_videos:yes;_details:yes</tags>
+    <articleCount>2875</articleCount>
+    <mediaCount>53286</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/01525ae1-a345-142e-caf0-11f9e443f1c2/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/gutenberg_en_lcc-f_2026-03" />
+    <author>
+      <name>gutenberg.org</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-03-05T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/gutenberg/gutenberg_en_lcc-f_2026-03.zim.meta4" length="9888134144" />
+  </entry>
+  <entry>
+    <id>urn:uuid:01ff9446-c812-f63f-1de7-39f9842f5d1e</id>
+    <title>Breizh partitions</title>
+    <updated>2026-02-11T00:00:00Z</updated>
+    <summary>Partitions gratuites et libres</summary>
+    <language>fra</language>
+    <name>breizhpartitions_fr_all</name>
+    <flavour></flavour>
+    <category>other</category>
+    <tags>_category:other;_ftindex:yes;music;_pictures:yes;_videos:yes;_details:yes</tags>
+    <articleCount>11500</articleCount>
+    <mediaCount>15139</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/01ff9446-c812-f63f-1de7-39f9842f5d1e/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/breizhpartitions_fr_all_2026-02" />
+    <author>
+      <name>-</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-02-11T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/zimit/breizhpartitions_fr_all_2026-02.zim.meta4" length="5655988224" />
+  </entry>
+  <entry>
+    <id>urn:uuid:02c7668d-36ba-8afc-8d90-02677a35bdeb</id>
+    <title>elementary OS Q&amp;A</title>
+    <updated>2026-08-01T00:00:00Z</updated>
+    <summary>Stack Exchange Q&amp;A for developers and users of elementary OS and applications</summary>
+    <language>eng</language>
+    <name>elementaryos.stackexchange.com_en_all</name>
+    <flavour></flavour>
+    <category>stack_exchange</category>
+    <tags>_category:stack_exchange;_videos:no;stack_exchange;_details:no;_ftindex:yes;_pictures:yes</tags>
+    <articleCount>17074</articleCount>
+    <mediaCount>3294</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/02c7668d-36ba-8afc-8d90-02677a35bdeb/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/elementaryos.stackexchange.com_en_all_2026-08" />
+    <author>
+      <name>Stack Exchange</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-08-01T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/stack_exchange/elementaryos.stackexchange.com_en_all_2026-08.zim.meta4" length="56979456" />
+  </entry>
+  <entry>
+    <id>urn:uuid:06db7294-f399-140d-b401-e0f4550c6db0</id>
+    <title>Algorithms</title>
+    <updated>2026-09-04T00:00:00Z</updated>
+    <summary>A free electronic version of the Algorithms textbook, along with lecture notes</summary>
+    <language>eng</language>
+    <name>jeffe.cs.illinois.edu_en_all</name>
+    <flavour></flavour>
+    <category>other</category>
+    <tags>_ftindex:yes;_category:other;_pictures:yes;_videos:yes;_details:yes</tags>
+    <articleCount>694</articleCount>
+    <mediaCount>2</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail"
+          href="/catalog/v2/illustration/06db7294-f399-140d-b401-e0f4550c6db0/?size=48"
+          type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="https://browse.library.kiwix.org/content/jeffe.cs.illinois.edu_en_all_2026-09" />
+    <author>
+      <name>-</name>
+    </author>
+    <publisher>
+      <name>openZIM</name>
+    </publisher>
+    <dc:issued>2026-09-04T00:00:00Z</dc:issued>
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="https://lb.download.kiwix.org/zim/zimit/jeffe.cs.illinois.edu_en_all_2026-09.zim.meta4" length="516538368" />
+  </entry>
+</feed>

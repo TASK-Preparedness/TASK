@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.library"
+name = "Library"
+version = "0.3.1"
+description = "Opens T.A.S.K. Resources (task-resources): the native offline library and reader for ZIM, PDF, EPUB and text files. Without task-resources, the built-in Kiwix library viewer from Phase 4A opens."
+icon = "book-open"
+order = 50
+min_platform = "0.2.0"
+readiness = "kiwix"
+status_note = "task-resources or built-in Kiwix viewer"
+
+[launch]
+builtin = "library"
+exec = ["/usr/bin/task-resources"]

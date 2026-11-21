@@ -1,0 +1,2290 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<DIV8 N="80.371" TYPE="SECTION" hierarchy_metadata="{&quot;path&quot;:&quot;/on/_SUBSTITUTE_DATE_/title-47/section-80.371&quot;,&quot;citation&quot;:&quot;47 CFR 80.371&quot;}">
+<HEAD>§ 80.371 Public correspondence frequencies.</HEAD>
+<P>This section describes the radiotelephony working frequencies assignable to ship and public coast stations.</P>
+<P>(a) <I>Working frequencies in the 2000-4000 kHz band.</I> The following table describes the working carrier frequency pairs in the 2000-4000 kHz band.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<THEAD>
+<TR>
+<TH colspan="3" class="center border-top-single border-bottom-single">Working frequency pairs in the 2000-4000 kHz band</TH>
+</TR>
+<TR>
+<TH rowspan="2" class="center border-bottom-single border-right-single">Region</TH>
+<TH colspan="2" class="center border-bottom-single">Carrier frequency (kHz)</TH>
+</TR>
+<TR>
+<TH class="center border-bottom-single border-right-single">Ship transmit</TH>
+<TH class="center border-bottom-single">Coast transmit</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">East Coast:</TD>
+<TD class="right border-right-single">2031.5</TD>
+<TD class="right">2490.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2118.0</TD>
+<TD class="right"><sup>1</sup> 2514.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2126.0</TD>
+<TD class="right">2522.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2142.0</TD>
+<TD class="right">2538.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2166.0</TD>
+<TD class="right">2558.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2198.0</TD>
+<TD class="right">2590.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2366.0</TD>
+<TD class="right">2450.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2382.0</TD>
+<TD class="right"><sup>5</sup> 2482.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2390.0</TD>
+<TD class="right">2566.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2400.0</TD>
+<TD class="right">2400.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2406.0</TD>
+<TD class="right">2442.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2406.0</TD>
+<TD class="right"><sup>4</sup> 2506.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">West Coast:</TD>
+<TD class="right border-right-single">2003.0</TD>
+<TD class="right">2450.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2009.0</TD>
+<TD class="right">2442.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2009.0</TD>
+<TD class="right">2566.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2031.5</TD>
+<TD class="right">2566.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2126.0</TD>
+<TD class="right">2522.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2206.0</TD>
+<TD class="right">2598.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2382.0</TD>
+<TD class="right">2466.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2406.0</TD>
+<TD class="right">2506.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2430.0</TD>
+<TD class="right"><sup>5</sup> 2482.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">Gulf Coast:</TD>
+<TD class="right border-right-single">2009.0</TD>
+<TD class="right">2466.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2134.0</TD>
+<TD class="right">2530.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2142.0</TD>
+<TD class="right">2538.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single"><sup>1</sup> 2158.0</TD>
+<TD class="right"><sup>1</sup> 2550.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2166.0</TD>
+<TD class="right">2558.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2206.0</TD>
+<TD class="right">2598.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2366.0</TD>
+<TD class="right">2450.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2382.0</TD>
+<TD class="right"><sup>5</sup> 2482.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2430.0</TD>
+<TD class="right">2572.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2458.0</TD>
+<TD class="right">2506.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">Great Lakes <sup>2</sup>:</TD>
+<TD class="right border-right-single">2118.0</TD>
+<TD class="right">2514.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2158.0</TD>
+<TD class="right">2550.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2206.0</TD>
+<TD class="right">2582.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">Alaska</TD>
+<TD class="right border-right-single">2131.0</TD>
+<TD class="right"><sup>5</sup> 2309.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2134.0</TD>
+<TD class="right">2312.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2237.0</TD>
+<TD class="right">2397.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2240.0</TD>
+<TD class="right">2400.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">Hawaii</TD>
+<TD class="right border-right-single">2134.0</TD>
+<TD class="right">2530.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">Caribbean:</TD>
+<TD class="right border-right-single">2009.0</TD>
+<TD class="right">2506.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single"><sup>3</sup> 2086.0</TD>
+<TD class="right">2585.0</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">2134.0</TD>
+<TD class="right">2530.0</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">Guam</TD>
+<TD class="right border-bottom-single border-right-single">2009.0</TD>
+<TD class="right border-bottom-single">2506.0
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="3"><sup>1</sup> Unlimited hours of use from December 15 to April 1 and day only from April 1 to December 15. Harmful interference must not be caused to any station in the Great Lakes region.
+</TD></TR><TR><TD colspan="3"><sup>2</sup> In the Great Lakes region 2206 kHz is not available for transmission to U.S. ships except in the case of distress. U.S. coast stations in the Great Lakes area may use 2514, 2550 and 2582 kHz on a shared basis with coast stations of Canada. Except in the case of distress, the frequency 2550 kHz must not be used for transmission to ship stations of Canada since the associated ship station transmit frequency 2158 kHz is not available to Canadian ship stations for transmission and 2582 kHz must not be used for public correspondence transmissions to U.S. ship stations since the associated ship transmit frequency 2206 kHz is not available to U.S. ship stations for transmissions except in the case of distress.
+</TD></TR><TR><TD colspan="3"><sup>3</sup> Limited to a peak envelope power of 150 watts.
+</TD></TR><TR><TD colspan="3"><sup>4</sup> Harmful interference must not be caused to any coast station in the Caribbean region.
+</TD></TR><TR><TD colspan="3"><sup>5</sup> <E T="03">But see</E> section 80.373(c)(3) of this chapter.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(b) <I>Working frequencies in the 4000-27500 kHz band.</I> This paragraph describes the working carrier frequencies in the 4000-27500 kHz band. With respect to frequencies that are assignable in more than one geographical area, once the frequency is assigned to one licensee, any subsequent license will be authorized on a secondary, non-interference basis with respect to the incumbent license's existing operation. If the first licensee later seeks authorization to operate in an additional geographic area, such authorization will be on a secondary, non-interference basis to other co-channel licensees.</P>
+<P>(1) The following table specifies the carrier frequencies available for assignment to public coast stations. The paired ship frequencies are available for use by authorized ship stations. The specific frequency assignment available to public coast stations for a particular geographic area is indicated by an “x” under the appropriate column. The allotment areas are in accordance with the “Standard Defined Areas” as identified in the International Radio Regulations, Appendix 25 Planning System, and indicated in the preface to the International Frequency List (IFL).</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Working Carrier Frequency Pairs in the 4000-27500 kHz Band</P></CAPTION>
+<THEAD>
+<TR>
+<TH class="center border-top-single border-bottom-single border-right-single">Channel</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">Ship transmit</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">Coast transmit</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">USA-E</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">USA-W</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">USA-S</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">USA-C</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">VIR</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">HWA</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">ALS</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">PTR</TH>
+<TH class="center border-top-single border-bottom-single">GUM</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">401</TD>
+<TD class="right border-right-single">4065</TD>
+<TD class="right border-right-single">4357</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">403</TD>
+<TD class="right border-right-single">4071</TD>
+<TD class="right border-right-single">4363</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">404</TD>
+<TD class="right border-right-single">4074</TD>
+<TD class="right border-right-single">4366</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">405</TD>
+<TD class="right border-right-single">4077</TD>
+<TD class="right border-right-single">4369</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">409</TD>
+<TD class="right border-right-single">4089</TD>
+<TD class="right border-right-single">4381</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">410</TD>
+<TD class="right border-right-single">4092</TD>
+<TD class="right border-right-single">4384</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">411</TD>
+<TD class="right border-right-single">4095</TD>
+<TD class="right border-right-single">4387</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">412</TD>
+<TD class="right border-right-single">4098</TD>
+<TD class="right border-right-single">4390</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">414</TD>
+<TD class="right border-right-single">4104</TD>
+<TD class="right border-right-single">4396</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">416</TD>
+<TD class="right border-right-single">4110</TD>
+<TD class="right border-right-single">4402</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">417</TD>
+<TD class="right border-right-single">4113</TD>
+<TD class="right border-right-single">4405</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">418</TD>
+<TD class="right border-right-single">4116</TD>
+<TD class="right border-right-single">4408</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">419</TD>
+<TD class="right border-right-single">4119</TD>
+<TD class="right border-right-single">4411</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">422</TD>
+<TD class="right border-right-single">4128</TD>
+<TD class="right border-right-single">4420</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">423</TD>
+<TD class="right border-right-single">4131</TD>
+<TD class="right border-right-single">4423</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">424</TD>
+<TD class="right border-right-single">4134</TD>
+<TD class="right border-right-single">4426</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">427</TD>
+<TD class="right border-right-single">4143</TD>
+<TD class="right border-right-single">4435</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">428</TD>
+<TD class="right border-right-single">4060</TD>
+<TD class="right border-right-single">4351</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">604</TD>
+<TD class="right border-right-single">6209</TD>
+<TD class="right border-right-single">6510</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">605</TD>
+<TD class="right border-right-single">6212</TD>
+<TD class="right border-right-single">6513</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">607</TD>
+<TD class="right border-right-single">6218</TD>
+<TD class="right border-right-single">6519</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">802</TD>
+<TD class="right border-right-single">8198</TD>
+<TD class="right border-right-single">8722</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">803</TD>
+<TD class="right border-right-single">8201</TD>
+<TD class="right border-right-single">8725</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">804</TD>
+<TD class="right border-right-single">8204</TD>
+<TD class="right border-right-single">8728</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">805</TD>
+<TD class="right border-right-single">8207</TD>
+<TD class="right border-right-single">8731</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">807</TD>
+<TD class="right border-right-single">8213</TD>
+<TD class="right border-right-single">8737</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">808</TD>
+<TD class="right border-right-single">8216</TD>
+<TD class="right border-right-single">8740</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">809</TD>
+<TD class="right border-right-single">8219</TD>
+<TD class="right border-right-single">8743</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">810</TD>
+<TD class="right border-right-single">8222</TD>
+<TD class="right border-right-single">8746</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">811</TD>
+<TD class="right border-right-single">8225</TD>
+<TD class="right border-right-single">8749</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">814</TD>
+<TD class="right border-right-single">8234</TD>
+<TD class="right border-right-single">8758</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">815</TD>
+<TD class="right border-right-single">8237</TD>
+<TD class="right border-right-single">8761</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">817</TD>
+<TD class="right border-right-single">8243</TD>
+<TD class="right border-right-single">8767</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">819</TD>
+<TD class="right border-right-single">8249</TD>
+<TD class="right border-right-single">8773</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">822</TD>
+<TD class="right border-right-single">8258</TD>
+<TD class="right border-right-single">8782</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">824</TD>
+<TD class="right border-right-single">8264</TD>
+<TD class="right border-right-single">8788</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">825</TD>
+<TD class="right border-right-single">8267</TD>
+<TD class="right border-right-single">8791</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">826</TD>
+<TD class="right border-right-single">8270</TD>
+<TD class="right border-right-single">8794</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">829</TD>
+<TD class="right border-right-single">8279</TD>
+<TD class="right border-right-single">8803</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">830</TD>
+<TD class="right border-right-single">8282</TD>
+<TD class="right border-right-single">8806</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">831</TD>
+<TD class="right border-right-single">8285</TD>
+<TD class="right border-right-single">8809</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">836</TD>
+<TD class="right border-right-single">8113</TD>
+<TD class="right border-right-single">8713</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">837</TD>
+<TD class="right border-right-single">8128</TD>
+<TD class="right border-right-single">8716</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1201</TD>
+<TD class="right border-right-single">12230</TD>
+<TD class="right border-right-single">13077</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1202</TD>
+<TD class="right border-right-single">12233</TD>
+<TD class="right border-right-single">13080</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1203</TD>
+<TD class="right border-right-single">12236</TD>
+<TD class="right border-right-single">13083</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1206</TD>
+<TD class="right border-right-single">12245</TD>
+<TD class="right border-right-single">13092</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1208</TD>
+<TD class="right border-right-single">12251</TD>
+<TD class="right border-right-single">13098</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1209</TD>
+<TD class="right border-right-single">12254</TD>
+<TD class="right border-right-single">13101</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1210</TD>
+<TD class="right border-right-single">12257</TD>
+<TD class="right border-right-single">13104</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1211</TD>
+<TD class="right border-right-single">12260</TD>
+<TD class="right border-right-single">13107</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1212</TD>
+<TD class="right border-right-single">12263</TD>
+<TD class="right border-right-single">13110</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1215</TD>
+<TD class="right border-right-single">12272</TD>
+<TD class="right border-right-single">13119</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1217</TD>
+<TD class="right border-right-single">12278</TD>
+<TD class="right border-right-single">13125</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1222</TD>
+<TD class="right border-right-single">12293</TD>
+<TD class="right border-right-single">13140</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1223</TD>
+<TD class="right border-right-single">12296</TD>
+<TD class="right border-right-single">13143</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1225</TD>
+<TD class="right border-right-single">12302</TD>
+<TD class="right border-right-single">13149</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1226</TD>
+<TD class="right border-right-single">12305</TD>
+<TD class="right border-right-single">13152</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1228</TD>
+<TD class="right border-right-single">12311</TD>
+<TD class="right border-right-single">13158</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1229</TD>
+<TD class="right border-right-single">12314</TD>
+<TD class="right border-right-single">13161</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1230</TD>
+<TD class="right border-right-single">12317</TD>
+<TD class="right border-right-single">13164</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1233</TD>
+<TD class="right border-right-single">12326</TD>
+<TD class="right border-right-single">13173</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1234</TD>
+<TD class="right border-right-single">12329</TD>
+<TD class="right border-right-single">13176</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1235</TD>
+<TD class="right border-right-single">12232</TD>
+<TD class="right border-right-single">13179</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1236</TD>
+<TD class="right border-right-single">12335</TD>
+<TD class="right border-right-single">13182</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1237</TD>
+<TD class="right border-right-single">12338</TD>
+<TD class="right border-right-single">13185</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1601</TD>
+<TD class="right border-right-single">16360</TD>
+<TD class="right border-right-single">17242</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1602</TD>
+<TD class="right border-right-single">16363</TD>
+<TD class="right border-right-single">17245</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1603</TD>
+<TD class="right border-right-single">16366</TD>
+<TD class="right border-right-single">17248</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1605</TD>
+<TD class="right border-right-single">16372</TD>
+<TD class="right border-right-single">17254</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1607</TD>
+<TD class="right border-right-single">16378</TD>
+<TD class="right border-right-single">17260</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1609</TD>
+<TD class="right border-right-single">16384</TD>
+<TD class="right border-right-single">17266</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1610</TD>
+<TD class="right border-right-single">16387</TD>
+<TD class="right border-right-single">17269</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1611</TD>
+<TD class="right border-right-single">16390</TD>
+<TD class="right border-right-single">17272</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1616</TD>
+<TD class="right border-right-single">16405</TD>
+<TD class="right border-right-single">17287</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1620</TD>
+<TD class="right border-right-single">16417</TD>
+<TD class="right border-right-single">17299</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1624</TD>
+<TD class="right border-right-single">16429</TD>
+<TD class="right border-right-single">17311</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1626</TD>
+<TD class="right border-right-single">16435</TD>
+<TD class="right border-right-single">17317</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1631</TD>
+<TD class="right border-right-single">16450</TD>
+<TD class="right border-right-single">17332</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1632</TD>
+<TD class="right border-right-single">16453</TD>
+<TD class="right border-right-single">17335</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1641</TD>
+<TD class="right border-right-single">16480</TD>
+<TD class="right border-right-single">17362</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1642</TD>
+<TD class="right border-right-single">16483</TD>
+<TD class="right border-right-single">17365</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1643</TD>
+<TD class="right border-right-single">16486</TD>
+<TD class="right border-right-single">17368</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1644</TD>
+<TD class="right border-right-single">16489</TD>
+<TD class="right border-right-single">17371</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1645</TD>
+<TD class="right border-right-single">16492</TD>
+<TD class="right border-right-single">17374</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1646</TD>
+<TD class="right border-right-single">16495</TD>
+<TD class="right border-right-single">17377</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1647</TD>
+<TD class="right border-right-single">16498</TD>
+<TD class="right border-right-single">17380</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1648</TD>
+<TD class="right border-right-single">16501</TD>
+<TD class="right border-right-single">17383</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1801</TD>
+<TD class="right border-right-single">18780</TD>
+<TD class="right border-right-single">19755</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1802</TD>
+<TD class="right border-right-single">18783</TD>
+<TD class="right border-right-single">19758</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1803</TD>
+<TD class="right border-right-single">18786</TD>
+<TD class="right border-right-single">19761</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1804</TD>
+<TD class="right border-right-single">18789</TD>
+<TD class="right border-right-single">19764</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1805</TD>
+<TD class="right border-right-single">18792</TD>
+<TD class="right border-right-single">19767</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1807</TD>
+<TD class="right border-right-single">18798</TD>
+<TD class="right border-right-single">19773</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">1808</TD>
+<TD class="right border-right-single">18801</TD>
+<TD class="right border-right-single">19776</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2201</TD>
+<TD class="right border-right-single">22000</TD>
+<TD class="right border-right-single">22696</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2205</TD>
+<TD class="right border-right-single">22012</TD>
+<TD class="right border-right-single">22708</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2210</TD>
+<TD class="right border-right-single">22027</TD>
+<TD class="right border-right-single">22723</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2214</TD>
+<TD class="right border-right-single">22039</TD>
+<TD class="right border-right-single">22735</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2215</TD>
+<TD class="right border-right-single">22042</TD>
+<TD class="right border-right-single">22738</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2216</TD>
+<TD class="right border-right-single">22045</TD>
+<TD class="right border-right-single">22741</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center">x</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2222</TD>
+<TD class="right border-right-single">22063</TD>
+<TD class="right border-right-single">22759</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2223</TD>
+<TD class="right border-right-single">22066</TD>
+<TD class="right border-right-single">22762</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2227</TD>
+<TD class="right border-right-single">22078</TD>
+<TD class="right border-right-single">22774</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2228</TD>
+<TD class="right border-right-single">22081</TD>
+<TD class="right border-right-single">22777</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2231</TD>
+<TD class="right border-right-single">22090</TD>
+<TD class="right border-right-single">22786</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2236</TD>
+<TD class="right border-right-single">22105</TD>
+<TD class="right border-right-single">22801</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2237</TD>
+<TD class="right border-right-single">22108</TD>
+<TD class="right border-right-single">22804</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2241</TD>
+<TD class="right border-right-single">22120</TD>
+<TD class="right border-right-single">22816</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2242</TD>
+<TD class="right border-right-single">22123</TD>
+<TD class="right border-right-single">22819</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2243</TD>
+<TD class="right border-right-single">22126</TD>
+<TD class="right border-right-single">22822</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2244</TD>
+<TD class="right border-right-single">22129</TD>
+<TD class="right border-right-single">22825</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2245</TD>
+<TD class="right border-right-single">22132</TD>
+<TD class="right border-right-single">22828</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2246</TD>
+<TD class="right border-right-single">22135</TD>
+<TD class="right border-right-single">22831</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2247</TD>
+<TD class="right border-right-single">22138</TD>
+<TD class="right border-right-single">22834</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2501</TD>
+<TD class="right border-right-single">25070</TD>
+<TD class="right border-right-single">26145</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2502</TD>
+<TD class="right border-right-single">25073</TD>
+<TD class="right border-right-single">26148</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2503</TD>
+<TD class="right border-right-single">25076</TD>
+<TD class="right border-right-single">26151</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single">x</TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center border-right-single"></TD>
+<TD class="center"></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">2504</TD>
+<TD class="right border-bottom-single border-right-single">25079</TD>
+<TD class="right border-bottom-single border-right-single">26154</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single border-right-single">x</TD>
+<TD class="center border-bottom-single"></TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV></DIV>
+<P>(2) The following table specifies the non-paired carrier frequencies that are available for assignment to public coast stations for simplex operations. These frequencies are available for use by authorized ship stations for transmissions to coast stations (simplex operations). Assignments on these frequencies must accept interference. They are shared with government users and are considered “common use” frequencies under the international Radio Regulations. They cannot be notified for inclusion in the Master International Frequency Register, which provides stations with interference protection, but may be listed in the international List of Coast Stations. (<I>See</I> Radio Regulation No. 1220 and Recommendation 304.)</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Public Correspondence Simplex</P><P class="headnote">[Non-paired radiotelephony frequencies in the 4000-27500 kHz Band <sup>1</sup> Carrier Frequencies (kHz)]</P></CAPTION>
+<THEAD>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">16537 <sup>2</sup></TD>
+<TD class="right border-right-single">18825</TD>
+<TD class="right border-right-single">22174</TD>
+<TD class="right">25100</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">16540</TD>
+<TD class="right border-right-single">18828</TD>
+<TD class="right border-right-single">22177</TD>
+<TD class="right">25103</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">18831</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right">25106</TD>
+</TR>
+<TR>
+<TD class="left border-right-single"> </TD>
+<TD class="right border-right-single">18834</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right">25109</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single"> </TD>
+<TD class="right border-bottom-single border-right-single">18837</TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single">25112
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="4"><sup>1</sup> Coast stations limited to a maximum transmitter power of 1 kW (PEP).
+</TD></TR><TR><TD colspan="4"><sup>2</sup> The alternative carrier frequency 16537 kHz may be used by ship stations and coast stations for calling on a simplex basis, provided that the peak envelope power does not exceed 1 kW.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(c) <I>Working frequencies in the marine VHF 156-162 MHz band.</I> (1)(i) The frequency pairs listed in this paragraph are available for assignment to public coast stations for communications with ship stations and units on land.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Working Carrier Frequency Pairs in the 156-162 MHz Band <sup>1</sup></P></CAPTION>
+<THEAD>
+<TR>
+<TH rowspan="2" class="center border-top-single border-bottom-single border-right-single">Channel designator</TH>
+<TH colspan="2" class="center border-top-single border-bottom-single">Carrier Frequency (MHz)</TH>
+</TR>
+<TR>
+<TH class="center border-bottom-single border-right-single">Ship transmit</TH>
+<TH class="center border-bottom-single">Coast transmit</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">24</TD>
+<TD class="right border-right-single">157.200</TD>
+<TD class="right">161.800</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">84</TD>
+<TD class="right border-right-single">157.225</TD>
+<TD class="right">161.825</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">25 <sup>5</sup></TD>
+<TD class="right border-right-single">157.250</TD>
+<TD class="right">161.850</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">85 <sup>2</sup></TD>
+<TD class="right border-right-single">157.275</TD>
+<TD class="right">161.875</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">26</TD>
+<TD class="right border-right-single">157.300</TD>
+<TD class="right">161.900</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">86</TD>
+<TD class="right border-right-single">157.325</TD>
+<TD class="right">161.925</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">27</TD>
+<TD class="right border-right-single">157.350</TD>
+<TD class="right">161.950</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">87 <sup>3</sup></TD>
+<TD class="right border-right-single">157.375</TD>
+<TD class="right">161.975</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">28</TD>
+<TD class="right border-right-single">157.400</TD>
+<TD class="right">162.000</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">88 <sup>4</sup></TD>
+<TD class="right border-bottom-single border-right-single">157.425</TD>
+<TD class="right border-bottom-single">162.025
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="3"><sup>1</sup> For special assignment of frequencies in this band in certain areas of Washington State, the Great Lakes and the east coast of the United States pursuant to arrangements between the United States and Canada, see subpart B of this part.
+</TD></TR><TR><TD colspan="3"><sup>2</sup> The frequency pair 157.275/161.875 MHz is available on a primary basis to ship and public coast stations. In Alaska it is also available on a secondary basis to private mobile repeater stations.
+</TD></TR><TR><TD colspan="3"><sup>3</sup> The frequency 161.975 MHz is available only for Automatic Identification System communications. In VPCSAs 10-42, site-based stations licensed to operate on frequency 161.975 MHz prior to March 2, 2009 may continue to operate on a co-primary basis on that frequency until March 2, 2024.
+</TD></TR><TR><TD colspan="3"><sup>4</sup> The frequency 162.025 MHz is available only for Automatic Identification System communications. One hundred twenty kilometers (75 miles) from the United States/Canada border, the frequency 157.425 MHz is available for intership and commercial communications. Outside the Puget Sound area and its approaches and the Great Lakes, 157.425 MHz is available for communications between commercial fishing vessels and associated aircraft while engaged in commercial fishing activities.
+</TD></TR><TR><TD colspan="3"><sup>5</sup> In VPCSAs 10-42, the working carrier frequency pair 157.250/161.850 MHz (Channel 25) is not available for assignment under part 80.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(ii) Service areas in the marine VHF 156-162 MHz band are VHF Public Coast Service Areas (VPCSAs). As listed in the table in this paragraph (c)(1)(ii), VPCSAs are based on, and composed of one or more of, the U.S. Department of Commerce's 172 Economic Areas (EAs). <I>See</I> 60 FR 13114 (March 10, 1995). In addition, the Commission shall treat Guam and the Northern Mariana Islands, Puerto Rico and the United States Virgin Islands, American Samoa, and the Gulf of Mexico as EA-like areas, and has assigned them EA numbers 173-176, respectively. Maps of the EAs and VPCSAs are available for public inspection through the Federal Communications Commission's Reference Information Center, Tel: 1-888-225-5322. In addition to the EAs listed in the table in this paragraph (c)(1)(ii), each VPCSA also includes the adjacent waters under the jurisdiction of the United States. In VPCSAs 10-42, the working carrier frequency pair 157.250 MHz/161.850 MHz (Channel 25) is not available for assignment under this part.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<THEAD>
+<TR>
+<TH colspan="2" class="center border-top-single border-bottom-single">VHF Public coast station areas (VPCSAs)</TH>
+</TR>
+<TR>
+<TH class="center border-bottom-single border-right-single">VPCSAs</TH>
+<TH class="center border-bottom-single">EAs</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">1 (Northern Atlantic)</TD>
+<TD class="left">1-5, 10</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2 (Mid-Atlantic)</TD>
+<TD class="left">9, 11-23, 25, 42, 46</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">3 (Southern Atlantic)</TD>
+<TD class="left">24, 26-34, 37, 38, 40, 41, 174</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">4 (Mississippi River)</TD>
+<TD class="left">34, 36, 39, 43-45, 47-53, 67-107, 113, 116-120, 122-125, 127, 130-134, 176</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">5 (Great Lakes)</TD>
+<TD class="left">6-8, 54-66, 108, 109</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">6 (Southern Pacific)</TD>
+<TD class="left">160-165</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">7 (Northern Pacific)</TD>
+<TD class="left">147, 166-170</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">8 (Hawaii)</TD>
+<TD class="left">172, 173, 175</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">9 (Alaska)</TD>
+<TD class="left">171</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">10 (Grand Forks)</TD>
+<TD class="left">110</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">11 (Minot)</TD>
+<TD class="left">111</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">12 (Bismarck)</TD>
+<TD class="left">112</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">13 (Aberdeen)</TD>
+<TD class="left">114</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">14 (Rapid City)</TD>
+<TD class="left">115</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">15 (North Platte)</TD>
+<TD class="left">121</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">16 (Western Oklahoma)</TD>
+<TD class="left">126</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">17 (Abilene)</TD>
+<TD class="left">128</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">18 (San Angelo)</TD>
+<TD class="left">129</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">19 (Odessa-Midland)</TD>
+<TD class="left">135</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">20 (Hobbs)</TD>
+<TD class="left">136</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">21 (Lubbock)</TD>
+<TD class="left">137</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">22 (Amarillo)</TD>
+<TD class="left">138</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">23 (Santa Fe)</TD>
+<TD class="left">139</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">24 (Pueblo)</TD>
+<TD class="left">140</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">25 (Denver-Boulder-Greeley)</TD>
+<TD class="left">141</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">26 (Scottsbluff)</TD>
+<TD class="left">142</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">27 (Casper)</TD>
+<TD class="left">143</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">28 (Billings)</TD>
+<TD class="left">144</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">29 (Great Falls)</TD>
+<TD class="left">145</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">30 (Missoula)</TD>
+<TD class="left">146</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">31 (Idaho Falls)</TD>
+<TD class="left">148</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">32 (Twin Falls)</TD>
+<TD class="left">149</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">33 (Boise City)</TD>
+<TD class="left">150</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">34 (Reno)</TD>
+<TD class="left">151</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">35 (Salt Lake City-Ogden)</TD>
+<TD class="left">152</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">36 (Las Vegas)</TD>
+<TD class="left">153</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">37 (Flagstaff)</TD>
+<TD class="left">154</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">38 (Farmington)</TD>
+<TD class="left">155</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">39 (Albuquerque)</TD>
+<TD class="left">156</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">40 (El Paso)</TD>
+<TD class="left">157</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">41 (Phoenix-Mesa)</TD>
+<TD class="left">158</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">42 (Tucson)</TD>
+<TD class="left border-bottom-single">159</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV></DIV>
+<P>(iii) Subject to paragraph (c)(3) of this section, each licensee may also operate on 12.5 kHz offset frequencies in areas where the licensee is authorized on both frequencies adjacent to the offset frequency, and in areas where the licensee on the other side of the offset frequency consents to the licensee's use of the adjacent offset frequency. Coordination with Canada is required for offset operations under any circumstance in which operations on either adjoining 25 kHz channel would require such coordination. <I>See</I> § 80.57 of this part.</P>
+<P>(2) Any recovered channel pairs will revert automatically to the holder of the VPCSA license within which such channels are included, except the channel pairs listed in the table in paragraph (c)(1)(i) of this section. Those channel pairs, and any channel pairs recovered where there is no VPCSA licensee, will be retained by the Commission for future licensing.</P>
+<P>(e) Canada/U.S.A. channeling arrangement frequencies. The VHF frequencies assignable to ship and coast stations in the State of Washington and their usage limitations pursuant to the Canada/U.S.A. channeling arrangement are described in subpart B of this part.</P>
+<P>(4) Subject to the requirements of § 1.924 of this chapter and § 80.21, each VPCSA licensee may place stations anywhere within its region without obtaining prior Commission approval provided:</P>
+<P>(i) It provides to co-channel coast station incumbent licensees, and incumbent Private Land Mobile Radio licensees authorized under part 90 of this chapter on a primary basis, protection as defined in subpart P of this part. VPCSA licensees that share a common border may either distribute the available frequencies upon mutual agreement or request that the Commission assign frequencies along the common border.</P>
+<P>(ii) The locations and/or technical parameters of the transmitters are such that individual coordination of the channel assignment(s) with a foreign administration, under applicable international agreements and rules in this part, is not required.</P>
+<P>(iii) For any construction or alteration that would exceed the requirements of § 17.7 of this chapter, licensees must notify the appropriate Regional Office of the Federal Aviation Administration (FAA Form 7460-1) and file a request for antenna height clearance and obstruction marking and lighting specifications (FCC Form 854) with the FCC, Attn: Information Processing Branch, 1270 Fairfield Rd., Gettysburg, PA 17325-7245.</P>
+<P>(iv) The transmitters must not have a significant environmental effect as defined by §§ 1.1301 through 1.1319 of this chapter.</P>
+<P>(d) <I>Working frequencies in the Mississippi River System.</I> The Mississippi River System includes the Mississippi River and connecting navigable waters other than the Great Lakes. The following simplex frequencies are available for assignment to public coast stations serving the Mississippi River System for radiotelephony communications. These simplex frequencies also are available for use by authorized ship stations within communication service range, whether or not the ship is operating within the confines of the Mississippi River System.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Mississippi River System Working Frequencies; Carrier Frequencies (kHz)</P></CAPTION>
+<THEAD>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="right border-right-single">2086 <sup>1</sup></TD>
+<TD class="right border-right-single">4065</TD>
+<TD class="right border-right-single">6209</TD>
+<TD class="right border-right-single">8201</TD>
+<TD class="right border-right-single">12362</TD>
+<TD class="right">16543</TD>
+</TR>
+<TR>
+<TD class="right border-right-single">2782</TD>
+<TD class="right border-right-single">4089</TD>
+<TD class="right border-right-single">6212</TD>
+<TD class="right border-right-single">8213</TD>
+<TD class="right border-right-single">12365</TD>
+<TD class="right">16546</TD>
+</TR>
+<TR>
+<TD class="right border-right-single"> </TD>
+<TD class="right border-right-single">4116</TD>
+<TD class="right border-right-single">6510</TD>
+<TD class="right border-right-single">8725</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right"></TD>
+</TR>
+<TR>
+<TD class="right border-bottom-single border-right-single"> </TD>
+<TD class="right border-bottom-single border-right-single">4408</TD>
+<TD class="right border-bottom-single border-right-single">6513</TD>
+<TD class="right border-bottom-single border-right-single">8737</TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single"></TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="6"><sup>1</sup> Limited to a maximum transmitter output of 150 watts (PEP).</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(e) <I>Canada/U.S.A. channeling arrangement frequencies.</I> The VHF frequencies assignable to ship and coast stations in the State of washington and their usage limitations purusant to the Canada/U.S.A. channeling arrangement are described in subpart B of this part.</P>
+<CITA TYPE="N">[51 FR 31213, Sept. 2, 1986]
+</CITA>
+<EDNOTE>
+<HED>Editorial Note:</HED><PSPACE>For <E T="04">Federal Register</E> citations affecting § 80.371, see the List of CFR Sections Affected, which appears in the Finding Aids section of the printed volume and at <I>www.govinfo.gov.</I></PSPACE></EDNOTE>
+</DIV8>

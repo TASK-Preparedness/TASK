@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>task-mesh</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>T.A.S.K. Mesh Operations</name>
+  <summary>Native field station for Meshtastic radios over USB</summary>
+  <description>
+    <p>Connects to a Meshtastic radio over USB serial and shows its connection state, the local device
+    and port, and a live table of mesh nodes. Data is stored locally in SQLite. Works offline.</p>
+  </description>
+  <launchable type="desktop-id">task-mesh.desktop</launchable>
+  <provides><binary>task-mesh</binary></provides>
+  <categories><category>HamRadio</category><category>Utility</category></categories>
+  <content_rating type="oars-1.1"/>
+  <releases><release version="0.1.0" date="2026-10-05"><description><p>Development release.</p></description></release></releases>
+</component>

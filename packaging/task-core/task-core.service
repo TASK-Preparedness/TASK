@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# Installed by the task-core package but NOT enabled. It refuses to start until
+# task-core-migrate has written /etc/task/MIGRATED, and never runs alongside rain-core.
+[Unit]
+Description=T.A.S.K. Core (task-core)
+Documentation=file:///usr/share/doc/task-core/MIGRATION.md
+Conflicts=rain-core.service
+After=rain-core.service systemd-udevd.service
+ConditionPathExists=/etc/task/MIGRATED
+
+[Service]
+Type=simple
+# Service account keeps its legacy name until migration stage M4 (separate approval).
+User=rain-core
+Group=rain-core
+# /run/rain exists only while task-core runs and holds just the compat symlink, so a
+# rolled-back rain-core (RuntimeDirectory=rain) finds it free again.
+RuntimeDirectory=task rain
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=no
+ExecStart=/usr/bin/task-core --config /etc/task/core.toml
+ExecStartPost=/usr/bin/ln -sfn /run/task/core.sock /run/rain/core.sock
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/task
+ReadOnlyPaths=/etc/task
+UMask=0007
+
+[Install]
+WantedBy=multi-user.target

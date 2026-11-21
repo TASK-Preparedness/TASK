@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.medical"
+name = "Medical"
+version = "0.2.0"
+description = "Offline medical REFERENCE material found on this device (Kiwix collections, IIAB modules, configured folders). No patient records, no clinical advice."
+icon = "heart-pulse"
+order = 70
+min_platform = "0.2.0"
+readiness = "medical"
+status_note = "reference only"
+
+[launch]
+builtin = "medical"

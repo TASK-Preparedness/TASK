@@ -1,0 +1,14 @@
+api: 1
+id: mesh
+name: Meshtastic
+version: 0.1.0
+summary: Mesh messaging and positions from the logical mesh device.
+requires: []
+capabilities:
+  requires: [mesh.messaging, mesh.position]
+logical_devices: [mesh.primary]
+permissions:
+  public: []
+  operator: []
+  administrator: []
+systemd: []

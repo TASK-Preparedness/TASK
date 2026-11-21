@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas (GitHub Discussions)
+    url: https://github.com/TASK-Preparedness/TASK/discussions
+    about: Ask questions, share setups and discuss ideas here.
+  - name: Security vulnerability
+    url: https://github.com/TASK-Preparedness/TASK/security/advisories/new
+    about: Report security or RF-safety problems privately.

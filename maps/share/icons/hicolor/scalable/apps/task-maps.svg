@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: 2026 Joshua Sturtz -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="4" y="4" width="120" height="120" rx="22" fill="#15181D" stroke="#2A2F36" stroke-width="4"/>
+  <g stroke="#2A2F36" stroke-width="3">
+    <path d="M4 44h120M4 84h120M44 4v120M84 4v120"/>
+  </g>
+  <path d="M18 98 L46 70 L70 82 L108 40" fill="none" stroke="#D29922" stroke-width="6" stroke-linecap="round"
+        stroke-linejoin="round" stroke-dasharray="2 10"/>
+  <path d="M64 22c-15 0-27 12-27 27 0 20 27 51 27 51s27-31 27-51c0-15-12-27-27-27z" fill="#4CC2FF"
+        stroke="#0B0D10" stroke-width="4"/>
+  <circle cx="64" cy="49" r="10" fill="#0B0D10"/>
+</svg>

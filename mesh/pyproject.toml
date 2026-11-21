@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-mesh"
+version = "0.3.1"
+description = "T.A.S.K. Mesh Operations — native Qt field station for Meshtastic radios over USB serial"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "T.A.S.K. Mesh Operations contributors" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: X11 Applications :: Qt",
+    "Topic :: Communications :: Ham Radio",
+]
+# Floors are the Debian 13 (trixie) package versions the app is tested against.
+dependencies = [
+    "PySide6>=6.8",
+    "protobuf>=4.21.12",
+    "pypubsub>=4.0.3",
+    "pyserial>=3.5",
+    "pyudev>=0.24.3",
+    "meshtastic==2.7.11",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-qt>=4.4", "pytest-timeout>=2.3"]
+
+[project.scripts]
+task-mesh = "task_mesh.app:main"
+
+[tool.setuptools.packages.find]
+include = ["task_mesh*"]
+exclude = ["task_mesh._vendor*"]
+
+[tool.setuptools.package-data]
+"task_mesh.database" = ["migrations/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+timeout = 30
+markers = [
+    "slow: long-running test (handshake timeout ~31 s, crash-safety loop)",
+]
+addopts = "-ra"
+qt_api = "pyside6"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

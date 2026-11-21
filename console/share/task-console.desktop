@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# Application-menu entry only. This is not an autostart entry (PHASE-2.md section 10.1).
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=T.A.S.K. Console
+GenericName=Field computer console
+Comment=T.A.S.K. Console: status and devices through task-core
+Exec=task-console
+Icon=task-console
+Terminal=false
+Categories=Utility;System;
+StartupNotify=true
+StartupWMClass=task-console

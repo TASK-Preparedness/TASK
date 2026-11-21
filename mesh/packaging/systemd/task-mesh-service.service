@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# T.A.S.K. Mesh background radio service (user unit). Installed by task-mesh 0.3.0 but NOT enabled.
+# Enable explicitly:  systemctl --user enable --now task-mesh-service
+[Unit]
+Description=T.A.S.K. Mesh background radio service (Meshtastic + MeshCore receive, notifications)
+Documentation=file:///usr/share/doc/task-mesh/SERVICE.md
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/task-mesh-service
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+# ProtectSystem=strict makes the whole tree read-only; the service only writes its own XDG dirs and the runtime dir.
+ReadWritePaths=-%h/.local/share -%h/.local/state -%h/.config %t
+RestrictAddressFamilies=AF_UNIX
+LockPersonality=yes
+RestrictRealtime=yes
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=graphical-session.target

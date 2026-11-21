@@ -1,0 +1,30 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: task-mesh
+Source: https://example.invalid/task-mesh
+
+Files: *
+Copyright: 2026 T.A.S.K. Mesh Operations contributors
+License: GPL-3+
+
+Files: usr/lib/task-mesh/task_mesh/_vendor/meshtastic/*
+Copyright: Meshtastic contributors (https://github.com/meshtastic/python)
+License: GPL-3
+Comment: Unmodified meshtastic 2.7.11 from PyPI (sha256
+ adb020f2cd7ace53896c6bf487f2d2136498dd88052c41a2aa6fb7a4634971b5), shipped
+ as source, minus its tests/ and analysis/ subpackages. Its license file is
+ kept in task_mesh/_vendor/meshtastic-2.7.11.dist-info/licenses/.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ On Debian systems the full text is in /usr/share/common-licenses/GPL-3.
+
+License: GPL-3
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License version 3 as published by the Free
+ Software Foundation.
+ .
+ On Debian systems the full text is in /usr/share/common-licenses/GPL-3.

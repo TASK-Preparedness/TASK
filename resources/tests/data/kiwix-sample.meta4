@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metalink xmlns="urn:ietf:params:xml:ns:metalink">
+  <generator>MirrorBrain/2.19.0</generator>
+  <origin dynamic="true">https://lb.download.kiwix.org/zim/zimit/php.net_en_all_2024-08.zim.meta4</origin>
+  <published>2026-10-13T14:35:44Z</published>
+  <publisher>
+    <name>Kiwix project</name>
+    <url>https://kiwix.org</url>
+  </publisher>
+
+  <file name="php.net_en_all_2024-08.zim">
+    <size>32847118</size>
+
+    <!-- <mtime>1723539841</mtime> -->
+
+    <!-- internal id: 185 -->
+    <hash type="md5">895612b8e63ba94d2dcf88d8b80de5e3</hash>
+    <hash type="sha-1">45233db15316ccb1e5192b6bea0b604faa6c9c99</hash>
+    <hash type="sha-256">e8e3549228bafaaff927078fcd87b677ed10ba23292c0c70883442bf3d742c3b</hash>
+    <pieces length="4194304" type="sha-1">
+      <hash>567be8ecd1863d7610eb3a37c3bd9637f7d484fe</hash>
+      <hash>66069f7ddaa1171918660e97424700f2efb377a3</hash>
+      <hash>22778a5ae5ac61bd22131a5ea5abbb6c51d7c308</hash>
+      <hash>7077633b7ac3c16ace6bd5188f8d23a661253e6f</hash>
+      <hash>385cdf8670516f38870dd6d28457f407763708ec</hash>
+      <hash>084a62b9cea3d661caf69da2c9be0b6895f18497</hash>
+      <hash>61d4b3a1617ced2a3cced0f8472d5bec9f67f5c6</hash>
+      <hash>59273df79420474a9ce458a57807a85bdc14185c</hash>
+    </pieces>
+
+
+    <!-- Found 9 mirrors: 0 in the same network prefix, 0 in the same autonomous system,
+         2 handling this country, 0 in the same region, 3 elsewhere -->
+
+    <!-- Mirrors in the same network (unknown): -->
+
+    <!-- Mirrors in the same AS (unknown): -->
+
+    <!-- Mirrors which handle this country (US): -->
+    <url location="us" priority="1">https://ny.mirror.driftle.ss/kiwix/zim/zimit/php.net_en_all_2024-08.zim</url>
+    <url location="us" priority="2">https://wi.mirror.driftle.ss/kiwix/zim/zimit/php.net_en_all_2024-08.zim</url>
+
+    <!-- Mirrors in the same continent (NA): -->
+
+    <!-- Mirrors in the rest of the world: -->
+    <url location="nl" priority="3">https://ftp.nluug.nl/pub/kiwix/zim/zimit/php.net_en_all_2024-08.zim</url>
+    <url location="fr" priority="4">https://mirror.download.kiwix.org/zim/zimit/php.net_en_all_2024-08.zim</url>
+    <url location="aq" priority="5">https://mirror-sites-in.mblibrary.info/mirror-sites/download.kiwix.org/zim/zimit/php.net_en_all_2024-08.zim</url>
+  </file>
+</metalink>

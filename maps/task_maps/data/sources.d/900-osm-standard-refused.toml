@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# Shipped only so the refusal is explicit and visible in the source list. task-maps refuses bulk /
+# offline download from tile.openstreetmap.org regardless of this file (hard-coded host rule).
+schema = 1
+id = "osm-standard"
+name = "OpenStreetMap standard tiles (download not permitted)"
+url = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+mechanism = "xyz"
+format = "png"
+attribution = "© OpenStreetMap contributors"
+license = "Data ODbL; tiles CC BY-SA 2.0. Tile servers are donation-funded with limited capacity."
+usage_policy_url = "https://operations.osmfoundation.org/policies/tiles/"
+offline_download_permitted = false
+evidence = "OSMF Tile Usage Policy §4: 'Bulk downloading is any pre-emptive fetching of tiles other than those a user is actively viewing ... Offline use is not permitted on tile.openstreetmap.org.'"
+evidence_urls = ["https://operations.osmfoundation.org/policies/tiles/"]
+verified_on = "2026-10-10"
+rate_limit = 1.0
+max_concurrency = 1
+min_zoom = 0
+max_zoom = 19
+user_agent_required = true
+enabled = false
+coverage = "World"
+notes = "For offline OSM maps use your own tile server, a provider whose terms allow offline use, or an MBTiles package."

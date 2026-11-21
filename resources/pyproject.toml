@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+[project]
+name = "task-resources"
+version = "0.2.4"
+description = "T.A.S.K. Resources: native offline ZIM/PDF/EPUB library and reader (python3-libzim, PySide6)"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.13"
+
+[project.scripts]
+task-resources = "task_resources.app:main"
+
+[tool.pytest.ini_options]
+# Phase 4F.3: headless by default (tests/conftest.py sets QT_QPA_PLATFORM=offscreen), a per-test timeout so a
+# Qt/WebEngine stall fails one test instead of hanging the run, and the 3000-file indexing benchmark opt-in.
+markers = ["slow: long benchmark; run with -m slow (or TASK_RUN_SLOW=1)"]
+timeout = 120
+timeout_method = "thread"
+addopts = "-m 'not slow'"

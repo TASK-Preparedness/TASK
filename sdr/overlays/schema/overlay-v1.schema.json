@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task-sdr-overlay/1",
+  "title": "T.A.S.K. SDR Studio frequency overlay dataset, version 1",
+  "description": "Reference data only: listed does not mean active; receive capability is not transmit authorization. task_sdr/overlays.py is the authoritative validator and adds checks JSON Schema cannot express: no duplicate JSON keys, no NaN/Infinity, dates must exist and not be in the future, retrieved >= publication_date, range start < end, marker bandwidth inside bounds, no duplicate items, files of at most 2 MiB, regular files only. Non-user datasets require source.url, publication_date and retrieved. A file failing any rule is rejected whole.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "type", "version", "source", "publication_date", "retrieved", "last_verified", "items"],
+  "properties": {
+    "schema": {"const": "task-sdr-overlay/1"},
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 200},
+    "type": {"enum": ["allocation", "channel_plan", "station_record", "user_annotation"]},
+    "version": {"type": "string", "pattern": "^[0-9A-Za-z][0-9A-Za-z.+~-]{0,31}$"},
+    "source": {
+      "type": "object", "additionalProperties": false, "required": ["agency", "citation"],
+      "properties": {
+        "agency": {"type": "string", "minLength": 1, "maxLength": 200},
+        "citation": {"type": "string", "maxLength": 200},
+        "url": {"type": "string", "pattern": "^https://[A-Za-z0-9.-]+(/[^\\s]*)?$", "maxLength": 500}
+      }
+    },
+    "publication_date": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "retrieved": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "last_verified": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "null = UNVERIFIED"},
+    "stale_after_days": {"type": "integer", "minimum": 1, "maximum": 3650, "default": 365},
+    "attribution": {"type": "string", "maxLength": 1000},
+    "example": {"type": "boolean", "default": false, "description": "true = demonstration data, not real reference data"},
+    "notes": {"type": "string", "maxLength": 2000},
+    "items": {"type": "array", "maxItems": 5000, "items": {"oneOf": [{"$ref": "#/$defs/range"}, {"$ref": "#/$defs/marker"}]}}
+  },
+  "$defs": {
+    "hz": {"type": "integer", "minimum": 1, "maximum": 6000000000, "description": "integer hertz"},
+    "common": {
+      "label": {"type": "string", "minLength": 1, "maxLength": 200},
+      "ref": {"type": "string", "maxLength": 200},
+      "notes": {"type": "string", "maxLength": 1000},
+      "tags": {"type": "array", "maxItems": 16, "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,31}$"}}
+    },
+    "range": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "label", "start_hz", "end_hz"],
+      "properties": {
+        "kind": {"const": "range"}, "label": {"$ref": "#/$defs/common/label"},
+        "start_hz": {"$ref": "#/$defs/hz"}, "end_hz": {"$ref": "#/$defs/hz"},
+        "ref": {"$ref": "#/$defs/common/ref"}, "notes": {"$ref": "#/$defs/common/notes"}, "tags": {"$ref": "#/$defs/common/tags"}
+      }
+    },
+    "marker": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "label", "freq_hz"],
+      "properties": {
+        "kind": {"const": "marker"}, "label": {"$ref": "#/$defs/common/label"},
+        "freq_hz": {"$ref": "#/$defs/hz"},
+        "bandwidth_hz": {"type": "integer", "minimum": 1, "maximum": 1000000000},
+        "ref": {"$ref": "#/$defs/common/ref"}, "notes": {"$ref": "#/$defs/common/notes"}, "tags": {"$ref": "#/$defs/common/tags"}
+      }
+    }
+  }
+}

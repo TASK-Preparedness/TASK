@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<DIV8 N="80.373" TYPE="SECTION" hierarchy_metadata="{&quot;path&quot;:&quot;/on/_SUBSTITUTE_DATE_/title-47/section-80.373&quot;,&quot;citation&quot;:&quot;47 CFR 80.373&quot;}">
+<HEAD>§ 80.373 Private communications frequencies.</HEAD>
+<P>This section describes the carrier frequencies assignable for ship-to-ship and ship-to-coast private communications.</P>
+<P>(a) <I>Special requirements for private coast stations.</I> Assignment to private coast stations of radiotelephony frequencies in the 2000-27500 kHz band are subject to the following:</P>
+<P>(1) Private coast stations must use J3E emission.</P>
+<P>(2) On 2182 kHz, private coast stations must be capable of receiving J3E and H3E emissions.</P>
+<P>(3) Except in the Mississippi River System and Great Lakes, private coast stations serving lakes or rivers are not authorized on the 2000-2850 kHz band.</P>
+<P>(4) Private coast stations may use DSC for calling on their assigned frequencies in the 2000-27500 kHz band and on those frequencies in the 156-162 MHz band which are allocated for maritime control, commercial and non-commercial communications.</P>
+<P>(b) Frequencies in the 2000-27500 kHz band for intership safety and other communications. This paragraph describes the geographic areas of operation and the frequencies and limitations in the band available for assignment for intership safety and operational simplex radiotelephone communications.</P>
+<P>(1) <I>Frequencies avaiable.</I></P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<THEAD>
+<TR>
+<TH class="center border-top-single border-bottom-single border-right-single">Carrier frequency (kHz)</TH>
+<TH class="center border-top-single border-bottom-single">Geographic area</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">2003.0</TD>
+<TD class="left">Great Lakes only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2082.5 <sup>1 2</sup></TD>
+<TD class="left">All areas.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2093.0 <sup>1</sup></TD>
+<TD class="left">All areas.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2142.0</TD>
+<TD class="left">Pacific coast areas south of 42 degrees north on a day basis only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2203.0 <sup>2</sup></TD>
+<TD class="left">Gulf of Mexico.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2214.0 <sup>1</sup></TD>
+<TD class="left">All areas.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2638.0 <sup>1</sup></TD>
+<TD class="left">All areas.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2670.0</TD>
+<TD class="left">All areas.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2738.0 <sup>1</sup></TD>
+<TD class="left">All areas except the Great Lakes.</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">2830.0</TD>
+<TD class="left border-bottom-single">Gulf of Mexico only.
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="2"><sup>1</sup> Limited to a peak envelope power of 150 watts.
+</TD></TR><TR><TD colspan="2"><sup>2</sup> Available on a secondary basis for intership communications by ships involved in non-commercial fishing.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(2) Except for 2093.0 kHz and 2214.0 kHz the frequencies shown in paragraph (b)(1) of this section are authorized primarily for intership safety communications in the indicated geographic area.</P>
+<P>(3) Except for the frequencies 2093.0 kHz, 2214.0 kHz and 2670.0 kHz, the frequencies shown in paragraph (b)(1) of this section may be used on a non-interference basis to safety communications, for operational communications and, in the case of commercial transport ships and ships of municipal and state governments, for business communications.</P>
+<P>(4) Ship stations may communicate with government coast stations on 2003.0 kHz about passage of vessels. Interference must not be caused to communications on the St. Lawrence Seaway and on the St. Mary's River.</P>
+<P>(5) Ship stations may use 2670.0 kHz for communications with coast and ship stations of the U.S. Coast Guard. When a ship is not equipped to transmit on 2670.0 kHz or in the band 156-162 MHz the frequency 2003.0 kHz may be used on the Great Lakes for communications must not cause harmful interference to intership safety, operational and business communications.</P>
+<P>(6) Navigational communications between ships and private coast stations may be exchanged on 2738.0 kHz and 2830.0 kHz. The frequencies 2214.0 kHz, 2738.0 kHz and 2830.0 kHz are assignable to private coast stations upon a showing that they need to communicate with commercial transport or Government ships. Private coast station applicants must show that public coast stations do not provide the required communications and harmful interference will not be caused to the intership use of these frequencies. The transmitter power must not exceed 150 watts. If 2214.0 kHz is authorized for ships, intership communication is also authorized. The geographic limitations to the frequencies 2738.0 kHz and 2830.0 kHz do not prohibit intership communication of less than 320 km (200 statute miles) when only one of the ship stations is within a permitted use geographic area.</P>
+<P>(7) Private aircraft stations may communicate with ship stations on 2738.0 kHz and 2830.0 kHz if:</P>
+<P>(i) The communications are limited to business or operational needs of the vessel while it is engaged in commercial fishing activities in the open sea or adjacent waters;</P>
+<P>(ii) Harmful interference must not be caused to intership communications;</P>
+<P>(iii) The maximum output power used for such communication must not exceed 25 watts;</P>
+<P>(c) <I>Frequencies in the 2000-27500 kHz bands for business and operational communications.</I> (1) The following simplex frequencies in the 2000-27500 kHz band are available for assignment to private coast stations for business and operational radiotelephone communications. These simplex frequencies also are available for use by authorized ship stations for business and operational radiotelephone communications.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Business and Operational Frequencies in the 2000-27500 kHz Band; Carrier Frequencies (kHz)</P></CAPTION>
+<THEAD>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">2065.0 <sup>1 3</sup></TD>
+<TD class="right border-right-single">4146</TD>
+<TD class="right border-right-single">6224</TD>
+<TD class="right border-right-single">8294</TD>
+<TD class="right border-right-single">12353</TD>
+<TD class="right border-right-single">16528</TD>
+<TD class="right border-right-single">18840</TD>
+<TD class="right border-right-single">22159</TD>
+<TD class="right">25115</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2079.0 <sup>1 3</sup></TD>
+<TD class="right border-right-single">4149</TD>
+<TD class="right border-right-single">6227</TD>
+<TD class="right border-right-single">8297</TD>
+<TD class="right border-right-single">12356</TD>
+<TD class="right border-right-single">16531</TD>
+<TD class="right border-right-single">18843</TD>
+<TD class="right border-right-single">22162</TD>
+<TD class="right">25118</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2096.5 <sup>1</sup></TD>
+<TD class="right border-right-single">4125 <sup>2</sup></TD>
+<TD class="right border-right-single">6230</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single">12359 <sup>6</sup></TD>
+<TD class="right border-right-single">16534</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single">22165</TD>
+<TD class="right"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">3023.0 <sup>4</sup></TD>
+<TD class="right border-right-single">4417 <sup>5</sup></TD>
+<TD class="right border-right-single">6516</TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single"></TD>
+<TD class="right border-right-single">22168</TD>
+<TD class="right"></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single"> </TD>
+<TD class="right border-bottom-single border-right-single">5680 <sup>4</sup></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single">22171</TD>
+<TD class="right border-bottom-single"></TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="9"><sup>1</sup> Limited to peak envelope power of 150 watts.
+</TD></TR><TR><TD colspan="9"><sup>2</sup> The frequency 4125 kHz is also available for distress and safety, and calling and reply, see § 80.369 (b) and (d) of this part.
+</TD></TR><TR><TD colspan="9"><sup>3</sup> The frequencies 2065.0 kHz and 2079.0 kHz must be coordinated with Canada.
+</TD></TR><TR><TD colspan="9"><sup>4</sup> The frequencies 3023.0 kHz and 5680.0 kHz are available to private coast stations licensed to state and local governments and any scene-of-action ships for the purpose of search and rescue scene-of-action coordination including communications with any scene-of-action aircraft.
+</TD></TR><TR><TD colspan="9"><sup>5</sup> The frequency 6516 kHz is limited to daytime operations. The frequencies 4417 kHz and 6516 kHz are also available for calling and reply, see § 80.369(d) of this part.
+</TD></TR><TR><TD colspan="9"><sup>6</sup> The alternative carrier frequency 12359 kHz may be used by ship stations and coast stations for calling on a simplex basis, provided that the peak envelope power does not exceed 1 kW.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(2) Assignment of these frequencies is subject to the following general limitations:</P>
+<P>(i) These frequencies are shared and are not available for the exclusive use of any station. No more than one frequency from each of the frequency bands will be authorized to a private station without justification;</P>
+<P>(ii) The emissions must be J3E or J2D except that when DSC is used the emission must be F1B or J2B; and</P>
+<P>(iii) Maximum transmitter output power is limited to 1 kW except as noted.</P>
+<P>(3) In addition to the frequencies shown in paragraph (c)(1) of this section, the following coast transmit frequencies listed in the table in § 80.371(a) of this chapter are available for assignment to private coast stations and authorized ship stations for simplex business and operational radiotelephone communications: in the East Coast, West Coast, and Gulf Coast regions, 2482 kHz; in the Alaska region, 2309 kHz. These frequencies shall not be assigned to public coast stations before July 25, 2002. After that date, only the above frequencies in the above regions that have been assigned to at least one private coast station shall continue to be available for assignment to private coast stations. If, by that date, in any of the above regions, any of the above frequencies has not been assigned to a private coast station, that frequency in that region shall be available for assignment only to public coast stations.</P>
+<P>(d) <I>Radioprinter frequencies.</I> (1) The following table describes the bands available for radioprinter simplex communications between ship and private coast stations:</P>
+<HD1>Frequency Bands (kHz)
+</HD1>
+<FP-1>2107-2170 4750-4850
+</FP-1>
+<FP-1>2194-2495 5060-5450
+</FP-1>
+<FP-1>2505-2850 5700-5950
+<SU>1</SU>
+</FP-1>
+<FP-1>3155-3400 7300-8100
+<SU>1</SU>
+</FP-1>
+<FP-1>4438-4650
+</FP-1>
+<EXTRACT>
+<P><SU>1</SU> After April 1, 2007, use of the sub-bands 5900-5950 kHz and 7300-7350 kHz shall be on the condition that harmful interference is not caused to HF broadcasting.</P></EXTRACT>
+<P>(2) Ship stations may conduct radioprinter communications with private coast stations on frequencies within these bands which are assigned to their associated private coast stations;</P>
+<P>(3) Any alphanumeric code may be used; and</P>
+<P>(4) The bandwidth of radioprinter communications on frequencies within these bands must not exceed 300 Hz.</P>
+<P>(e) <I>Frequencies in the 2000-27500 kHz band for medical advisory communications.</I> (1) Private coast stations may be authorized to use any frequencies within the 2030-27500 kHz band that are allocated to Government and non-Government fixed or fixed and mobile radio services shown in the Commission's Table of Frequency Allocations contained in § 2.106 of this chapter for communications with ship stations to provide medical treatment information or advice. Assignment of these frequencies is subject to the following limitations:</P>
+<P>(2) No protection is provided from harmful interference caused by foreign stations; and</P>
+<P>(3) A private coast station must cease operations on a frequency that causes harmful interference to a foreign station.</P>
+<P>(f) Frequencies in the 156-162 MHz band. The following tables describe the carrier frequencies available in the 156-162 MHz band for radiotelephone communications between ship and private coast stations. (<E T="04">Note:</E> the letter “A” following the channel designator indicates simplex operation on a channel designated internationally as a duplex channel.)</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Frequencies in the 156-162 MHz Band</P></CAPTION>
+<THEAD>
+<TR>
+<TH class="center border-top-single border-bottom-single border-right-single">Channel designator</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">Carrier frequency (MHz) ship transmit</TH>
+<TH class="center border-top-single border-bottom-single border-right-single">Carrier frequency (MHz) coast transmit</TH>
+<TH class="center border-top-single border-bottom-single">Points of communication (intership and between coast and ship unless otherwise indicated)</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Port Operations</strong></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">01A <sup>1</sup></TD>
+<TD class="right border-right-single">156.050</TD>
+<TD class="right border-right-single">156.050</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">63A <sup>1</sup></TD>
+<TD class="right border-right-single">156.175</TD>
+<TD class="right border-right-single">156.175</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">05A <sup>2</sup></TD>
+<TD class="right border-right-single">156.250</TD>
+<TD class="right border-right-single">156.250</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">65A</TD>
+<TD class="right border-right-single">156.275</TD>
+<TD class="right border-right-single">156.275</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">66A</TD>
+<TD class="right border-right-single">156.325</TD>
+<TD class="right border-right-single">156.325</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">12 <sup>3</sup></TD>
+<TD class="right border-right-single">156.600</TD>
+<TD class="right border-right-single">156.600</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">73</TD>
+<TD class="right border-right-single">156.675</TD>
+<TD class="right border-right-single">156.675</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">14 <sup>3</sup></TD>
+<TD class="right border-right-single">156.700</TD>
+<TD class="right border-right-single">156.700</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">74</TD>
+<TD class="right border-right-single">156.725</TD>
+<TD class="right border-right-single">156.725</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">77 <sup>4</sup></TD>
+<TD class="right border-right-single">156.875</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Intership only.</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">20A <sup>12</sup></TD>
+<TD class="right border-bottom-single border-right-single">157.000</TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="left border-bottom-single">Intership only.</TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Navigational (Bridge-to-Bridge)</strong> <sup>5</sup></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">67 <sup>7</sup></TD>
+<TD class="right border-right-single">156.375</TD>
+<TD class="right border-right-single">156.375</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">13 <sup>6</sup></TD>
+<TD class="right border-bottom-single border-right-single">156.650</TD>
+<TD class="right border-bottom-single border-right-single">156.650</TD>
+<TD class="left border-bottom-single"></TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Commercial</strong></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">01A <sup>1</sup></TD>
+<TD class="right border-right-single">156.050</TD>
+<TD class="right border-right-single">156.050</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">63A <sup>1</sup></TD>
+<TD class="right border-right-single">156.175</TD>
+<TD class="right border-right-single">156.175</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">07A</TD>
+<TD class="right border-right-single">156.350</TD>
+<TD class="right border-right-single">156.350</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">67 <sup>7</sup></TD>
+<TD class="right border-right-single">156.375</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Intership only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">08</TD>
+<TD class="right border-right-single">156.400</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Do.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">09</TD>
+<TD class="right border-right-single">156.450</TD>
+<TD class="right border-right-single">156.450</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">10</TD>
+<TD class="right border-right-single">156.500</TD>
+<TD class="right border-right-single">156.500</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">11 <sup>3</sup></TD>
+<TD class="right border-right-single">156.550</TD>
+<TD class="right border-right-single">156.550</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">72 <sup>14</sup></TD>
+<TD class="right border-right-single">156.625</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Intership only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">18A</TD>
+<TD class="right border-right-single">156.900</TD>
+<TD class="right border-right-single">156.900</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">19A</TD>
+<TD class="right border-right-single">156.950</TD>
+<TD class="right border-right-single">156.950</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">79A</TD>
+<TD class="right border-right-single">156.975</TD>
+<TD class="right border-right-single">156.975</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">80A</TD>
+<TD class="right border-right-single">157.025</TD>
+<TD class="right border-right-single">157.025</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">88A <sup>8</sup></TD>
+<TD class="right border-bottom-single border-right-single">157.425</TD>
+<TD class="right border-bottom-single border-right-single">157.425</TD>
+<TD class="left border-bottom-single"></TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Digital Selective Calling</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">70 <sup>15</sup></TD>
+<TD class="right border-bottom-single border-right-single">156.525</TD>
+<TD class="right border-bottom-single border-right-single">156.525</TD>
+<TD class="left border-bottom-single"></TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Noncommercial</strong></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">67 <sup>14</sup></TD>
+<TD class="right border-right-single">156.375</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Intership only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">68 <sup>17</sup></TD>
+<TD class="right border-right-single">156.425</TD>
+<TD class="right border-right-single">156.425</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">09 <sup>16</sup></TD>
+<TD class="right border-right-single">156.450</TD>
+<TD class="right border-right-single">156.450</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">69</TD>
+<TD class="right border-right-single">156.475</TD>
+<TD class="right border-right-single">156.475</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">71 <sup>18</sup></TD>
+<TD class="right border-right-single">156.575</TD>
+<TD class="right border-right-single">156.575</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">72</TD>
+<TD class="right border-right-single">156.625</TD>
+<TD class="right border-right-single"></TD>
+<TD class="left">Intership only.</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">78A</TD>
+<TD class="right border-right-single">156.925</TD>
+<TD class="right border-right-single">156.925</TD>
+<TD class="left"></TD>
+</TR>
+<TR>
+<TD class="left border-right-single">79A</TD>
+<TD class="right border-right-single">156.975</TD>
+<TD class="right border-right-single">156.975</TD>
+<TD class="left">Great Lakes only.</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">80A</TD>
+<TD class="right border-bottom-single border-right-single">157.025</TD>
+<TD class="right border-bottom-single border-right-single">157.025</TD>
+<TD class="left border-bottom-single">Do.</TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Distress, Safety and Calling</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">16</TD>
+<TD class="right border-bottom-single border-right-single">156.800</TD>
+<TD class="right border-bottom-single border-right-single">156.800</TD>
+<TD class="left border-bottom-single"></TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Intership Safety</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">06</TD>
+<TD class="right border-bottom-single border-right-single">156.300</TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="left border-bottom-single">a. Intership, or b. For SAR: Ship and aircraft for the U.S. Coast Guard.</TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Environmental</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">15 <sup>13</sup></TD>
+<TD class="right border-bottom-single border-right-single"></TD>
+<TD class="right border-bottom-single border-right-single">156.750</TD>
+<TD class="left border-bottom-single">Coast to ship only.</TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Maritime Control</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">17 <sup>9 10</sup></TD>
+<TD class="right border-bottom-single border-right-single">156.850</TD>
+<TD class="right border-bottom-single border-right-single">156.850</TD>
+<TD class="left border-bottom-single"></TD>
+</TR>
+<TR>
+<TD colspan="4" class="center border-bottom-single"><strong class="minor-caps">Liaison and Safety Broadcasts, U.S. Coast Guard</strong></TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">22A <sup>11</sup></TD>
+<TD class="right border-bottom-single border-right-single">157.100</TD>
+<TD class="right border-bottom-single border-right-single">157.100</TD>
+<TD class="left border-bottom-single">Ship, aircraft, and coast stations of the U.S. Coast Guard and at Lake Mead, Nev., ship and coast stations of the National Park Service, U.S. Department of the Interior.
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="4"><sup>1</sup> 156.050 MHz and 156.175 MHz are available for port operations and commercial communications purposes when used only within the U.S. Coast Guard designated Vessel Traffic Services (VTS) area of New Orleans, on the lower Mississippi River from the various pass entrances in the Gulf of Mexico to Devil's Swamp Light at River Mile 242.4 above head of passes near Baton Rouge.
+</TD></TR><TR><TD colspan="4"><sup>2</sup> 156.250 MHz is available for port operations communications use only within the U.S. Coast Guard designated VTS radio protection areas of New Orleans and Houston described in § 80.383. 156.250 MHz is available for intership port operations communications used only within the area of Los Angeles and Long Beach harbors, within a 25-nautical mile radius of Point Fermin, California.
+</TD></TR><TR><TD colspan="4"><sup>3</sup> 156.550 MHz, 156.600 MHz and 156.700 MHz are available in the U.S. Coast Guard designated port areas only for VTS communications and in the Great Lakes available primarily for communications relating to the movement of ships in sectors designated by the St. Lawrence Seaway Development Corporation or the U.S. Coast Guard. The use of these frequencies outside VTS and ship movement sector protected areas is permitted provided they cause no interference to VTS and ship movement communications in their respective designated sectors.
+</TD></TR><TR><TD colspan="4"><sup>4</sup> Use of 156.875 MHz is limited to communications with pilots regarding the movement and docking of ships. Normal output power must not exceed 1 watt.
+</TD></TR><TR><TD colspan="4"><sup>5</sup> 156.375 MHz and 156.650 MHz are available primarily for intership navigational communications. These frequencies are available between coast and ship on a secondary basis when used on or in the vicinity of locks or drawbridges. Normal output power must not exceed 1 watt. Maximum output power must not exceed 10 watts for coast stations or 25 watts for ship stations.
+</TD></TR><TR><TD colspan="4"><sup>6</sup> On the Great Lakes, in addition to bridge-to-bridge communications, 156.650 MHz is available for vessel control purposes in established vessel traffic systems. 156.650 MHz is not available for use in the Mississippi River from South Pass Lighted Whistle Buoy “2” and Southwest Pass entrance Mid-channel Lighted Whistle Buoy to mile 242.4 above Head of Passes near Baton Rouge. Additionally it is not available for use in the Mississippi River-Gulf Outlet, the Mississippi River-Gulf Outlet Canal, and the Inner Harbor Navigational Canal, except to aid the transition from these areas.
+</TD></TR><TR><TD colspan="4"><sup>7</sup> Use of 156.375 MHz is available for navigational communications only in the Mississippi River from South Pass Lighted Whistle Buoy “2” and Southwest Pass entrance Mid-channel Lighted Whistle Buoy to mile 242.4 above Head of Passes near Baton Rouge, and in addition over the full length of the Mississippi River-Gulf Outlet Canal from entrance to its junction with the Inner Harbor Navigational Canal, and over the full length of the Inner Harbor Navigational Canal from its junction with the Mississippi River to its entry to Lake Pontchartrain at the New Seabrook vehicular bridge.
+</TD></TR><TR><TD colspan="4"><sup>8</sup> Within that portion of VHF Public Coast Station Areas (VPCSAs) 1 through 9 listed in the table in Section 80.371(c)(1)(ii) within 120 km (75 miles) of the United States/Canada border, in the area of the Great Lakes, the Saint Lawrence Seaway, and the Puget Sound and the Strait of Juan de Fuca and its approaches, Maritime VHF Channel 88A (157.425 MHz) is available for use for public correspondence communications, subject to prior coordination with Canada. Maritime VHF Channel 88B (162.025 MHz) is available only for Automatic Identification System communications. One hundred twenty kilometers (75 miles) from the United States/Canada border, 157.425 MHz is available for intership and commercial communications. Outside the Puget Sound area and its approaches and the Great Lakes, 157.425 MHz is available for communications between commercial fishing vessels and associated aircraft while engaged in commercial fishing activities.
+</TD></TR><TR><TD colspan="4"><sup>9</sup> When the frequency 156.850 MHz is authorized, it may be used additionally for search and rescue training exercises conducted by state or local governments.
+</TD></TR><TR><TD colspan="4"><sup>10</sup> The frequency 156.850 MHz is additionally available to coast stations on the Great Lakes for transmission of scheduled Coded Marine Weather Forecasts (MAFOR), Great Lakes Weather Broadcast (LAWEB) and unscheduled Notices to Mariners or Bulletins. F3C and J3C emissions are permitted. Coast stations on the Great Lakes must cease weather broadcasts which cause interference to stations operating on 156.800 MHz until the interference problem is resolved.
+</TD></TR><TR><TD colspan="4"><sup>11</sup> The frequency 157.100 MHz is authorized for search and rescue training exercises by state or local government in conjunction with U.S. Coast Guard stations. Prior U.S. Coast Guard approval is required. Use must cease immediately on U.S. Coast Guard request.
+</TD></TR><TR><TD colspan="4"><sup>12</sup> The duplex pair for channel 20 (157.000/161.600 MHz) may be used for ship to coast station communications.
+</TD></TR><TR><TD colspan="4"><sup>13</sup> Available for assignment to coast stations, the use of which is in accord with an agreed program, for the broadcast of information to ship stations concerning the environmental conditions in which vessels operate, i.e., weather; sea conditions; time signals; notices to mariners; and hazards to navigation.
+</TD></TR><TR><TD colspan="4"><sup>14</sup> Available only in the Puget Sound and the Strait of Juan de Fuca.
+</TD></TR><TR><TD colspan="4"><sup>15</sup> The frequency 156.525 MHz is to be used exclusively for distress, safety and calling using digital selective calling techniques. No other uses are permitted.
+</TD></TR><TR><TD colspan="4"><sup>16</sup> The frequency 156.450 MHz is available for intership, ship and coast general purpose calling by noncommercial vessels, such as recreational boats and private coast stations.
+</TD></TR><TR><TD colspan="4"><sup>17</sup> The frequency 156.425 MHz is assigned by rule to private coast stations in Alaska for facsimile transmissions as well as voice communications.
+</TD></TR><TR><TD colspan="4"><sup>18</sup> 156.575 MHz is available for port operations communications use only within the U.S. Coast Guard designated VTS radio protection area of Seattle (Puget Sound) described in § 80.383. Normal output power must not exceed 1 watt. Maximum output power must not exceed 10 watts.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(g)(1) On-board communications: This section describes the carrier frequency pairs assignable for on-board mobile radiotelephony communications. The center of the on-board repeater antenna must not be located more than 3 meters (10 feet) above the ship's working deck. These frequencies are available on a shared basis with stations in the Industrial/Business Radio Pool.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Frequencies for On-Board Communications</P></CAPTION>
+<THEAD>
+<TR>
+<TH rowspan="2" class="center border-top-single border-bottom-single border-right-single">Channel</TH>
+<TH colspan="2" class="center border-top-single border-bottom-single">Carrier frequency (MHz)</TH>
+</TR>
+<TR>
+<TH class="center border-bottom-single border-right-single">On-board mobile<br></br>station</TH>
+<TH class="center border-bottom-single">On-board repeater station<sup>1</sup></TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left border-right-single">1</TD>
+<TD class="right border-right-single">467.750</TD>
+<TD class="right">457.525</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">2</TD>
+<TD class="right border-right-single">467.775</TD>
+<TD class="right">457.550</TD>
+</TR>
+<TR>
+<TD class="left border-right-single">3</TD>
+<TD class="right border-right-single">467.800</TD>
+<TD class="right">457.575</TD>
+</TR>
+<TR>
+<TD class="left border-bottom-single border-right-single">4</TD>
+<TD class="right border-bottom-single border-right-single">467.825</TD>
+<TD class="right border-bottom-single">457.600
+</TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="3"><sup>1</sup> These frequencies may also be assigned to mobile stations for single frequency simplex operation.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(2) Where needed, equipment designed for 12.5 kHz channel spacing using the additional frequencies 457.5375 MHz, 457.5625 MHz, 467.5375 MHz, and 467.5625 MHz may be introduced for on-board communications.</P>
+<P>(h) <I>Repeater frequencies in Alaska.</I> The following frequencies are assignable on a primary basis to public and on a secondary basis to private coast stations in Alaska for maritime repeater operations:</P>
+<EXTRACT>
+<FP-1>Repeater receive: 157.275 MHz
+</FP-1>
+<FP-1>Repeater transmit: 161.875 MHz</FP-1></EXTRACT>
+<P>(i) <I>Frequencies in the 1600-5450 kHz band for private communications in Alaska.</I> The following simplex frequencies are available for assignment to private fixed stations located in the State of Alaska for radiotelephony communications with ship stations. These simplex frequencies are available for use by authorized ship stations for radiotelephony communications with private fixed stations located in the State of Alaska.</P>
+<DIV width="100%"><DIV class="gpotbl_div">
+<TABLE border="1" cellpadding="1" cellspacing="1" class="gpo_table" frame="void" width="100%">
+<CAPTION><P class="title">Private communications in Alaska Carrier frequencies (kHz)</P></CAPTION>
+<THEAD>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left">1619.0 <sup>3</sup></TD>
+<TD class="right">2382.0</TD>
+<TD class="right">2563.0</TD>
+</TR>
+<TR>
+<TD class="left">1622.0 <sup>3</sup></TD>
+<TD class="right">2419.0</TD>
+<TD class="right">2566.0</TD>
+</TR>
+<TR>
+<TD class="left">1643.0 <sup>3</sup></TD>
+<TD class="right">2422.0</TD>
+<TD class="right">2590.0</TD>
+</TR>
+<TR>
+<TD class="left">1646.0 <sup>3</sup></TD>
+<TD class="right">2427.0</TD>
+<TD class="right">2616.0</TD>
+</TR>
+<TR>
+<TD class="left">1649.0 <sup>3</sup></TD>
+<TD class="right">2430.0</TD>
+<TD class="right">3258.0</TD>
+</TR>
+<TR>
+<TD class="left">1652.0 <sup>3</sup></TD>
+<TD class="right">2447.0</TD>
+<TD class="right"><sup>1</sup> 3261.0</TD>
+</TR>
+<TR>
+<TD class="left">1705.0 <sup>3</sup></TD>
+<TD class="right">2450.0</TD>
+<TD class="right">4366.0</TD>
+</TR>
+<TR>
+<TD class="left">1709.0</TD>
+<TD class="right">2479.0</TD>
+<TD class="right">4369.0</TD>
+</TR>
+<TR>
+<TD class="left">1712.0</TD>
+<TD class="right">2482.0</TD>
+<TD class="right">4396.0</TD>
+</TR>
+<TR>
+<TD class="left">2003.0</TD>
+<TD class="right">2506.0</TD>
+<TD class="right">4402.0</TD>
+</TR>
+<TR>
+<TD class="left">2006.0</TD>
+<TD class="right">2509.0</TD>
+<TD class="right">4420.0</TD>
+</TR>
+<TR>
+<TD class="left">2115.0</TD>
+<TD class="right">2512.0</TD>
+<TD class="right">4423.0</TD>
+</TR>
+<TR>
+<TD class="left">2118.0</TD>
+<TD class="right">2535.0</TD>
+<TD class="right"><sup>2</sup> 5167.5</TD>
+</TR>
+<TR>
+<TD class="left">2379.0</TD>
+<TD class="right">2538.0</TD>
+<TD class="right"></TD>
+</TR>
+</TBODY>
+<TFOOT><TR><TD colspan="3"><sup>1</sup> Ship stations must limit use of 3261.0 kHz to communications over distances which cannot be reached by the use of frequency below 2700 kHz or above 156.000 MHz.
+</TD></TR><TR><TD colspan="3"><sup>2</sup> The frequency 5167.5 kHz is available for emergency communications in Alaska. Peak envelope power of stations operating on this frequency must not exceed 150 watts. When a station in Alaska is authorized to use 5167.5 kHz, such station may also use this frequency for calling and listening for the purpose of establishing communications.
+</TD></TR><TR><TD colspan="3"><sup>3</sup> Use of these frequencies is on a secondary basis to Region 2 broadcasting.</TD></TR></TFOOT></TABLE>
+</DIV></DIV>
+<P>(j) <I>Frequencies for portable ship stations.</I> VHF frequencies authorized for stations authorized carrier frequencies in the 156.275 MHz to 157.450 MHz and 161.575 MHz to 162.025 MHz bands may also be authorized as marine utility stations. Marine-utility stations on shore must not cause interference to any Automatic Identification System, VHF or coast station, VHF or UHF land mobile base station, or U.S. Government station.</P>
+<CITA TYPE="N">[51 FR 31213, Sept. 2, 1986; 51 FR 34984, Oct. 1, 1986]
+</CITA>
+<EDNOTE>
+<HED>Editorial Note:</HED><PSPACE>For <E T="04">Federal Register</E> citations affecting § 80.373, see the List of CFR Sections Affected, which appears in the Finding Aids section of the printed volume and at <I>www.govinfo.gov.</I></PSPACE></EDNOTE>
+</DIV8>

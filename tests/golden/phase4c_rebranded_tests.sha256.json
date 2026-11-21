@@ -1,0 +1,19 @@
+{
+ "comment": "sha256 of the 14 Phase 1 test files after the Phase 4C rain->task rebrand (tests/rebrand_map.py); each equals rebrand_text(original)",
+ "files": {
+  "conftest.py": "86b1a2df4013aa125cb9848856773da5e8e4b21fc42f15ff0d38c9855a811677",
+  "test_assign.py": "bbc061fd80acfd3b4629e809fccf0296eff5af92db4407122553fca2cd4a0665",
+  "test_auth.py": "32cf5ddccbc64042d5869af3d820a5f6de7e1a778901c7f5e069f56fa1d85d26",
+  "test_boot.py": "56d0e69fd9316a55b62a5021a323090f7d8d8ad8d543d6d67b3bac2e0ad67ee3",
+  "test_capabilities.py": "eccf6121a5aa41e89ddc7a447806836bdad28a43304b36b6169af505ebe6f8a8",
+  "test_enumerator.py": "857a837c13c373d32816257746eea6e2a55fdfb49e32746a792086050dae0e2a",
+  "test_hotplug_parent_dedup.py": "e3232dbbd06edad07d2285a8874ca9b416ddcc3d65644a3666a7c4736107d485",
+  "test_identity.py": "193486b520fcfbf5ed92480d100b01905f02e1dc78e6c1323c08276ce3412cc0",
+  "test_manifests.py": "6465d37a7d04242b11115eef3c35c0560cac9b23688ef26edcbf4d3f6a6f14fd",
+  "test_medical_absent.py": "012c0662562e8ac2a7e935e916cafb4b1740552b3cac37550913ac7a51d4d8ac",
+  "test_not_root.py": "c68ffa07aa3483e28ebd02e46f3c353868846cbfeb988b039a41e6c61cc11d06",
+  "test_persist.py": "3c16d9539724c04ba56aa0eb0b80e1a8abb8bba5b37aa23937a5963ca6a29a70",
+  "test_protocol.py": "a2f13e570eb00638912372e4515810630bc17866da472935281367725815ed92",
+  "test_rules.py": "efdf7bce63896caf1d05171796d78b54454363ca6c2057937db6ebcd51c689fd"
+ }
+}

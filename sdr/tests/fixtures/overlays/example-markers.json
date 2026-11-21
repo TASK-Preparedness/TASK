@@ -1,0 +1,7 @@
+{"schema": "task-sdr-overlay/1", "id": "example-markers", "title": "EXAMPLE markers (test fixture)",
+ "type": "channel_plan", "version": "0.0.1-example",
+ "source": {"agency": "EXAMPLE - not a real source", "citation": "test fixture", "url": "https://example.invalid/fixture"},
+ "publication_date": "2026-01-01", "retrieved": "2026-01-02", "last_verified": "2026-01-03", "stale_after_days": 3650,
+ "example": true,
+ "items": [{"kind": "marker", "label": "EXAMPLE ch 1", "freq_hz": 146000000, "bandwidth_hz": 12500, "ref": "example ref 1"},
+           {"kind": "marker", "label": "EXAMPLE ch 2", "freq_hz": 146025000, "ref": "example ref 2"}]}

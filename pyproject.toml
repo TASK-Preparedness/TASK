@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-core"
+version = "0.2.1"
+description = "T.A.S.K. core (Phase 2: protocol v2, sessions, terminal recovery CLI)"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = [
+  "PyYAML>=6",
+  "tomli>=2; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+udev = ["pyudev"]
+
+[project.scripts]
+task-core = "task_core.main:main"
+task-core-admin = "task_core.admin:main"
+task-core-migrate = "task_core_migrate:main"
+
+[tool.setuptools]
+packages = ["task_core", "task_core_migrate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

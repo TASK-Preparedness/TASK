@@ -1,0 +1,26 @@
+name: Installation problem
+description: The installer, packages or offline bundle did not work
+labels: ["installer", "triage"]
+body:
+  - type: dropdown
+    id: method
+    attributes:
+      label: Installation method
+      options: [Installer GUI, Installer text mode (TUI), Offline bundle, Manual .deb install, From source]
+    validations: {required: true}
+  - type: input
+    id: hardware
+    attributes: {label: Computer, OS and architecture}
+    validations: {required: true}
+  - type: textarea
+    id: detect
+    attributes: {label: Output of `python3 -m task_installer detect`, render: text}
+  - type: textarea
+    id: what
+    attributes: {label: What happened? Include the exact error.}
+    validations: {required: true}
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network during install
+      options: [Online, Fully offline, Unsure]

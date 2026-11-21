@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.mesh"
+name = "Mesh Network"
+version = "0.3.0"
+description = "Opens T.A.S.K. Mesh Operations (task-mesh), the native Meshtastic field station. task-mesh talks to the radio over USB serial itself; the launcher only starts it."
+icon = "network"
+order = 10
+min_platform = "0.2.0"
+readiness = "mesh"
+single_instance = true
+
+[launch]
+exec = ["/usr/bin/task-mesh"]
+exec_alternatives = [["/usr/local/bin/task-mesh"], ["/usr/bin/rain-mesh"]]
+
+[launch.labels]
+"/usr/bin/task-mesh" = "task-mesh"
+"/usr/local/bin/task-mesh" = "task-mesh"
+"/usr/bin/rain-mesh" = "rain-mesh 0.1.0 (legacy)"
+
+[requires]
+hardware = ["Meshtastic radio on USB serial (design target Heltec V3)"]
+debian = ["task-mesh"]

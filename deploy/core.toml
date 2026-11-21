@@ -1,0 +1,4 @@
+socket = "/run/rain/core.sock"
+state_dir = "/var/lib/rain"
+share_dir = "/usr/lib/rain"
+auth_file = "/etc/rain/auth.toml"

@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+"""task-maps command (Debian package: modules live in /usr/share/task-maps)."""
+import sys
+
+sys.path.insert(0, "/usr/share/task-maps")
+from task_maps.app import main  # noqa: E402
+
+sys.exit(main())

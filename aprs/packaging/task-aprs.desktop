@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. APRS
+Comment=APRS (amateur, via Direwolf) and GMRS data
+Exec=/usr/bin/task-aprs
+Icon=task-aprs
+Categories=Network;HamRadio;
+Terminal=false

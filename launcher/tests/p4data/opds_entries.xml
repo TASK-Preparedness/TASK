@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2026 Joshua Sturtz -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- TESTDATA: shaped like kiwix-serve 3.7 /catalog/v2/entries output (OPDS 1.2 acquisition feed). -->
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/"
+      xmlns:opds="https://specs.opds.io/opds-1.2" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <id>urn:uuid:00000000-0000-0000-0000-000000000000</id>
+  <title>Filtered Entries</title>
+  <updated>2026-10-01T00:00:00Z</updated>
+  <totalResults>3</totalResults>
+  <entry>
+    <id>urn:uuid:11111111-1111-1111-1111-111111111111</id>
+    <title>TESTDATA Wikipedia (mini)</title>
+    <updated>2026-09-01T00:00:00Z</updated>
+    <summary>Test fixture encyclopedia</summary>
+    <language>eng</language>
+    <name>testwiki_en_mini</name>
+    <flavour>mini</flavour>
+    <category>wikipedia</category>
+    <tags>wikipedia;_category:wikipedia</tags>
+    <articleCount>1200</articleCount>
+    <mediaCount>30</mediaCount>
+    <link rel="http://opds-spec.org/image/thumbnail" href="/kiwix/catalog/v2/illustration/11111111-1111-1111-1111-111111111111/?size=48" type="image/png;width=48;height=48;scale=1"/>
+    <link type="text/html" href="/kiwix/content/testwiki_en_mini" />
+    <link rel="http://opds-spec.org/acquisition/open-access" type="application/x-zim" href="http://example.invalid/x.zim" length="52428800" />
+  </entry>
+  <entry>
+    <id>urn:uuid:22222222-2222-2222-2222-222222222222</id>
+    <title>TESTDATA mdwiki medical encyclopedia</title>
+    <updated>2026-08-01T00:00:00Z</updated>
+    <summary>Test fixture medical reference</summary>
+    <language>eng</language>
+    <name>mdwiki_en_all_testdata</name>
+    <category>other</category>
+    <tags>_category:other;medicine</tags>
+    <articleCount>500</articleCount>
+    <mediaCount>0</mediaCount>
+    <link type="text/html" href="/kiwix/content/mdwiki_en_all_testdata" />
+  </entry>
+  <entry>
+    <id>urn:uuid:33333333-3333-3333-3333-333333333333</id>
+    <title>TESTDATA Gutenberg sample</title>
+    <updated>2026-07-01T00:00:00Z</updated>
+    <summary>Test fixture books</summary>
+    <language>eng</language>
+    <name>gutenberg_testdata</name>
+    <category>gutenberg</category>
+    <tags>gutenberg</tags>
+    <articleCount>42</articleCount>
+    <mediaCount>3</mediaCount>
+    <link type="text/html" href="/kiwix/content/gutenberg_testdata" />
+  </entry>
+</feed>

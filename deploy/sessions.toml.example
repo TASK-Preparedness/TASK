@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+#
+# /etc/rain/sessions.toml (PHASE-2.md section 6.2): root-owned, mode 0644, no secrets.
+# Optional. Without it, session.login is refused for every client (fail closed) and
+# everything else behaves as rain-core 0.1.1.
+#
+# Create or edit it with:   sudo rain-core-admin client allow <username>
+#                           sudo rain-core-admin client remove <username>
+# or by hand from this example. rain-core rereads it when it changes.
+
+# uids allowed to call session.login (the console's desktop user, and later the web portal).
+# Being listed grants the right to try a password, never a role.
+[clients]
+1000 = "desktop user (rain-console and rain-core-admin session commands)"
+
+# Optional. Out-of-range values fall back to these defaults, with a log line.
+[timeouts]
+idle_seconds = 7200        # 2 h without a request ends a session
+absolute_seconds = 43200   # 12 h after login ends a session regardless of activity

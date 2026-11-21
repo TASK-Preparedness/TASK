@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. Maps & GPS
+GenericName=Offline maps and GPS
+Comment=Offline maps, map downloads, GPS position, waypoints and tracks (T.A.S.K. — Tactical Access Support Kit)
+Exec=task-maps
+Icon=task-maps
+Terminal=false
+Categories=Utility;Science;Geography;
+Keywords=map;maps;gps;gpsd;offline;mbtiles;gpx;waypoint;track;task;rain;
+StartupNotify=true
+StartupWMClass=task-maps
+SingleMainWindow=true

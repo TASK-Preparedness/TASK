@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. Launcher
+GenericName=Application launcher
+Comment=Launcher for T.A.S.K. apps (task-core client)
+Exec=task-launcher
+Icon=task-launcher
+Terminal=false
+Categories=Utility;
+Keywords=task;launcher;dashboard;
+StartupNotify=false

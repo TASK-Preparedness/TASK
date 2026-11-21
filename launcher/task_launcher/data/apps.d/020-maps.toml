@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+manifest_version = 1
+id = "task.maps"
+name = "Maps & GPS"
+version = "0.2.0"
+description = "Maps and GPS. Until the native T.A.S.K. Maps app (task-maps, Phase 4B) is installed, this opens FoxtrotGPS as a FALLBACK; FoxtrotGPS is not the native mapping system."
+icon = "map"
+order = 20
+min_platform = "0.2.0"
+readiness = "gps"
+single_instance = true
+
+[launch]
+exec = ["/usr/bin/task-maps"]
+exec_alternatives = [["/usr/bin/foxtrotgps"]]
+
+[launch.labels]
+"/usr/bin/task-maps" = "T.A.S.K. Maps"
+"/usr/bin/foxtrotgps" = "FoxtrotGPS (fallback)"
+
+[[actions]]
+id = "gpsmon"
+label = "GPS monitor (gpsmon, terminal)"
+exec = ["/usr/bin/gpsmon"]
+terminal = true
+
+[[actions]]
+id = "cgps"
+label = "GPS status (cgps, terminal)"
+exec = ["/usr/bin/cgps"]
+terminal = true
+
+[requires]
+core_capabilities = ["gps.position"]
+debian = ["foxtrotgps", "gpsd-clients"]

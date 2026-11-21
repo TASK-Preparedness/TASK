@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+"""task-launcher command (Debian package: modules live in /usr/share/task-launcher)."""
+import sys
+
+sys.path.insert(0, "/usr/share/task-launcher")
+from task_launcher.app import main  # noqa: E402
+
+sys.exit(main())

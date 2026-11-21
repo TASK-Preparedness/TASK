@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+# Byte-compile the private module tree once (the launcher runs python with -B).
+if [ "$1" = configure ] && command -v py3compile >/dev/null 2>&1; then
+	py3compile -p task-mesh /usr/lib/task-mesh
+fi
+#DEBHELPER#
+exit 0

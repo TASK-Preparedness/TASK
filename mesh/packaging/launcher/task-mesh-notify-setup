@@ -1,0 +1,9 @@
+#!/bin/sh
+# T.A.S.K. Mesh notification setup helper (same isolated interpreter setup as task-mesh).
+exec /usr/bin/python3 -I -S -B -c '
+import sys
+sys.path[:0] = ["/usr/lib/task-mesh", "/usr/lib/task-mesh/task_mesh/_vendor"]
+sys.path.append("/usr/lib/python3/dist-packages")
+from task_mesh.notify_setup import main
+sys.exit(main(sys.argv[1:]))
+' "$@"

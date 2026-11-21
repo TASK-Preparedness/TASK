@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# System-wide default branding for task-launcher. Copy to /etc/task-launcher/branding.toml
+# (as root) to change the default for every user. Users can still pick a preset in Settings.
+# preset: "task" (T.A.S.K. — Tactical Access Support Kit) or "custom" (uses title/subtitle
+# below). The former "rain" preset is accepted as an alias of "task".
+preset = "task"
+# title = "T.A.S.K."
+# subtitle = "Tactical Access Support Kit"

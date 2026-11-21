@@ -1,0 +1,7 @@
+{"schema": "task-sdr-overlay/1", "id": "example-ranges", "title": "EXAMPLE ranges (test fixture)",
+ "type": "allocation", "version": "0.0.1-example",
+ "source": {"agency": "EXAMPLE - not a real source", "citation": "test fixture", "url": "https://example.invalid/fixture"},
+ "publication_date": "2026-01-01", "retrieved": "2026-01-02", "last_verified": null, "example": true,
+ "notes": "Placeholder values for tests only.",
+ "items": [{"kind": "range", "label": "EXAMPLE range A", "start_hz": 145900000, "end_hz": 146100000, "tags": ["example"]},
+           {"kind": "range", "label": "EXAMPLE range B", "start_hz": 146400000, "end_hz": 146600000}]}

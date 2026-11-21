@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Joshua Sturtz
+# Example USER source: copy to ~/.config/task-maps/sources.d/local-tile-server.toml and edit.
+# Only set user_attests_permission = true if you own the server or have the operator's permission
+# to bulk-download from it.
+schema = 1
+id = "my-tile-server"
+name = "My tile server (LAN)"
+url = "http://192.168.1.10:8080/tile/{z}/{x}/{y}.png"
+mechanism = "xyz"
+format = "png"
+attribution = "© OpenStreetMap contributors (rendered on my own server)"
+license = "Own server"
+offline_download_permitted = true
+user_attests_permission = true
+rate_limit = 5.0
+max_concurrency = 2
+min_zoom = 0
+max_zoom = 17
+max_tiles_per_job = 200000
+user_agent_required = false
+# For keyed services use {api_key} in url, api_key_required = true, and store the key in
+# task-maps → Download → API key… (saved to ~/.config/task-maps/keys.toml, mode 0600).

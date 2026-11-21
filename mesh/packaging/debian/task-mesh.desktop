@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=T.A.S.K. Mesh Operations
+GenericName=Meshtastic Field Station
+Comment=Monitor a Meshtastic radio and mesh nodes over USB
+Exec=task-mesh
+Icon=task-mesh
+Terminal=false
+Categories=Network;HamRadio;
+Keywords=meshtastic;lora;mesh;radio;
+StartupNotify=true
+StartupWMClass=task-mesh
