@@ -16,6 +16,20 @@ Debian packages are the supported install path; pip (`console/deploy/install-con
 All packages are pure Python: **`Architecture: all`**. "arm64" here means "dependencies resolve and
 the code imports on Debian 13 arm64", nothing more. Nothing in this directory touches a Raspberry Pi.
 
+## Chroot results (2026-11-22, Debian 13 arm64 under qemu-user, apt 3.0.4)
+
+* **each** (every package alone: install with Depends from Debian arm64, import smoke, policy, remove,
+  purge, leftovers): 50/50 checks passed (after a harness fix: dependencies are installed before the
+  leftover snapshot).
+* **all** (all ten with Recommends; dpkg --verify; apt-get check; arm64 byte-compile of every .py;
+  imports; units present and not enabled; py3compile/py3clean; remove; purge): all passed.
+* **upgrade** (delivered set + the Pi's modified notifier + simulated `/etc/task/core.toml` → Milestone B set,
+  offline): all passed. The notifier keeps the Pi's sha256 2864d242…; `dpkg --verify` is clean afterwards;
+  site config is untouched after upgrade and after remove.
+* **installer**: the planned argv installs everything. See docs/INSTALLER-DRYRUN-REPORT-MILESTONE-B.md.
+* Findings: task-console 0.2.0 lacked `python3-pyside6.qtnetwork`; `apt-get --no-download` fails with
+  local .debs in apt 3.0.4.
+
 ## Reproducibility
 
 * `SOURCE_DATE_EPOCH` per package (1791792000 = 2026-10-12 08:00 UTC; launcher/resources 1791633600 =
