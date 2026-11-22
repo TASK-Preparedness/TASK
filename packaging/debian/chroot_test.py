@@ -195,8 +195,9 @@ def scenario_each(args, results):
         c.run(["apt-get", "update"])
         for d in debs:
             name = d.name.split("_")[0]
-            ours = {x.name.split("_")[0] for x in debs}
-            deps = dep_groups([d], exclude=ours)
+            # all Depends, incl. T.A.S.K. ones from the local repo (task-core-compat -> task-core -> python3-yaml),
+            # so that dependency maintainer scripts (py3compile) run before the snapshot
+            deps = dep_groups([d])
             if deps:   # dependencies first (from Debian 13 arm64), then the snapshot
                 c.run(["apt-get", "satisfy", "-y", "--no-install-recommends"] + deps, check=False)
             before = c.snapshot()
