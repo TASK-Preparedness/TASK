@@ -1,4 +1,4 @@
-# Release-readiness assessment (2026-11-21)
+# Release-readiness assessment (2026-11-21, updated 2026-11-22 for Milestone B)
 
 **Verdict: NOT READY for Public Alpha publication. Ready for maintainer review of the source tree.**
 
@@ -9,11 +9,11 @@
 | R.A.I.N. migration preserved | ✅ | byte-identical. |
 | License audit | ✅ Draft | GPL-3.0-or-later throughout; third-party notices written; CC-BY-SA alert excluded; needs maintainer confirmation (approval #1, #2). |
 | Private data / secrets | ✅ | Scanner: 0 HIGH findings; 45 MEDIUM reviewed (fake test MACs/IPs, government e-mails inside public-domain eCFR/NWS snapshots, fixture paths). Real configs, callsign, MACs of personal devices excluded/redacted. |
-| Automated tests | ⚠️ Mostly passing | See TESTING.md: failures are environment/test-assumption issues, documented. |
-| Debian packages | ❌ | No arm64 packages built from this tree and validated. |
-| Installer | ⚠️ | Detection/planning/TUI/GUI exist, simulation-tested; execution disabled; never run on a Pi. |
+| Automated tests | ✅ | Milestone B: 1,805 passed, 0 failed, 15 skipped (x86_64). |
+| Debian packages | ⚠️ | Built reproducibly from this tree (Architecture: all), chroot-tested on Debian 13 arm64 under qemu emulation. Not tested on a Pi. Two PROPOSED versions need approval. Placeholder maintainer/Source fields remain. |
+| Installer | ⚠️ | Preflight, bundle verification and offline plans exist; the planned argv was executed by a test harness inside the arm64 chroot. The installer itself stays dry run; never run on a Pi. |
 | Offline bundle | ❌ | Needs validated packages + clean trixie arm64 dependency closure. |
-| Windows | ❌ | Platform groundwork only; no build, no Windows test machine. |
+| Windows | ❌ | Experimental PyInstaller build under Wine only; no Windows test machine; no support claimed. |
 | Hardware acceptance | ⚠️ | SDR 0.2.4, Medical Reader 0.3.7, Maps 0.1.1 pending. |
 | Docs/community | ✅ Draft | Full doc set, issue templates, Discussions guide; contacts pending (approval #3). |
 

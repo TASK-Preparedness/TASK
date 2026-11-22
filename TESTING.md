@@ -11,6 +11,38 @@ update path) needs `RAIN_020_WHEEL=<path to rain_core-0.2.0-py3-none-any.whl>`
 
 Requirements: see CONTRIBUTING.md (Debian 13 `python3-*` packages incl. PySide6 6.8).
 
+## Recorded results — 2026-11-22 (America/New_York), Milestone B (branch `milestone-b`)
+
+Same build machine as below: Debian 13 **x86_64**, Python 3.13.5, PySide6 6.8.2.1, offscreen Qt.
+`scripts/run-all-tests.sh` (log: `SUMMARY.txt` in the Milestone B test-results zip):
+
+| Suite | Result |
+|---|---|
+| core | 178 passed |
+| console | 53 passed (was 50 passed / 1 failed; +2 new tests) |
+| comms | 29 passed |
+| aprs | 35 passed |
+| launcher | 326 passed, 13 skipped |
+| maps | 132 passed |
+| resources | 154 passed, 1 skipped |
+| sdr | 305 passed, 1 skipped |
+| release/common | 113 passed |
+| platform | 20 passed |
+| installers/raspberry-pi (simulation) | 83 passed |
+| installers/windows (Linux-side checks, NOT a Windows test) | 7 passed |
+| mesh | 370 passed (was 368 / 1 failed; +1 new test) |
+| **Total** | **1,805 passed, 0 failed, 15 skipped** |
+
+AT-15 file (`mesh/tests/integration/test_db_crash_safety.py`, 2 tests) was also run 5 times in a row: 5/5 passed.
+Both earlier failures are explained in KNOWN-ISSUES.md.
+
+### Packaging tests (not part of run-all-tests.sh; need root, qemu-user-static, mmdebstrap)
+* `packaging/debian/build_debs.py`: two builds give identical SHA256SUMS. Eight packages are byte-identical
+  to the delivered debs, and the verification builds of mesh 0.3.1 and console 0.2.0 are byte-identical too.
+* `packaging/debian/verify_debs.py`: every payload file equals the Pi's installed file, apart from the expected changelog differences.
+* `packaging/debian/chroot_test.py`: Debian 13 **arm64 chroot under qemu-user emulation** on the
+  x86_64 machine. Results are in `chroot-results.json` in the debs zip. This is **not** a Raspberry Pi test.
+
 ## Recorded results — 2026-11-21 (America/New_York), commit of this tree
 
 Build/test machine: Debian GNU/Linux 13 (trixie) **x86_64**, Python 3.13.5, PySide6 6.8.2.1, pytest 8.3.5, pytest-qt 4.4.0 (all Debian
@@ -63,8 +95,9 @@ resources 153 passed, release/common 1 failed (config count), mesh 364 passed / 
 ## Not tested (requires physical hardware or other environments)
 UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST:
 * The installer on any real Raspberry Pi (Pi 5, 4, 3, Zero 2 W); its detection on real `/proc`/`/sys`.
-* Installing, upgrading or removing any package built from this tree.
+* Installing, upgrading or removing any package built from this tree **on a Raspberry Pi**
+  (done only in an emulated arm64 chroot, see above).
 * Offline installation.
-* Any Windows behaviour.
+* Any Windows behaviour (only Wine and a simulated-Windows import check were used).
 * Radios, GPS, SDR and Bluetooth with code from this tree (the same code is installed on the
   development Pi; its hardware status is in HARDWARE.md).
