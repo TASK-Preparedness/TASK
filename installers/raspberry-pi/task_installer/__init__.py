@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 Joshua Sturtz
-"""T.A.S.K. Raspberry Pi installer (pre-alpha, 0.1.0.dev0).
+"""T.A.S.K. Raspberry Pi installer (pre-alpha, 0.2.0.dev0).
 
 Status: detection, compatibility gating, module planning, a text (TUI) front
 end and a PySide6 wizard exist and are tested in SIMULATION only (fake
@@ -11,4 +11,4 @@ clean-Pi test passes.
 
 UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST
 """
-__version__ = "0.1.0.dev0"
+__version__ = "0.2.0.dev0"

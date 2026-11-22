@@ -7,7 +7,7 @@ installed, using data you provide.
 
 | Kind | What it means | Status |
 |---|---|---|
-| **Fully offline** | Everything needed (T.A.S.K. `.deb`s *and* every Debian dependency) is in a downloaded bundle; apt runs with `--no-download` and fails rather than fetching. | Planned — bundle not built yet |
+| **Fully offline** | Everything needed (T.A.S.K. `.deb`s *and* every Debian dependency) is in a downloaded bundle; a read-only `apt-get --print-uris` check must list only local files before apt runs, so nothing is fetched (`--no-download` is broken with local .debs in Debian 13's apt 3.0.4). | Planned — bundle not built yet |
 | **Needs additional downloads** | T.A.S.K. packages are local, but Debian dependencies (Qt, numpy, Direwolf…) come from your normal apt sources. | Planned |
 | **Optional online features** | Map tile downloads (subject to each source's policy) and similar features. Never automatic. | Implemented in Maps (opt-in) |
 

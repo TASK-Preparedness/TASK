@@ -1,0 +1,10 @@
+Package: task-console
+Version: 0.2.0
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 132
+Depends: python3 (>= 3.11), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8)
+Section: admin
+Priority: optional
+Description: T.A.S.K. Console (renamed rain-console)
+ Desktop console for task-core: status, devices and accounts views.

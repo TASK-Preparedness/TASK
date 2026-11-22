@@ -38,8 +38,12 @@ maturity, packages, notable dependencies, hardware and an installed-size estimat
 
 ## Plans and safety
 Plans are argv lists; `assert_safe` rejects `purge`, `autoremove`, `systemctl`, `enable`,
-`restart`, shells and flashing tools. Offline installs use local `.deb`s with
-`--no-download`. Uninstall = `apt-get remove` (keeps `/etc/task` conffiles and all
+`restart`, shells and flashing tools. Offline installs use local `.deb`s. Every apt step
+is preceded by a read-only `apt-get install --print-uris` check that must list only local
+`file:` URIs; the plan stops otherwise. (`--no-download` is not usable: apt 3.0.4 in Debian 13
+aborts with "Internal Error, Pathname to install is not absolute" when it is combined with local
+`.deb` paths. Found in the Milestone B arm64 chroot.) Preflight (Milestone B) refuses downgrades
+and backs up locally modified package files that an install would overwrite. Uninstall = `apt-get remove` (keeps `/etc/task` conffiles and all
 home-folder data). Update records versions first for rollback. Repair starts with
 `dpkg --verify` and warns that re-installing overwrites intentional local edits.
 

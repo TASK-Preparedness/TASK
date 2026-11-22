@@ -1,0 +1,22 @@
+Package: task-maps
+Version: 0.1.1
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 242
+Depends: python3 (>= 3.13), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8)
+Recommends: gpsd
+Suggests: gpsd-clients, task-launcher (>= 0.2.0)
+Section: utils
+Priority: optional
+Description: offline maps and GPS for the T.A.S.K. platform
+ T.A.S.K. Maps & GPS is a native Qt (PySide6) map application: its own
+ renderer shows raster MBTiles maps offline, a Download Maps mode fetches
+ an area from tile sources whose terms permit offline use (rate-limited,
+ resumable, live progress), MBTiles files can be imported without
+ network, and the GPS position comes read-only from gpsd. Waypoints and
+ recorded tracks are kept locally with GPX 1.1 import and export.
+ .
+ Bulk downloading from tile.openstreetmap.org is refused. Maps and
+ waypoints are user data in ~/.local/share/task-maps and are kept on
+ upgrade and removal. It never runs as root and never opens the GPS
+ serial device.

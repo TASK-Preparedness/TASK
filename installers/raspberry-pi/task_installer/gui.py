@@ -22,8 +22,9 @@ from . import __version__
 from .catalog import CATALOG, INSTALLABLE
 from .compat import MODELS, evaluate
 from .executor import DryRunExecutor
-from .plan import COMPLETE, CUSTOM, MINIMAL, SOURCE_OFFLINE, install_plan, select
-from .tui import report
+from .plan import COMPLETE, CUSTOM, MINIMAL, SOURCE_OFFLINE, _packages, install_plan, select
+from .preflight import check as preflight_check
+from .tui import render_preflight, report
 
 
 class _Page(QWizardPage):
@@ -43,9 +44,11 @@ class _Page(QWizardPage):
 
 
 class InstallerWizard(QWizard):
-    def __init__(self, facts, manual=None):
+    def __init__(self, facts, manual=None, bundle=None, verify_text=None, root="/"):
         super().__init__()
         self.facts = facts
+        self.bundle, self.verify_text, self.root = bundle, verify_text, root
+        self.preflight = None
         self.manual = manual
         self.verdict = evaluate(facts, manual)
         self.plan = None
@@ -168,14 +171,16 @@ class InstallerWizard(QWizard):
     def _entered(self, pid):
         page = self.page(pid)
         if page is self.su:
+            self.preflight = None
             try:
                 mods = select(self.mode(), self.verdict, self.checked_ids())
-                self.plan = install_plan(mods, self.verdict, SOURCE_OFFLINE)
-                self.su_text.setPlainText(self.plan.render())
+                self.preflight = preflight_check(self.facts, _packages(mods), self.bundle, self.verify_text, self.root)
+                self.plan = install_plan(mods, self.verdict, SOURCE_OFFLINE, bundle=self.bundle, preflight=self.preflight)
+                self.su_text.setPlainText(render_preflight(self.preflight) + "\n\n" + self.plan.render())
                 self.su_error.setText("")
             except (ValueError, KeyError, PermissionError) as e:
                 self.plan = None
-                self.su_text.setPlainText("")
+                self.su_text.setPlainText(render_preflight(self.preflight) if self.preflight else "")
                 self.su_error.setText(f"Error: {e}")
             self.su.completeChanged.emit()
         elif page is self.fi and self.plan is not None:
@@ -190,11 +195,11 @@ class InstallerWizard(QWizard):
         return super().nextId()
 
 
-def run_gui(facts, manual=None) -> int:
+def run_gui(facts, manual=None, bundle=None, verify_text=None, root="/") -> int:
     if hasattr(os, "geteuid") and os.geteuid() == 0:
         print("Refusing to run the graphical installer as root. Run it as your normal desktop user.", file=sys.stderr)
         return 2
     app = QApplication.instance() or QApplication(sys.argv)
-    w = InstallerWizard(facts, manual)
+    w = InstallerWizard(facts, manual, bundle, verify_text, root)
     w.show()
     return app.exec()

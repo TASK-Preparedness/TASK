@@ -1,6 +1,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 Joshua Sturtz
-"""Test 75 (installer footprint) against a temporary root and HOME with an apt shim."""
+"""Test 75 (installer footprint) against a temporary root and HOME with an apt shim.
+
+Milestone B fix: the test used to pass ``--prefix /usr/local`` to pip. Debian 13's python3 uses the
+``posix_local`` sysconfig scheme, which already maps the default prefix to /usr/local and appends
+``/local`` to an explicit /usr/local prefix, so files landed in usr/local/local/... and the footprint
+check failed. The install script itself (no --prefix) was always correct; only the test assumption
+was wrong. The test now uses ``--root`` alone, exactly like a real ``sudo ./install-console.sh``.
+The supported install path is the Debian package (/usr/bin/task-console, /usr/lib/task-console).
+"""
 
 import hashlib
 import os
@@ -44,9 +52,12 @@ def test_75_installer_footprint(tmp_path):
     shim = tmp_path / "apt-get"
     shim.write_text(f"#!/bin/sh\necho \"$@\" >> {apt_log}\n")
     shim.chmod(0o755)
+    dpkg = tmp_path / "dpkg-query"
+    dpkg.write_text("#!/bin/sh\nexit 1\n")  # task-console .deb not installed
+    dpkg.chmod(0o755)
     env = {"PATH": os.environ["PATH"], "HOME": str(home), "PYTHON": sys.executable, "APT_GET": str(shim),
-           "RAIN_ROOT": str(root), "RAIN_ALLOW_NONROOT": "1",
-           "RAIN_PIP_ARGS": f"--root {root} --prefix /usr/local --no-warn-script-location"}
+           "DPKG_QUERY": str(dpkg), "RAIN_ROOT": str(root), "RAIN_ALLOW_NONROOT": "1",
+           "RAIN_PIP_ARGS": f"--root {root} --no-warn-script-location"}
     result = subprocess.run(["bash", str(bundle / "install-console.sh")], env=env, capture_output=True, text=True)
     assert result.returncode == 0, result.stdout + result.stderr
     assert apt_log.read_text().split() == ["install", "-y"] + PACKAGES
@@ -67,7 +78,7 @@ def test_75_installer_footprint(tmp_path):
     # a corrupt wheel is refused before anything is installed
     (bundle / wheel.name).write_bytes(b"corrupt")
     fresh = tmp_path / "root2"
-    env2 = dict(env, RAIN_ROOT=str(fresh), RAIN_PIP_ARGS=f"--root {fresh} --prefix /usr/local")
+    env2 = dict(env, RAIN_ROOT=str(fresh), RAIN_PIP_ARGS=f"--root {fresh}")
     apt_log.unlink()
     result = subprocess.run(["bash", str(bundle / "install-console.sh")], env=env2, capture_output=True, text=True)
     assert result.returncode != 0 and "does not match SHA256SUMS" in result.stderr
@@ -84,3 +95,28 @@ def test_75_installer_footprint(tmp_path):
     assert not (root / "usr/local/share/applications/task-console.desktop").exists()
     assert not (root / "usr/local/share/icons/hicolor/scalable/apps/task-console.svg").exists()
     assert files_under(home) == []
+
+
+def test_75b_refuses_to_shadow_installed_deb(tmp_path):
+    """With the task-console .deb installed the legacy pip installer changes nothing."""
+    bundle = tmp_path / "bundle"
+    shutil.copytree(CONSOLE / "deploy", bundle)
+    apt_log = tmp_path / "apt.log"
+    shim = tmp_path / "apt-get"
+    shim.write_text(f"#!/bin/sh\necho \"$@\" >> {apt_log}\n")
+    shim.chmod(0o755)
+    dpkg = tmp_path / "dpkg-query"
+    dpkg.write_text("#!/bin/sh\nprintf 'install ok installed'\n")
+    dpkg.chmod(0o755)
+    root = tmp_path / "root"
+    env = {"PATH": os.environ["PATH"], "HOME": str(tmp_path), "PYTHON": sys.executable, "APT_GET": str(shim),
+           "DPKG_QUERY": str(dpkg), "RAIN_ROOT": str(root), "RAIN_ALLOW_NONROOT": "1"}
+    result = subprocess.run(["bash", str(bundle / "install-console.sh")], env=env, capture_output=True, text=True)
+    assert result.returncode != 0 and "would shadow it" in result.stderr
+    assert not apt_log.exists() and not root.exists()
+
+
+def test_75c_debian_scheme_paths_documented():
+    """The pip path under /usr/local must never be combined with an explicit --prefix (Debian posix_local)."""
+    text = (CONSOLE / "deploy/install-console.sh").read_text()
+    assert "--prefix" not in "".join(ln for ln in text.splitlines() if not ln.lstrip().startswith("#"))

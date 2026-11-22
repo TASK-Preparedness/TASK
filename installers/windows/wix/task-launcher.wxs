@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: 2026 Joshua Sturtz -->
+<!-- EXPERIMENTAL per-user MSI skeleton (WiX v3 schema, also accepted by msitools' wixl) for managed
+     deployment. The PyInstaller file list is harvested at build time (heat.exe / wixl-heat) into
+     the "LauncherFiles" component group. Per-user, no services, no auto-start. UNVERIFIED on Windows. -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="T.A.S.K. Launcher (experimental)" Language="1033" Version="$(var.Version)"
+           Manufacturer="T.A.S.K. project" UpgradeCode="6D0F4C8E-3B1A-4E5B-9A57-5F3C2B7D1A10">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perUser" InstallPrivileges="limited"/>
+    <MajorUpgrade DowngradeErrorMessage="A newer T.A.S.K. Launcher is already installed."/>
+    <MediaTemplate EmbedCab="yes"/>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="LocalAppDataFolder">
+        <Directory Id="ProgramsDir" Name="Programs">
+          <Directory Id="TaskDir" Name="TASK">
+            <Directory Id="INSTALLDIR" Name="Launcher"/>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="Launcher" Title="T.A.S.K. Launcher" Level="1">
+      <ComponentGroupRef Id="LauncherFiles"/>
+    </Feature>
+  </Product>
+</Wix>

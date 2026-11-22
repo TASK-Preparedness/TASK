@@ -94,17 +94,25 @@ def list_linux(root: str | os.PathLike = "/") -> list[SerialPortInfo]:
     return out
 
 
-def list_windows() -> list[SerialPortInfo]:  # pragma: no cover - needs Windows
-    try:
-        from serial.tools import list_ports  # pyserial
-    except ImportError:
-        return []
-    return [SerialPortInfo(device=p.device, vid=p.vid, pid=p.pid,
-                           manufacturer=p.manufacturer, product=p.product)
-            for p in list_ports.comports()]
+def list_windows(comports=None) -> list[SerialPortInfo]:
+    """COM ports from pyserial's registry/SetupAPI enumeration (ports are NOT opened).
+    ``comports`` lets tests inject a fake enumerator; on Windows it defaults to pyserial's."""
+    if comports is None:
+        try:
+            from serial.tools import list_ports  # pyserial
+        except ImportError:
+            return []
+        comports = list_ports.comports
+    out = []
+    for p in comports():
+        out.append(SerialPortInfo(device=getattr(p, "device", None) or getattr(p, "name", ""),
+                                  vid=getattr(p, "vid", None), pid=getattr(p, "pid", None),
+                                  manufacturer=getattr(p, "manufacturer", None), product=getattr(p, "product", None),
+                                  by_id=getattr(p, "serial_number", None) and f"USB serial {p.serial_number}"))
+    return sorted(out, key=lambda i: (len(i.device), i.device))
 
 
-def list_serial_ports(root: str | os.PathLike = "/", platform: str | None = None) -> list[SerialPortInfo]:
+def list_serial_ports(root: str | os.PathLike = "/", platform: str | None = None, comports=None) -> list[SerialPortInfo]:
     if (platform or current_platform()) == WINDOWS:
-        return list_windows()
+        return list_windows(comports)
     return list_linux(root)

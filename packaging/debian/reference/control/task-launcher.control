@@ -1,0 +1,21 @@
+Package: task-launcher
+Version: 0.3.7
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 449
+Depends: python3 (>= 3.13), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8), python3-pyside6.qtnetwork (>= 6.8), python3-pyside6.qtsvg (>= 6.8), python3-pyside6.qtdbus (>= 6.8)
+Recommends: fonts-inter, qt6-wayland, qt6-svg-plugins, xdg-utils
+Suggests: task-core (>= 0.3.0), task-resources (>= 0.2.4), task-mesh (>= 0.2.0), task-aprs, task-sdr, task-maps (>= 0.1.1), foxtrotgps, gpsd-clients, kiwix-tools, direwolf
+Section: utils
+Priority: optional
+Description: application launcher for the T.A.S.K. platform
+ Native Qt (PySide6) launcher for the T.A.S.K. platform: app tiles from
+ TOML manifests and installed desktop applications, horizontal paging,
+ task-core link status and sign-in, read-only System and Devices views and
+ an App Manager. It launches the installed field apps (task-mesh,
+ task-aprs, task-sdr, task-maps; SDR++/Gqrx as External) and has native
+ read-only windows for the Kiwix library, a receive-only APRS monitor
+ fallback, local weather
+ data and offline medical references. It is an ordinary desktop window
+ (no kiosk, no session replacement), never runs as root, never opens
+ hardware itself and never transmits.

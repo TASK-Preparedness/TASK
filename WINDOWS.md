@@ -1,8 +1,9 @@
 # T.A.S.K. on Windows — architecture and status
 
-> **Status: unavailable.** No Windows build exists and nothing has been run on
-> Windows. This document is the plan, plus the shared groundwork that already
-> exists in `platform/`. Windows compatibility will only be claimed after a
+> **Status: unavailable (experimental work only).** Nothing has been run on Windows.
+> Milestone B (2026-11-22) produced an experimental launcher build with Windows CPython
+> **under Wine** on Linux. It is untested and unpublished; see
+> `installers/windows/README.md`. Windows compatibility will only be claimed after a
 > build has been made and tested on Windows 11 x64.
 
 Target: **Windows 11 x64**, native PySide6 UI shared with the Raspberry Pi version.
@@ -15,7 +16,7 @@ Target: **Windows 11 x64**, native PySide6 UI shared with the Raspberry Pi versi
 3. Same safety rules: read-only discovery, no automatic transmit, no auto-start,
    no firmware flashing from the installer, no shell strings.
 
-## Platform abstraction layer (`platform/task_platform`, 0.1.0.dev0)
+## Platform abstraction layer (`platform/task_platform`, 0.2.0.dev0)
 
 | Area | Linux backend | Windows backend | Status (Linux / Windows) |
 |---|---|---|---|
@@ -30,7 +31,10 @@ Target: **Windows 11 x64**, native PySide6 UI shared with the Raspberry Pi versi
 | Background services | systemd user unit (never auto-enabled) | per-user background process started from the launcher; optional Task Scheduler entry only on explicit opt-in | verified / planned |
 | Permissions | `dialout` group, polkit-free | none needed for COM ports; driver install is a user/admin action | verified / planned |
 | Logging | journald / files under XDG state | rotating files under `%LOCALAPPDATA%\TASK\<app>\logs` | verified / planned |
-| Configuration | TOML under XDG config | same TOML under `%APPDATA%\TASK` | verified / planned |
+| Configuration (`config.py`) | TOML under XDG config, atomic save | same TOML under `%APPDATA%\TASK` | implemented / implemented, untested |
+| Device discovery (`discovery.py`) | serial list + known USB IDs (possible/likely/unknown, never opened) | same, from pyserial | implemented / implemented, untested |
+| Offline resources (`resources.py`) | read-only scan + SHA-256 manifest verify | same, Windows roots | implemented / implemented, untested |
+| Launcher | 0.3.7 | proposed 0.3.8 patch (`installers/windows/patches`) | verified / planned (imports and builds its window under Wine only) |
 
 The table is also code: `task_platform.capabilities.CAPABILITIES`, with a test that
 fails if any Windows entry is marked verified.

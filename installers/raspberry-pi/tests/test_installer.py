@@ -139,7 +139,11 @@ def test_install_plans_are_safe(facts, mode, source):
     assert pl.network_required == (source == P.SOURCE_ONLINE)
     if source == P.SOURCE_OFFLINE:
         assert all(not s.network for s in pl.steps)
-        assert any("--no-download" in s.argv for s in pl.steps)
+        checks = [s for s in pl.steps if s.expect == P.LOCAL_URIS_ONLY]
+        installs = [s for s in pl.steps if s.argv[:2] == ["apt-get", "install"] and not s.expect]
+        assert checks and installs and pl.steps.index(checks[0]) == pl.steps.index(installs[0]) - 1
+        assert "--print-uris" in checks[0].argv and not checks[0].root
+        assert not any("--no-download" in s.argv for s in pl.steps)   # broken with local .debs in apt 3.0
     assert "NOT enabled" in pl.render() or mode == P.MINIMAL
 
 

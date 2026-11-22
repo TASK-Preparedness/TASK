@@ -1,0 +1,11 @@
+Package: python3-task-comms
+Version: 0.3.1
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 73
+Depends: python3 (>= 3.11)
+Section: python
+Priority: optional
+Description: T.A.S.K. shared communications helpers
+ Status cards, task-geofeed/1, hash-chained audit, transmit policy (amateur + GMRS),
+ APRS codec, notification store with per-protocol mesh sources. Pure Python, no hardware access.

@@ -80,7 +80,7 @@ A launcher tile alone never counts as an implementation.
 * **Does:** Meshtastic over USB serial (Heltec V3 verified), MeshCore protocol support, message database, background hub service, desktop notifications.
 * **Audible alert (hand-modified on the Pi, now maintained source):** `mesh/task_mesh/hub/notifier.py` is the installed Pi version (SHA-256 `2864d242…bbe1a`); the original package version (`notifier.py.pre-audio-backup`, SHA-256 `3a8f6145…20b72`) equals task-mesh 0.3.1 source. Change: desktop notification always suppresses its own sound, and the notifier plays `~/.local/share/task-mesh/sounds/mesh-alert.wav` with `/usr/bin/paplay` (argv list, detached, no shell) when sound is on. Diff: `docs/provenance/mesh-notifier-audio.diff`.
 * **WAV not shipped:** derived from a CC-BY-SA-3.0 sound; users generate it with `scripts/generate-mesh-alert.sh` (see THIRD_PARTY_NOTICES.md).
-* **Known issues:** package version still 0.3.1 although the notifier differs from the 0.3.1 .deb — a 0.3.2 release is proposed (needs approval); debian/copyright lists `Source: https://example.invalid/task-mesh` and holder "T.A.S.K. Mesh Operations contributors" (needs maintainer decision); test runner previously extracted only the meshtastic wheel (fixed here).
+* **Known issues:** package version still 0.3.1 although the notifier differs from the 0.3.1 .deb. Milestone B builds the PROPOSED 0.3.2~alpha1 (needs approval). The AT-15 test failure was a test clock bug, now fixed; retention is unchanged. debian/copyright lists `Source: https://example.invalid/task-mesh` and holder "T.A.S.K. Mesh Operations contributors" (needs maintainer decision); test runner previously extracted only the meshtastic wheel (fixed here).
 
 ### Maps & GPS — task-maps 0.1.1 (experimental)
 * **Installed at:** `/usr/share/task-maps`, `/usr/bin/task-maps`. **Depends:** PySide6; recommends gpsd.
@@ -105,7 +105,7 @@ A launcher tile alone never counts as an implementation.
 
 ### Devices — task-console 0.2.0 (experimental)
 * **Installed at:** `/usr/lib/task-console`, `/usr/bin/task-console`. **Does:** device list/assignment UI over task-core.
-* **Known issues:** legacy pip-based `install-console.sh` footprint test fails on Debian 13's pip (`/usr/local/local/…`); the .deb is the supported path.
+* **Known issues:** 0.2.0 lacks the `python3-pyside6.qtnetwork` dependency (works on the Pi because task-launcher pulls it in); fixed in the PROPOSED 0.2.1~alpha1 package (Milestone B, needs approval). `deploy/install-console.sh` is developer-only, and since Milestone B it refuses to shadow an installed .deb; the `/usr/local/local` test failure is fixed (see KNOWN-ISSUES.md).
 
 ### Weather (incomplete) and Mission Planner (planned)
 * Weather shows only the presence of decoders and the age of local data; there is no decoder integration or forecast engine.

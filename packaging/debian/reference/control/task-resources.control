@@ -1,0 +1,28 @@
+Package: task-resources
+Version: 0.2.4
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 242
+Depends: python3 (>= 3.13), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8), python3-libzim (>= 3.6), ca-certificates
+Recommends: python3-pyside6.qtwebenginewidgets (>= 6.8), python3-pyside6.qtwebenginecore (>= 6.8), python3-pyside6.qtpdf (>= 6.8), python3-pyside6.qtpdfwidgets (>= 6.8)
+Suggests: task-launcher (>= 0.3.2)
+Section: utils
+Priority: optional
+Description: native offline library and reader for the T.A.S.K. platform
+ T.A.S.K. Resources is its own ZIM library and reader built on python3-libzim:
+ it finds existing ZIM files (and PDF, EPUB, text, Markdown and HTML) where
+ they already are and never moves, copies or modifies them; it keeps a
+ private index with categories, edited metadata, bookmarks and history;
+ it searches titles and, where a ZIM has a full-text index, full text.
+ .
+ Pages are read straight from the archive. The optional Qt WebEngine viewer
+ serves them through a zim:// scheme handler with all network requests
+ blocked; without WebEngine a lightweight viewer is used. It does not use
+ or reconfigure Kiwix, kiwix-serve or any HTTP server, never runs as root
+ and has no service or autostart.
+ .
+ Since 0.2.0 it can browse the official Kiwix OPDS catalog and download ZIM,
+ PDF, EPUB, HTML, text and Markdown files on request: resumable, verified
+ (size, published sha-256, file type, libzim integrity check) before they
+ appear in the library, through an SSRF-safe HTTPS client. Nothing is
+ contacted until the user asks.

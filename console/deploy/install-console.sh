@@ -2,7 +2,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 Joshua Sturtz
 #
-# Install T.A.S.K. Console 0.1.0 (PHASE-2.md section 14 item 6). Run from the unpacked bundle:
+# DEVELOPER / LEGACY PATH ONLY. The supported install is the Debian package task-console
+# (/usr/bin/task-console -> /usr/lib/task-console). This script pip-installs the console wheel under
+# /usr/local and is kept for development machines without the .deb.
+#
+# Install T.A.S.K. Console 0.2.0 (PHASE-2.md section 14 item 6). Run from the unpacked bundle:
 #
 #   sudo ./install-console.sh
 #
@@ -10,7 +14,10 @@
 #   1. check the console wheel against SHA256SUMS
 #   2. apt-get install the Debian trixie Qt packages (python3-pyside6.qtcore, qtgui, qtwidgets,
 #      qtnetwork; qt6-wayland). This step needs the network or a local apt cache.
-#   3. pip-install the console wheel into the system python3 (--no-deps --no-index)
+#   3. pip-install the console wheel into the system python3 (--no-deps --no-index). Debian's
+#      python3 uses the "posix_local" install scheme, which already maps the default prefix to
+#      /usr/local (bin: /usr/local/bin, modules: /usr/local/lib/python3.X/dist-packages). Never pass
+#      "--prefix /usr/local" in addition: Debian appends /local again (/usr/local/local/...).
 #   4. install the application-menu entry to /usr/local/share/applications/ and the icon to
 #      /usr/local/share/icons/hicolor/scalable/apps/
 #
@@ -21,9 +28,13 @@
 # Socket access is a separate, explicit administrator command (section 12 item 1), not done here:
 #   sudo usermod -aG task-core <desktop user>     (then log out and in)
 #
+# It refuses to run when the Debian package task-console is installed: /usr/local/bin comes first
+# on PATH, so a pip copy would silently shadow the packaged /usr/bin/task-console. Remove the
+# package first, or set TASK_CONSOLE_ALLOW_SHADOW=1 if you really want both.
+#
 # Environment overrides exist only so the script can be exercised off-target:
-#   PYTHON, APT_GET, RAIN_ROOT (prefix for the share files), RAIN_PIP_ARGS (extra pip arguments),
-#   RAIN_ALLOW_NONROOT=1
+#   PYTHON, APT_GET, DPKG_QUERY, RAIN_ROOT (prefix for the share files), RAIN_PIP_ARGS (extra pip
+#   arguments), RAIN_ALLOW_NONROOT=1
 set -euo pipefail
 umask 022
 
@@ -32,6 +43,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 WHEEL_NAME="task_console-${VERSION}-py3-none-any.whl"
 PYTHON="${PYTHON:-/usr/bin/python3}"
 APT_GET="${APT_GET:-apt-get}"
+DPKG_QUERY="${DPKG_QUERY:-dpkg-query}"
 ROOT="${RAIN_ROOT:-}"
 PACKAGES=(python3-pyside6.qtcore python3-pyside6.qtgui python3-pyside6.qtwidgets python3-pyside6.qtnetwork
           qt6-wayland)
@@ -51,6 +63,13 @@ if [[ "$(id -u)" -ne 0 && "${RAIN_ALLOW_NONROOT:-0}" != "1" ]]; then
   die "re-run as root: sudo $0"
 fi
 [[ -x "$PYTHON" ]] || die "$PYTHON not found"
+
+# ---- 0. never shadow the Debian package ------------------------------------------------
+if command -v "$DPKG_QUERY" >/dev/null 2>&1 \
+   && [[ "$("$DPKG_QUERY" -W -f='${Status}' task-console 2>/dev/null || true)" == "install ok installed" ]] \
+   && [[ "${TASK_CONSOLE_ALLOW_SHADOW:-0}" != "1" ]]; then
+  die "the Debian package task-console is installed (/usr/bin/task-console); this pip install would shadow it. Nothing was changed."
+fi
 
 # ---- 1. checksum ---------------------------------------------------------------------
 WHEEL="$(find_file "$WHEEL_NAME")" || die "$WHEEL_NAME not found next to this script"

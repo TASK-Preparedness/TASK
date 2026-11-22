@@ -1,0 +1,14 @@
+Package: task-core
+Version: 0.3.0
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 192
+Depends: python3 (>= 3.11), python3-yaml (>= 6)
+Recommends: python3-pyudev
+Suggests: task-core-compat
+Section: admin
+Priority: optional
+Description: T.A.S.K. Core device service (renamed rain-core 0.2.1)
+ Same protocol and runtime code as rain-core 0.2.1 (it reports version 0.2.1), renamed,
+ plus task-core-migrate (staged, reversible migration from rain-core). The systemd unit is
+ installed but neither enabled nor started; it refuses to run before migration.

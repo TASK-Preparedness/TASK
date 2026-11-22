@@ -1,0 +1,11 @@
+# SHA-256 of the .debs previously delivered for installation on the development Pi (versions = dpkg-query on the Pi, 2026-11-08).
+8956231817cbfe2dd0f285fe5b84b5df4abd408c8e00af40f3a5996d6e4b09e4  python3-task-comms_0.3.1_all.deb
+640604311eaf3a60e1992a2d3a3459149191a9aee1b621d001a9cb2f05c3a283  task-aprs_0.1.0_all.deb
+243125990452c776098590105b4a53f5f40352c503da8e7111f45f524fc069db  task-console_0.2.0_all.deb
+3ec1bbfb4b63e55fe73d236d76b8cc2d561c32d8a0883327f718a1486df95da0  task-core-compat_0.3.0_all.deb
+a48197329d50197f62cf8b4db87963b4d57c275ba587a2ae5a1b12627385f5e1  task-core_0.3.0_all.deb
+bcf59ec094b83953f6af3041766e6600b3481504a378525b7fe7116973991e04  task-launcher_0.3.7_all.deb
+e45652d283c2b9abb94113b618073784beb3a4200e58e2bcaf268e0a512d5b0d  task-maps_0.1.1_all.deb
+eb569b01fc9584ea538ab547763897726bafaf1d840baef3db8faa478c1ea953  task-mesh_0.3.1_all.deb
+064aa332db0de2e52e82891f4ab295972331758e91e269ddd32aa6b90cd457e5  task-resources_0.2.4_all.deb
+5bcec72059da184e2a6e53d18f21d2d504a9c143a5234cec86f4801493236a82  task-sdr_0.2.4_all.deb

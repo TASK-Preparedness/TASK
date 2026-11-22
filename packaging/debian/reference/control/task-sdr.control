@@ -1,0 +1,14 @@
+Package: task-sdr
+Version: 0.2.4
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 215
+Depends: python3 (>= 3.11), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8), python3-pyside6.qtmultimedia (>= 6.8), python3-numpy, python3-scipy, librtlsdr0 (>= 2.0.2), python3-task-comms (>= 0.3.0)
+Suggests: python3-soapysdr, soapysdr0.8-module-rtlsdr, rtl-sdr
+Section: hamradio
+Priority: optional
+Description: T.A.S.K. SDR Studio (receive only)
+ Native RTL-SDR (librtlsdr; RTL-SDR Blog V4 aware) receiver with digit tuner, spectrum and
+ waterfall, AM/NFM/WFM/USB/LSB/CW, bandwidth, gain/AGC, squelch, S-meter, bookmarks and
+ presets, a Smart Scanner, and a frequency-overlay framework (format only; no frequency data is
+ included). SoapySDR is optional. No transmit capability.

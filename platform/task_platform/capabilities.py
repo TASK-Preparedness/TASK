@@ -17,7 +17,11 @@ CAPABILITIES: dict[str, dict[str, str]] = {
     "serial_discovery": {"linux": "implemented", "windows": "implemented"},
     "process":          {"linux": "verified", "windows": "implemented"},
     "logging":          {"linux": "verified", "windows": "planned"},
-    "config":           {"linux": "verified", "windows": "planned"},
+    "config":           {"linux": "implemented", "windows": "implemented"},
+    "device_discovery": {"linux": "implemented", "windows": "implemented"},
+    "offline_resources": {"linux": "implemented", "windows": "implemented"},
+    # mainline launcher 0.3.7 does not import on Windows; installers/windows/patches has the proposed fix
+    "launcher":         {"linux": "verified", "windows": "planned"},
     "notifications":    {"linux": "verified", "windows": "planned"},
     "background_services": {"linux": "verified", "windows": "planned"},
     "usb_discovery":    {"linux": "implemented", "windows": "planned"},

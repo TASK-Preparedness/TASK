@@ -22,3 +22,9 @@ Nothing below has been done. Each item needs Joshua Sturtz's explicit decision.
 | 16 | Clean-Pi test hardware | A spare SD card / Pi for install/upgrade/remove validation. |
 | 17 | Windows work | Approve Milestone E start, CI on GitHub Actions, PyInstaller + NSIS. |
 | 18 | Still pending from earlier | Seven Radio transmit questions, Milestone B coding approval, Firmware Manager questions and per-step Heltec approvals (unchanged). |
+| 19 | task-mesh **0.3.2~alpha1** (Milestone B) | Approve the version string (the `~alpha1` pre-release sorts below 0.3.2) for the package that ships the maintained notifier. It is built and chroot-tested, not installed anywhere. Supersedes the plain "0.3.2" in #10 until a Pi test passes. |
+| 20 | task-console **0.2.1~alpha1** (Milestone B) | Approve the dependency fix (`python3-pyside6.qtnetwork`). Packaging-only. |
+| 21 | task-launcher **0.3.8** | Bundle: the Windows portability patch (`installers/windows/patches/`, Linux tests unchanged) and preferring `/usr/bin/task-console` over `/usr/local/bin` in `090-devices.toml`. Not built; 0.3.7 stays byte-identical. |
+| 22 | Clean-Pi package test | Install, upgrade and remove the Milestone B bundle on a spare SD card (not the working Pi). Needed before the installer may execute anything. |
+| 23 | Pi `dpkg-query` of dependency versions | Run the read-only command in `packaging/debian/README.md` on the Pi and send the output. It is needed for exact dependency pins and the Milestone D offline bundle; it does not block Milestone B. |
+| 24 | Windows test machine | A Windows 11 x64 machine/VM to run `installers/windows/build_windows.py` natively. The Wine build is not a Windows test. |

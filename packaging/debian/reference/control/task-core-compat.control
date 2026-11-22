@@ -1,0 +1,10 @@
+Package: task-core-compat
+Version: 0.3.0
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 1
+Depends: task-core (= 0.3.0)
+Section: admin
+Priority: optional
+Description: legacy command names for task-core
+ /usr/bin/rain-core-admin -> task-core-admin for one release. Removable after cleanup stage M5.

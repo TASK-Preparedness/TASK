@@ -1,0 +1,15 @@
+Package: task-aprs
+Version: 0.1.0
+Architecture: all
+Maintainer: T.A.S.K. Development Team <TBD-maintainer-email>
+Installed-Size: 73
+Depends: python3 (>= 3.11), python3-pyside6.qtcore (>= 6.8), python3-pyside6.qtgui (>= 6.8), python3-pyside6.qtwidgets (>= 6.8), python3-task-comms (>= 0.3.0)
+Recommends: direwolf
+Suggests: task-launcher (>= 0.3.0)
+Section: hamradio
+Priority: optional
+Description: T.A.S.K. APRS (amateur via Direwolf) and GMRS data profile
+ Two-way amateur APRS through an already running Direwolf (AGW/KISS on loopback); never
+ starts or configures Direwolf. Every transmission is an explicit user action checked by the
+ transmit policy and audited. GMRS data only through a radio-integration driver; no verified
+ real GMRS driver exists yet (SIMULATION driver only).

@@ -1,3 +1,20 @@
+task-mesh (0.3.2~alpha1) unstable; urgency=medium
+
+  * PROPOSED pre-release (T.A.S.K. Public Alpha, Milestone B); version needs
+    maintainer approval. Not installed anywhere.
+  * Ship the audible Mesh alert that was hand-modified on the development
+    Pi as maintained source (hub/notifier.py, SHA-256 2864d242...bbe1a): the
+    desktop notification suppresses its own sound and the notifier plays
+    ~/.local/share/task-mesh/sounds/mesh-alert.wav with /usr/bin/paplay
+    (argv list, detached, no shell) when sound is on. The WAV itself is not
+    shipped (CC-BY-SA-3.0 source); scripts/generate-mesh-alert.sh creates it.
+  * No other code change from 0.3.1. Retention behaviour unchanged.
+  * Tests: AT-15 crash-safety test uses a frozen reference clock (it failed
+    after 2026-10-21 because fixed 2026-09-21 timestamps were pruned by the
+    30-day startup retention).
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Sun, 22 Nov 2026 09:00:00 -0500
+
 task-mesh (0.3.1) unstable; urgency=medium
 
   * Phase 4F.1 corrective release.

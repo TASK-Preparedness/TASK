@@ -63,6 +63,12 @@ class HostFacts:
     bluetooth_adapters: list[str] = field(default_factory=list)
     installed_packages: dict[str, str] = field(default_factory=dict)  # name -> version
     simulated: bool = False
+    # /proc/cpuinfo "Revision" (new-style code), decoded; cross-checks the device-tree model
+    revision: str | None = None
+    revision_family: str | None = None
+    revision_mem_mib: int | None = None
+    # files that would conflict with or shadow packaged T.A.S.K. programs (pip/legacy installs)
+    shadowing_files: list[str] = field(default_factory=list)
 
     @property
     def installed_task_packages(self) -> dict[str, str]:
@@ -118,6 +124,31 @@ def parse_meminfo(text: str | None) -> int | None:
     return int(m.group(1)) // 1024 if m else None
 
 
+# New-style revision code (bit 23 set): type in bits 4-11, memory in bits 20-22.
+# Source: Raspberry Pi documentation, "Raspberry Pi revision codes".
+_REV_TYPE = {0x04: "pi2", 0x08: "pi3", 0x09: "zero", 0x0a: "cm3", 0x0c: "zero", 0x0d: "pi3", 0x0e: "pi3",
+             0x10: "cm3", 0x11: "pi4", 0x12: "zero2w", 0x13: "pi400", 0x14: "cm4", 0x15: "cm4",
+             0x17: "pi5", 0x18: "cm5", 0x19: "pi500", 0x1a: "cm5"}
+_REV_MEM = {0: 256, 1: 512, 2: 1024, 3: 2048, 4: 4096, 5: 8192, 6: 16384}
+
+
+def parse_revision(cpuinfo: str | None) -> tuple[str | None, str | None, int | None]:
+    """Return (revision hex, family, memory MiB) from /proc/cpuinfo; unknown parts are None."""
+    m = re.search(r"^Revision\s*:\s*([0-9a-fA-F]+)\s*$", cpuinfo or "", re.M)
+    if not m:
+        return None, None, None
+    rev = m.group(1).lower()
+    code = int(rev, 16)
+    if not code & (1 << 23):  # old-style codes: only very old boards
+        return rev, "pi1" if code < 0x0011 else None, None
+    return rev, _REV_TYPE.get((code >> 4) & 0xFF), _REV_MEM.get((code >> 20) & 0x7)
+
+
+# Paths that would shadow the Debian packages (PATH has /usr/local/bin first) or are legacy names.
+SHADOW_PATHS = ("usr/local/bin/task-console", "usr/local/bin/rain-console", "usr/local/bin/task-launcher",
+                "usr/local/bin/task-mesh", "usr/local/bin/task-core", "usr/local/bin/rain-core")
+
+
 def parse_dpkg_status(text: str | None) -> dict[str, str]:
     pkgs: dict[str, str] = {}
     for stanza in (text or "").split("\n\n"):
@@ -165,6 +196,7 @@ def detect(root: str | os.PathLike = "/", env: dict | None = None, runner: Runne
     root = Path(root)
     env = dict(os.environ) if env is None else env
     simulated = root != Path("/")
+    explicit_runner = runner is not None
     runner = runner or default_runner
     model = _read(root / "proc/device-tree/model") or _read(root / "sys/firmware/devicetree/base/model")
     model = model.replace("\x00", "").strip() if model else None
@@ -174,11 +206,18 @@ def detect(root: str | os.PathLike = "/", env: dict | None = None, runner: Runne
         free = st.f_bavail * st.f_frsize // (1024 * 1024)
     except OSError:
         free = None
+    rev, rev_family, rev_mem = parse_revision(_read(root / "proc/cpuinfo"))
+    shadow = sorted("/" + rel for rel in SHADOW_PATHS if (root / rel).exists() or (root / rel).is_symlink())
+    if simulated and not explicit_runner:
+        # never ask the build host about a simulated root: use the fixture's own value (or unknown)
+        arch = (_read(root / "var/lib/dpkg/arch-native") or "").strip() or None
+    else:
+        arch = runner(["dpkg", "--print-architecture"])
     bt = sorted(p.name for p in (root / "sys/class/bluetooth").glob("hci*")) if (root / "sys/class/bluetooth").is_dir() else []
     return HostFacts(
         model=model, pi_family=pi_family(model),
         kernel_machine=kernel_machine or _platform.machine(),
-        dpkg_arch=runner(["dpkg", "--print-architecture"]),
+        dpkg_arch=arch,
         os_id=osr.get("ID"), os_version_id=osr.get("VERSION_ID"),
         os_codename=osr.get("VERSION_CODENAME"), os_pretty=osr.get("PRETTY_NAME"),
         mem_total_mib=parse_meminfo(_read(root / "proc/meminfo")),
@@ -189,4 +228,5 @@ def detect(root: str | os.PathLike = "/", env: dict | None = None, runner: Runne
         python_version=_platform.python_version(),
         usb=scan_usb(root), bluetooth_adapters=bt,
         installed_packages=parse_dpkg_status(_read(root / "var/lib/dpkg/status")),
-        simulated=simulated)
+        simulated=simulated, revision=rev, revision_family=rev_family, revision_mem_mib=rev_mem,
+        shadowing_files=shadow)

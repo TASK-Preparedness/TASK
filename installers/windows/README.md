@@ -1,7 +1,49 @@
-# Windows installer (planned)
+# Windows build (EXPERIMENTAL, not supported)
 
-Nothing here builds yet. Plan (see ../../WINDOWS.md): PyInstaller "onedir" build of the
-shared PySide6 apps, wrapped in a per-user NSIS installer (or WiX MSI for managed
-deployment); no administrator rights, no auto-start, uninstall keeps user data in
-`%APPDATA%\TASK` / `%LOCALAPPDATA%\TASK` unless the user chooses otherwise.
-Requires a Windows 11 x64 test machine before any build is published.
+**No Windows support is claimed.** Nothing here has run on Windows. An experimental launcher build
+was produced with Windows CPython **under Wine** on Linux. Wine is not Windows, so that build is
+**UNTESTED** and must not be published or presented as a release.
+
+| File | Purpose |
+|---|---|
+| `patches/launcher-windows-prep.patch` | Proposed launcher 0.3.8 portability fix (not applied to `launcher/`; 0.3.7 stays byte-identical). It touches paths (`%APPDATA%`/`%LOCALAPPDATA%`/`%PROGRAMDATA%` under `TASK`), the privilege check (`IsUserAnAdmin` instead of `os.geteuid`), temp/runtime names (no `/tmp`, no `os.getuid`) and the manifest owner check. Linux behaviour is unchanged: the full launcher suite passes with the patch applied (326 passed, 13 skipped). |
+| `build_windows.py` | Stages git-tracked `launcher/` + `platform/` sources, applies the patch with `git apply --check` first, runs PyInstaller (`task-launcher.spec`, onedir), and optionally NSIS. It refuses to run PyInstaller off Windows. `--use-stage` reuses a stage made with `--stage-only`. |
+| `task-launcher.spec` | PyInstaller spec: windowed, no UAC elevation, no QtWebEngine; bundles `apps.d`, LICENSE and THIRD_PARTY_NOTICES. |
+| `nsis/task-launcher.nsi` | Per-user installer (`RequestExecutionLevel user`, `%LOCALAPPDATA%\Programs\TASK\Launcher`, HKCU uninstall entry). No services, no auto-start, no drivers. Uninstall keeps `%APPDATA%\TASK` and `%LOCALAPPDATA%\TASK`. |
+| `wix/task-launcher.wxs` | Per-user MSI skeleton for managed deployment. The file list is harvested at build time. |
+| `tools/simulate_windows_launcher.py` | Linux CPython with POSIX `os` functions removed and `sys.platform = "win32"`. Catches POSIX assumptions only. |
+| `tools/wine_smoke.py` | Windows CPython (e.g. under Wine): imports every launcher + task_platform module and builds the main window offscreen. |
+| `tests/test_windows_prep.py` | Patch applies cleanly; patch scope; simulated import; build refuses off Windows; NSIS/WiX scripts compile with a dummy payload (`makensis`, `wixl`). |
+
+## NSIS vs WiX
+
+| | NSIS 3.11 | WiX (v3 schema; checked with msitools `wixl` 0.106) |
+|---|---|---|
+| Licence | zlib/libpng | MS-RL (WiX); LGPL (msitools) |
+| Output | `.exe` installer + uninstaller | `.msi` (Windows Installer: repair, managed deployment, GPO/Intune) |
+| Per-user install | yes (`RequestExecutionLevel user`) | yes (`InstallScope="perUser"`) |
+| Build on Linux | yes (`makensis`, Debian package) | partly: `wixl` covers a subset; real WiX needs Windows/.NET |
+| Upgrade/uninstall | scripted by us | built-in MajorUpgrade, repair, rollback |
+| Recommendation | **first experimental installer** (simple, buildable in CI on any OS) | later, when managed deployment is needed |
+
+Inno Setup was not chosen because its licence is not OSI-approved.
+
+## Results on the build machine (Debian 13 x86_64, 2026-11-22)
+
+* Wine 10.0 + Windows CPython 3.12.10 (python.org NuGet package) + PySide6-Essentials 6.8.2.1 +
+  PyInstaller 6.11.1 + pyserial 3.5. These were installed into a scratch Wine prefix, not into the system Python.
+* `wine_smoke.py`: 0 import failures across launcher and task_platform; `MainWindow` builds offscreen;
+  paths resolve to `C:\users\<user>\AppData\Roaming\TASK\task-launcher` and `…\Local\TASK\task-launcher`,
+  instance file under `%TEMP%`. Exit code 9 at interpreter teardown (Wine `CloseHandle` error in
+  `subprocess.__del__`), after all checks had passed.
+* PyInstaller onedir build: succeeded (92 MB folder, 38 MB zip). This exceeds the 25 MB deliverable limit,
+  so it is kept on the build machine only and is **not** part of the release outputs.
+* Running the frozen `.exe` under Wine: it **refused to start** with "task-launcher must not run as root".
+  Wine's default user reports as an elevated administrator (`IsUserAnAdmin() == True`). On real Windows
+  with UAC, an unelevated administrator should report False. This is unverified; test it on Windows 11 first.
+* `makensis` compiles the NSIS script and `wixl` builds the MSI skeleton, both with a dummy payload only.
+
+## Before any Windows claim
+A Windows 11 x64 machine (or VM): run the build natively, start the launcher as an unelevated user,
+install and uninstall with NSIS, check the paths. Also needed: maintainer approval of launcher 0.3.8
+(the patch), code-signing decision, and CI (GitHub Actions `windows-latest`) after publication is approved.

@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2026 Joshua Sturtz
 """Plan execution.
 
-Only the dry-run executor exists in 0.1.0.dev0. A real executor (running
+Only the dry-run executor exists in 0.2.0.dev0. A real executor (running
 privileged apt steps through sudo in a terminal, never a root GUI) will be
 added after validated arm64 packages exist and a clean-Pi test is approved.
 """

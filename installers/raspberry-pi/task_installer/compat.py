@@ -101,6 +101,13 @@ def evaluate(facts: HostFacts, manual_family: str | None = None, min_disk_mib: i
         blockers.append(f"{chosen.label} is not supported: {chosen.note}")
     elif chosen.status != VERIFIED:
         warnings.append(f"{chosen.label}: {chosen.status}. {chosen.note}")
+    # 2b. second, independent read-only source: the board revision code in /proc/cpuinfo
+    if facts.revision_family and detected and facts.revision_family != detected.family:
+        warnings.append(f"Device-tree model ({facts.model}) and revision code {facts.revision} "
+                        f"({facts.revision_family}) disagree; the stricter of the two is used.")
+        other = MODELS.get(facts.revision_family)
+        if other and chosen:
+            chosen = _stricter(chosen, other)
     # 3. resources
     min_ram = chosen.min_ram_mib if chosen else 2048
     if facts.mem_total_mib is not None and facts.mem_total_mib < min_ram * 0.85:
@@ -110,6 +117,10 @@ def evaluate(facts: HostFacts, manual_family: str | None = None, min_disk_mib: i
     if not facts.graphical:
         warnings.append("No graphical session detected: the text installer will be used; T.A.S.K. apps need a desktop to run.")
     profile = chosen.profile if chosen else "full"
+    mem = facts.mem_total_mib or facts.revision_mem_mib
+    if chosen and chosen.family in ("pi4", "pi400", "cm4") and mem is not None and mem < 1800 and profile == "full":
+        profile = "no-webengine"
+        warnings.append(f"{chosen.label} with {mem} MiB RAM: the QtWebEngine reader (recommended package) is skipped.")
     return Verdict(ok=not blockers, model=chosen, blockers=blockers, warnings=warnings,
                    profile=profile, manual_mismatch=mismatch)
 

@@ -66,3 +66,25 @@ def test_wizard_zero2w_disables_complete(qtbot, facts):
 def test_gui_refuses_root(monkeypatch, facts):
     monkeypatch.setattr(gui.os, "geteuid", lambda: 0)
     assert gui.run_gui(facts("pi5")) == 2
+
+
+def test_wizard_with_bundle_shows_preflight_and_exact_files(qtbot, facts, tmp_path):
+    from test_milestone_b import make_bundle
+    b = make_bundle(tmp_path)
+    w = gui.InstallerWizard(facts("pi4"), bundle=b)
+    qtbot.addWidget(w)
+    w.show()
+    walk_to_end(w, qtbot)
+    text = w.su_text.toPlainText()
+    assert "Preflight: OK" in text and "task-launcher_0.3.7_all.deb" in text and "*" not in text.split("Commands")[1]
+
+
+def test_wizard_with_corrupt_bundle_cannot_continue(qtbot, facts, tmp_path):
+    from test_milestone_b import make_bundle
+    b = make_bundle(tmp_path, corrupt="task-launcher")
+    w = gui.InstallerWizard(facts("pi5"), bundle=b)
+    qtbot.addWidget(w)
+    w.show()
+    for _ in range(6):
+        w.next()
+    assert w.plan is None and "BLOCKER" in w.su_text.toPlainText() and not w.su.isComplete()

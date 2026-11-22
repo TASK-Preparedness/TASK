@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2026 Joshua Sturtz
-"""T.A.S.K. platform abstraction layer (EXPERIMENTAL, 0.1.0.dev0).
+"""T.A.S.K. platform abstraction layer (EXPERIMENTAL, 0.2.0.dev0).
 
 Shared, dependency-free interfaces that let T.A.S.K. modules run on Linux (the
 verified platform) and, later, Windows 11 x64 (NOT YET BUILT OR TESTED).
@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import sys
 
-__version__ = "0.1.0.dev0"
+__version__ = "0.2.0.dev0"
 
 LINUX = "linux"
 WINDOWS = "windows"
