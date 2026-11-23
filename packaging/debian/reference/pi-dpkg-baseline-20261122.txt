@@ -1,0 +1,48 @@
+# Debian/Raspberry Pi OS packages on the development Pi, as reported by Joshua Sturtz on 2026-11-22
+# (transcribed from his message; dpkg-query was run by him, read-only). Host: Raspberry Pi 5 Model B Rev 1.0,
+# revision d04170, arm64, Debian 13.6 trixie (os-release ID=debian, no Raspberry Pi OS branding).
+# Format: package<TAB>version. "-" = reported NOT installed.
+python3	3.13.5-1
+python3-pyside6.qtcore	6.8.2.1-4
+python3-pyside6.qtdbus	6.8.2.1-4
+python3-pyside6.qtgui	6.8.2.1-4
+python3-pyside6.qtmultimedia	6.8.2.1-4
+python3-pyside6.qtnetwork	6.8.2.1-4
+python3-pyside6.qtpdf	6.8.2.1-4
+python3-pyside6.qtpdfwidgets	6.8.2.1-4
+python3-pyside6.qtprintsupport	6.8.2.1-4
+python3-pyside6.qtsvg	6.8.2.1-4
+python3-pyside6.qtwebchannel	6.8.2.1-4
+python3-pyside6.qtwebenginecore	6.8.2.1-4
+python3-pyside6.qtwebenginewidgets	6.8.2.1-4
+python3-pyside6.qtwidgets	6.8.2.1-4
+python3-numpy	1:2.2.4+ds-1
+python3-scipy	1.15.3-1
+python3-serial	3.5-2
+python3-protobuf	3.21.12-11+deb13u1
+python3-pubsub	4.0.3-7
+python3-pyudev	0.24.3-1
+python3-libzim	3.6.0-1.1+b1
+python3-yaml	6.0.2-1+b2
+gpsd	3.25-5+deb13u1
+direwolf	1.7+dfsg-2+deb13u1
+ffmpeg	8:7.1.5-0+deb13u1+rpt1
+pulseaudio-utils	17.0+dfsg1-2+rpt1
+librtlsdr0	2.0.2-2+b1
+librtlsdr2	-
+soapysdr-tools	0.8.1-5+b2
+soapysdr0.8-module-rtlsdr	0.3.3-1+b4
+soapysdr-module-all	-
+# T.A.S.K. packages (dpkg-query on the Pi, 2026-11-08 inventory)
+python3-task-comms	0.3.1
+task-aprs	0.1.0
+task-console	0.2.0
+task-core	0.3.0
+task-core-compat	0.3.0
+task-launcher	0.3.7
+task-maps	0.1.1
+task-mesh	0.3.1
+task-resources	0.2.4
+task-sdr	0.2.4
+bluez	5.82-1.1+rpt1
+sound-theme-freedesktop	0.8-6~deb13u1

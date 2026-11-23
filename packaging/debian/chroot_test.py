@@ -309,8 +309,26 @@ def scenario_upgrade(args, results):
                         "detail": [r.stdout.strip()]})
         results.append({"check": "upgrade: site configuration /etc/task/core.toml untouched",
                         "ok": cfg.exists() and c.sha("/etc/task/core.toml") == cfg_sha, "detail": []})
-        smoke(c, results, "upgrade", ["task-mesh", "task-console"])
+        r = c.run(["dpkg-query", "-W", "task-launcher"], check=False)
+        results.append({"check": "upgrade: task-launcher is 0.3.8", "ok": "0.3.8" in r.stdout, "detail": [r.stdout.strip()]})
+        toml = (c.dir / "usr/share/task-launcher/apps.d/090-devices.toml").read_text()
+        results.append({"check": "upgrade: launcher Devices tile prefers /usr/bin/task-console",
+                        "ok": 'exec = ["/usr/bin/task-console"]' in toml, "detail": []})
+        smoke(c, results, "upgrade", ["task-mesh", "task-console", "task-launcher"])
         check_policy(c, results, "upgrade")
+        # rollback to the versions installed on the Pi (previous debs kept), then restore the backed-up notifier
+        r = c.run(["apt-get", "install", "-y", "--allow-downgrades"] + [f"/work/ref/{d.name}" for d in ref], check=False)
+        results.append({"check": "rollback: re-install the Pi's previous versions with --allow-downgrades", "ok": r.returncode == 0,
+                        "detail": [ln for ln in r.stdout.splitlines() if "downgraded" in ln]})
+        r = c.run(["dpkg-query", "-W", "-f", "${Package} ${Version}\n"] + [d.name.split("_")[0] for d in ref], check=False)
+        want = {d.name.split("_")[0] + " " + d.name.split("_")[1] for d in ref}
+        results.append({"check": "rollback: every package is back at the Pi's version", "ok": set(r.stdout.split("\n")) - {""} == want,
+                        "detail": sorted(set(r.stdout.split("\n")) ^ want - {""})})
+        shutil.copy(args.pi_notifier, c.dir / notifier.lstrip("/"))   # restore from the backup, as the guide says
+        results.append({"check": "rollback: restored notifier == Pi's modified notifier",
+                        "ok": c.sha(notifier) == PI_NOTIFIER_SHA, "detail": []})
+        results.append({"check": "rollback: /etc/task/core.toml untouched",
+                        "ok": cfg.exists() and c.sha("/etc/task/core.toml") == cfg_sha, "detail": []})
         c.run(["apt-get", "remove", "-y"] + [d.name.split("_")[0] for d in new], check=False)
         results.append({"check": "upgrade: after remove, /etc/task/core.toml still present and unchanged",
                         "ok": cfg.exists() and c.sha("/etc/task/core.toml") == cfg_sha, "detail": []})
@@ -381,6 +399,58 @@ def scenario_installer(args, results):
         c.close()
 
 
+# The exact commands of docs/VOLUNTEER-TESTING.md (keep in sync; test_volunteer_guide_commands checks it).
+VOLUNTEER_INSTALL = ["apt", "install", "-y"]   # the guide uses "sudo apt install" (interactive confirmation)
+VOLUNTEER_ORDER = ["python3-task-comms", "task-core", "task-core-compat", "task-launcher", "task-console", "task-mesh",
+                   "task-maps", "task-aprs", "task-sdr", "task-resources"]
+
+
+def scenario_volunteer(args, results):
+    """Fresh Debian 13 arm64 system, network on: the volunteer guide's commands, one at a time."""
+    c = Chroot(args.base, args.work, "volunteer", args.log)
+    try:
+        b = "/home/tester/task-volunteer-test"
+        for f in sorted(Path(args.debs).glob("*.deb")) + [Path(args.debs) / "SHA256SUMS"]:
+            c.put(f, f"{b}/{f.name}")
+        before = c.snapshot()
+        r = c.run(["sha256sum", "-c", "SHA256SUMS"], check=False, cwd=b)
+        results.append({"check": "volunteer: sha256sum -c SHA256SUMS", "ok": r.returncode == 0 and "FAILED" not in r.stdout,
+                        "detail": r.stdout.strip().splitlines()[-3:]})
+        r = c.run(["apt", "update"], check=False)
+        results.append({"check": "volunteer: apt update", "ok": r.returncode == 0, "detail": []})
+        files = {p.name.split("_")[0]: "./" + p.name for p in Path(args.debs).glob("*.deb")}
+        r = c.run(VOLUNTEER_INSTALL + [files[n] for n in VOLUNTEER_ORDER], check=False, cwd=b)
+        results.append({"check": "volunteer: apt install ./<10 debs> (Depends + Recommends from Debian 13 arm64)",
+                        "ok": r.returncode == 0, "detail": r.stdout.strip().splitlines()[-2:]})
+        r = c.run(["dpkg-query", "-W", "-f", "${Package} ${Version} ${db:Status-Abbrev}\n"] + VOLUNTEER_ORDER, check=False)
+        results.append({"check": "volunteer: dpkg-query shows all ten installed (ii)",
+                        "ok": r.returncode == 0 and r.stdout.count(" ii") == 10, "detail": r.stdout.strip().splitlines()})
+        r = c.run(["dpkg", "--verify"] + VOLUNTEER_ORDER, check=False)
+        results.append({"check": "volunteer: dpkg --verify prints nothing", "ok": r.returncode == 0 and not r.stdout.strip(),
+                        "detail": r.stdout.strip().splitlines()[:10]})
+        r = c.run(["setpriv", "--reuid=65534", "--regid=65534", "--clear-groups", "task-launcher", "--version"],
+                  check=False)   # as an ordinary user (the launcher refuses root)
+        results.append({"check": "volunteer: task-launcher --version", "ok": r.stdout.strip() == "task-launcher 0.3.8",
+                        "detail": [r.stdout.strip(), r.stderr.strip()[-200:]]})
+        r = c.run(["sh", "-c", "ls /etc/systemd/system/*.wants /etc/systemd/user/*.wants /etc/xdg/autostart 2>/dev/null "
+                   "| grep -i task || true"], check=False)
+        results.append({"check": "volunteer: no T.A.S.K. service enabled, no autostart", "ok": not r.stdout.strip(),
+                        "detail": r.stdout.strip().splitlines()})
+        smoke(c, results, "volunteer", VOLUNTEER_ORDER)
+        r = c.run(["apt", "remove", "-y"] + VOLUNTEER_ORDER, check=False)
+        results.append({"check": "volunteer: apt remove <10 packages>", "ok": r.returncode == 0, "detail": []})
+        r = c.run(["dpkg-query", "-W", "-f", "${db:Status-Abbrev}\n"] + VOLUNTEER_ORDER, check=False)
+        results.append({"check": "volunteer: all ten removed (rc or not installed)", "ok": " ii" not in r.stdout and "ii " not in r.stdout,
+                        "detail": r.stdout.split()})
+        c.run(["dpkg", "--purge"] + VOLUNTEER_ORDER, check=False)
+        mine = sorted(f for f in (c.snapshot() - before) - c.owned()
+                      if any(k in f for k in ("task-", "task_", "/task/", "rain-")))
+        results.append({"check": "volunteer: after purge no T.A.S.K. files remain outside the test folder",
+                        "ok": not [f for f in mine if not f.startswith(b)], "detail": mine[:20]})
+    finally:
+        c.close()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", required=True)
@@ -403,7 +473,7 @@ def main():
     results.append({"check": "build host can execute arm64 binaries (qemu-user binfmt)", "ok": arch.returncode == 0,
                     "detail": [arch.stdout.strip()]})
     for name, fn in (("each", scenario_each), ("all", scenario_all), ("upgrade", scenario_upgrade),
-                     ("installer", scenario_installer)):
+                     ("installer", scenario_installer), ("volunteer", scenario_volunteer)):
         if a.only and name not in a.only:
             continue
         t = time.time()
