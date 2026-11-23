@@ -1,18 +1,29 @@
 name: Hardware compatibility report
 description: Tell us how T.A.S.K. works (or not) on your board, radio, GPS or SDR
-labels: ["hardware", "compatibility"]
+labels: ["hardware", "compatibility", "experimental-alpha"]
 body:
   - type: input
     id: device
-    attributes: {label: Device, placeholder: "Raspberry Pi 4 4GB / Heltec V3.2 / RTL-SDR Blog V4 / BTECH UV-PRO"}
+    attributes:
+      label: Device
+      placeholder: "Raspberry Pi 4 4GB / Heltec V3.2 / RTL-SDR Blog V4 / BTECH UV-PRO"
     validations: {required: true}
   - type: input
+    id: revision
+    attributes:
+      label: Board revision (if a Raspberry Pi)
+      description: "From: grep Revision /proc/cpuinfo"
+      placeholder: "d04170"
+  - type: input
     id: os
-    attributes: {label: OS and architecture, placeholder: "Raspberry Pi OS 64-bit (trixie), arm64"}
+    attributes:
+      label: OS and architecture
+      placeholder: "Raspberry Pi OS 64-bit (trixie), arm64"
     validations: {required: true}
   - type: input
     id: versions
-    attributes: {label: T.A.S.K. versions}
+    attributes:
+      label: T.A.S.K. versions
     validations: {required: true}
   - type: dropdown
     id: result
@@ -22,7 +33,8 @@ body:
     validations: {required: true}
   - type: textarea
     id: tested
-    attributes: {label: What exactly did you test? What did you NOT test?}
+    attributes:
+      label: What exactly did you test? What did you NOT test?
     validations: {required: true}
   - type: textarea
     id: detect

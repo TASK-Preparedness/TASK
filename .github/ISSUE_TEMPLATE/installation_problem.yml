@@ -1,6 +1,6 @@
 name: Installation problem
 description: The installer, packages or offline bundle did not work
-labels: ["installer", "triage"]
+labels: ["installer", "triage", "experimental-alpha"]
 body:
   - type: dropdown
     id: method
@@ -10,14 +10,24 @@ body:
     validations: {required: true}
   - type: input
     id: hardware
-    attributes: {label: Computer, OS and architecture}
+    attributes:
+      label: Computer, OS and architecture
     validations: {required: true}
   - type: textarea
+    id: versions
+    attributes:
+      label: Package versions (if any installed)
+      description: "dpkg-query -W -f='${Package}\\t${Version}\\t${Architecture}\\n' 'task-*' python3-task-comms"
+      render: text
+  - type: textarea
     id: detect
-    attributes: {label: Output of `python3 -m task_installer detect`, render: text}
+    attributes:
+      label: Output of `python3 -m task_installer detect` (optional, dry run only)
+      render: text
   - type: textarea
     id: what
-    attributes: {label: What happened? Include the exact error.}
+    attributes:
+      label: What happened? Include the exact error.
     validations: {required: true}
   - type: dropdown
     id: network

@@ -1,32 +1,68 @@
 name: Bug report
 description: Something in T.A.S.K. does not work as expected
-labels: ["bug", "triage"]
+labels: ["bug", "triage", "experimental-alpha"]
 body:
   - type: markdown
     attributes:
-      value: "Thanks! Please remove callsigns, locations, device serial numbers and messages from logs before posting."
+      value: |
+        This is an **experimental alpha**. The public packages have **not** been validated on a physical Raspberry Pi.
+
+        Please remove callsigns, locations, device serial numbers, message text and passwords from logs before posting.
   - type: dropdown
     id: module
     attributes:
       label: Module
-      options: [Launcher, Mesh Network, Maps & GPS, Radio / APRS, SDR Studio, Library / Medical Reader, Devices, Core, Installer, Windows, Other]
+      options: [Launcher, Mesh Network, Maps & GPS, Radio / APRS, SDR Studio, Library / Medical Reader, Devices, Core, Installer, Packaging, Windows (unsupported), Other]
     validations: {required: true}
   - type: input
-    id: version
-    attributes: {label: Package version(s), description: "Output of: dpkg-query -W 'task-*' python3-task-comms"}
+    id: pi_model
+    attributes:
+      label: Raspberry Pi model
+      description: "Output of: cat /proc/device-tree/model"
+      placeholder: "Raspberry Pi 5 Model B Rev 1.0"
     validations: {required: true}
   - type: input
-    id: hardware
-    attributes: {label: Computer and OS, placeholder: "Raspberry Pi 5 8GB, Debian 13 trixie arm64"}
+    id: revision
+    attributes:
+      label: Board revision
+      description: "From: grep Revision /proc/cpuinfo"
+      placeholder: "d04170"
+    validations: {required: true}
+  - type: input
+    id: os
+    attributes:
+      label: OS and architecture
+      description: "From: dpkg --print-architecture and /etc/os-release"
+      placeholder: "Debian 13 trixie, arm64"
+    validations: {required: true}
+  - type: textarea
+    id: versions
+    attributes:
+      label: Package versions
+      description: "Paste: dpkg-query -W -f='${Package}\\t${Version}\\t${Architecture}\\n' 'task-*' python3-task-comms"
+      render: text
     validations: {required: true}
   - type: textarea
     id: steps
-    attributes: {label: Steps to reproduce}
+    attributes:
+      label: Steps to reproduce
     validations: {required: true}
   - type: textarea
     id: expected
-    attributes: {label: What did you expect, and what happened instead?}
+    attributes:
+      label: What did you expect, and what happened instead?
     validations: {required: true}
   - type: textarea
     id: logs
-    attributes: {label: Logs (redacted), render: text}
+    attributes:
+      label: Logs (redacted)
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I have redacted callsigns, locations, serial numbers, messages and passwords.
+          required: true
+        - label: If I transmitted, I was licensed and authorized to do so, or I did not transmit at all.
+          required: true

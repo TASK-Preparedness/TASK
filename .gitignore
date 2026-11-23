@@ -6,9 +6,14 @@ dist/
 .venv/
 venv/
 .pytest_cache/
+.coverage
+htmlcov/
+coverage/
 *.deb
 *.zip
 *.tar.gz
+*.log
+
 # never commit generated/derived or personal data
 mesh-alert.wav
 *.sqlite
@@ -17,3 +22,20 @@ mesh-alert.wav
 radio-protocols.json
 *.mbtiles
 *.zim
+auth.toml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+id_ecdsa
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

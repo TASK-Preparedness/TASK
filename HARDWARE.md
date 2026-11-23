@@ -1,5 +1,10 @@
 # Hardware compatibility
 
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> Volunteer testing for the public packages is requested on Raspberry Pi 5
+> with Debian 13 trixie arm64 only. Entries marked **verified** below refer
+> to the developer's installed system, not to the public alpha packages.
+
 Status words: **verified** (tested on real hardware with T.A.S.K.), **untested**
 (expected to work, nobody has confirmed), **experimental** (may work with
 limits), **unsupported**. Please report your results with the *Hardware

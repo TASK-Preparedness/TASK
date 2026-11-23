@@ -1,5 +1,8 @@
 # Offline installation and use
 
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> A complete offline dependency bundle is **not** part of this alpha.
+
 Offline operation is a core design rule: every module works without internet once
 installed, using data you provide.
 

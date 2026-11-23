@@ -1,6 +1,13 @@
 # Decisions that need the maintainer's approval
 
-Nothing below has been done. Each item needs Joshua Sturtz's explicit decision.
+> Updated 2026-11-23. Package updates task-mesh 0.3.2~alpha1,
+> task-console 0.2.1~alpha1 and launcher 0.3.8 were **approved for
+> packaging, isolated testing and volunteer-testing packages only**.
+> They are not validated on a physical Raspberry Pi and are not published.
+> The project-wide license, maintainer e-mail, git author identity and
+> exact public release contents remain open.
+
+Items 19–21 were approved on 2026-11-23 for packaging, building and isolated testing only. The other items still need Joshua Sturtz's explicit decision.
 
 | # | Decision | Recommendation |
 |---|---|---|
@@ -26,5 +33,5 @@ Nothing below has been done. Each item needs Joshua Sturtz's explicit decision.
 | 20 | task-console **0.2.1~alpha1** (Milestone B) | **APPROVED 2026-11-23 for packaging, building and isolated testing only.** Approve the dependency fix (`python3-pyside6.qtnetwork`). Packaging-only. |
 | 21 | task-launcher **0.3.8** | **APPROVED 2026-11-23 for packaging, building and isolated testing only; merged and built.** Bundle: the Windows portability patch (`installers/windows/patches/`, Linux tests unchanged) and preferring `/usr/bin/task-console` over `/usr/local/bin` in `090-devices.toml`. |
 | 22 | Clean-Pi package test | Install, upgrade and remove the Milestone B bundle on a spare SD card (not the working Pi). Needed before the installer may execute anything. |
-| 23 | Pi `dpkg-query` of dependency versions | Run the read-only command in `packaging/debian/README.md` on the Pi and send the output. It is needed for exact dependency pins and the Milestone D offline bundle; it does not block Milestone B. |
+| 23 | Pi `dpkg-query` of dependency versions | **Received 2026-11-23** and recorded in `packaging/debian/reference/pi-dpkg-baseline-20261122.txt`. Exact pins for the Milestone D offline bundle still need to be written from that output. |
 | 24 | Windows test machine | A Windows 11 x64 machine/VM to run `installers/windows/build_windows.py` natively. The Wine build is not a Windows test. |

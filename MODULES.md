@@ -1,5 +1,11 @@
 # T.A.S.K. modules — verified inventory
 
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> The inventory below describes the development Pi and this source tree.
+> Public packages for volunteer testing (including task-mesh 0.3.2~alpha1,
+> task-console 0.2.1~alpha1 and task-launcher 0.3.8) are experimental and
+> have not been accepted on a clean physical Raspberry Pi.
+
 Inventory date: 2026-11-21. Evidence sources:
 
 1. **Installed-source archive** collected read-only from the development Pi on

@@ -1,3 +1,6 @@
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> Install only from [INSTALL.md](INSTALL.md) after verifying SHA-256 checksums, preferably on a spare SD card. Read [SAFETY.md](SAFETY.md) first. Windows is not supported.
+
 # Quick start
 
 1. **Check compatibility:** `cd installers/raspberry-pi && /usr/bin/python3 -m task_installer detect`.

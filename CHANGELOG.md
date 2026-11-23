@@ -3,6 +3,30 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
+## [Unreleased] — Public experimental alpha preparation (2026-11-23)
+
+Nothing here was installed on, or validated on, a Raspberry Pi. Nothing was
+published. The project-wide license remains **pending owner approval**.
+
+### Added
+* Public-alpha documentation set for volunteer testers: [SAFETY.md](SAFETY.md),
+  [SUPPORT.md](SUPPORT.md), expanded [INSTALL.md](INSTALL.md) (spare SD card,
+  one command at a time, SHA-256 verification, uninstall and rollback), and a
+  volunteer test-report issue template.
+* README and related docs now label this tree **EXPERIMENTAL ALPHA — NOT
+  VALIDATED ON A PHYSICAL RASPBERRY PI**, and state that Windows is not
+  supported.
+* Top-level [LICENSE](LICENSE) is an explicit `LICENSE PENDING OWNER APPROVAL`
+  placeholder. Historical GPL headers and per-module LICENSE files were **not**
+  rewritten.
+
+### Changed
+* CONTRIBUTING and SECURITY no longer treat GPL-3.0-or-later as an approved
+  project-wide license. Reporting paths keep the maintainer e-mail as a
+  placeholder.
+* Bug-report and hardware issue templates ask for Pi model, revision, OS and
+  package versions.
+
 ## [Unreleased] — Volunteer test round 1 (2026-11-23)
 
 Approved on 2026-11-23 for packaging, building and isolated testing only. Nothing was installed on the
@@ -23,6 +47,7 @@ development Pi, and nothing was published.
   checked against the Pi's reported packages (0 violations).
 * Chroot scenarios: rollback to the Pi's previous versions; the volunteer guide's commands.
 * Installer fixture for the development Pi exactly as reported (Pi 5 Rev 1.0, d04170, arm64, Debian 13.6, ID=debian).
+
 
 ## [Unreleased] — Milestone B (2026-11-22): packaging, installer, Windows groundwork
 

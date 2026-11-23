@@ -1,3 +1,5 @@
+> **No Windows support.** This experimental alpha does not include a Windows build, installer, or test results. Nothing in this repository has been run on Windows 11 (or any other Windows system). The notes below are development groundwork only and must not be read as a support claim.
+
 # T.A.S.K. on Windows — architecture and status
 
 > **Status: unavailable (experimental work only).** Nothing has been run on Windows.

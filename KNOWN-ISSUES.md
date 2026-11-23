@@ -1,6 +1,8 @@
 # Known issues
 
-Updated 2026-11-22 (Milestone B). Hardware status is in HARDWARE.md, test results in TESTING.md.
+Updated 2026-11-23 (public alpha preparation). Hardware status is in HARDWARE.md, test results in TESTING.md.
+
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
 
 ## Resolved in Milestone B
 
@@ -31,10 +33,11 @@ Updated 2026-11-22 (Milestone B). Hardware status is in HARDWARE.md, test result
 
 | Area | Issue | Status |
 |---|---|---|
-| task-console 0.2.0 packaging | Imports `PySide6.QtNetwork` but does not depend on `python3-pyside6.qtnetwork`. It fails when installed without task-launcher (found in the arm64 chroot). | Fixed in 0.2.1~alpha1 (approved for testing 2026-11-23) |
-| Launcher tile (Devices) | 0.3.7 tries `/usr/local/bin/task-console` before `/usr/bin/task-console`, so a stale pip copy wins. | Fixed in launcher 0.3.8 (prefers `/usr/bin`); approved for testing 2026-11-23 |
-| task-mesh 0.3.1 | The installed notifier differs from the 0.3.1 package (the maintained audible alert). `dpkg --verify` reports it. | 0.3.2~alpha1 ships it (approved for testing 2026-11-23) |
+| task-console 0.2.0 packaging | Imports `PySide6.QtNetwork` but does not depend on `python3-pyside6.qtnetwork`. It fails when installed without task-launcher (found in the arm64 chroot). | Fixed in 0.2.1~alpha1 (approved 2026-11-23 for packaging and isolated testing; not Pi-validated) |
+| Launcher tile (Devices) | 0.3.7 tries `/usr/local/bin/task-console` before `/usr/bin/task-console`, so a stale pip copy wins. | Fixed in launcher 0.3.8 (prefers `/usr/bin`); approved 2026-11-23 for packaging and isolated testing; not Pi-validated. The installer warns about shadowing copies. |
+| task-mesh 0.3.1 | The installed notifier differs from the 0.3.1 package (the maintained audible alert). `dpkg --verify` reports it. | 0.3.2~alpha1 ships it (approved 2026-11-23 for packaging and isolated testing; not Pi-validated) |
 | Packaging metadata | Placeholder maintainer e-mail, `Source:` URLs TBD, lintian errors caused by them | Needs maintainer decision / licence audit |
-| Launcher on Windows | 0.3.7 did not import on Windows (`os.geteuid`); fixed in 0.3.8. Under Wine the frozen build refuses to start because Wine reports an elevated admin. | Untested on Windows |
+| Launcher on Windows | 0.3.7 did not import on Windows (`os.geteuid`); fixed in 0.3.8. Under Wine the frozen build refuses to start because Wine reports an elevated admin. | Untested on Windows; no Windows support is claimed |
+| Project-wide license | LICENSE is a pending-approval placeholder; historical GPL headers remain in source | Needs owner decision before publication |
 | Installer | Dry run only. It has never run on a real Pi. | By design until a clean-Pi test is approved |
 | Hardware acceptance | SDR 0.2.4 audio, Medical Reader fix (launcher 0.3.7), Maps 0.1.1 | Pending physical tests |

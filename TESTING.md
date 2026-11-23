@@ -1,5 +1,9 @@
 # Testing
 
+> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> Figures below are automated tests and an emulated arm64 chroot on an
+> x86_64 build machine, unless a row explicitly says otherwise.
+
 ## How to run
 
 ```bash

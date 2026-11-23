@@ -1,0 +1,82 @@
+name: Volunteer test report
+description: Record a pass, fail, skip or blocked result from the experimental alpha
+labels: ["testing", "experimental-alpha"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing this **experimental alpha**. The public packages have **not** been validated on a physical Raspberry Pi.
+
+        Please remove callsigns, locations, device serial numbers, message text and passwords before posting.
+  - type: input
+    id: pi_model
+    attributes:
+      label: Raspberry Pi model
+      description: "Output of: cat /proc/device-tree/model"
+      placeholder: "Raspberry Pi 5 Model B Rev 1.0"
+    validations: {required: true}
+  - type: input
+    id: revision
+    attributes:
+      label: Board revision
+      description: "From: grep Revision /proc/cpuinfo"
+      placeholder: "d04170"
+    validations: {required: true}
+  - type: input
+    id: os
+    attributes:
+      label: OS and architecture
+      description: "From: dpkg --print-architecture and /etc/os-release"
+      placeholder: "Debian 13 trixie, arm64"
+    validations: {required: true}
+  - type: textarea
+    id: versions
+    attributes:
+      label: Package versions
+      description: "Paste: dpkg-query -W -f='${Package}\\t${Version}\\t${Architecture}\\n' 'task-*' python3-task-comms"
+      render: text
+    validations: {required: true}
+  - type: input
+    id: what
+    attributes:
+      label: What did you test?
+      description: "For example: install of task-mesh 0.3.2~alpha1, launcher start, receive-only SDR, uninstall"
+    validations: {required: true}
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - pass
+        - fail
+        - skip
+        - blocked
+      description: "pass = it worked; fail = it did not; skip = you chose not to run it; blocked = you could not run it (missing hardware, missing package, unclear instructions)"
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps you ran
+      description: One command or action per line is helpful.
+    validations: {required: true}
+  - type: textarea
+    id: notes
+    attributes:
+      label: What happened (or why it was skipped/blocked)
+    validations: {required: true}
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or command output (redacted)
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I tested on a spare or disposable system when I could, or I accepted the risk of testing on this card.
+          required: false
+        - label: I have redacted callsigns, locations, serial numbers, messages and passwords.
+          required: true
+        - label: If I transmitted, I was licensed and authorized to do so, or I did not transmit at all.
+          required: true
