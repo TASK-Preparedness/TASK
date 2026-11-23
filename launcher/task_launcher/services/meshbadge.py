@@ -10,16 +10,19 @@ Nothing here marks anything read, and no message content or sender is ever read:
 
 import json
 import os
+import tempfile
 import socket
 import sqlite3
 from pathlib import Path
+
+from task_launcher import paths
 
 LABELS = {"meshtastic": "Meshtastic", "meshcore": "MeshCore"}
 
 
 def _runtime() -> Path:
     v = os.environ.get("XDG_RUNTIME_DIR")
-    return Path(v) if v and os.path.isabs(v) else Path("/tmp") / f"task-runtime-{os.getuid()}"
+    return Path(v) if v and os.path.isabs(v) else (Path("/tmp") if os.name == "posix" else Path(tempfile.gettempdir())) / f"task-runtime-{paths.user_tag()}"
 
 
 def socket_path() -> Path:

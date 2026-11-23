@@ -31,10 +31,10 @@ Updated 2026-11-22 (Milestone B). Hardware status is in HARDWARE.md, test result
 
 | Area | Issue | Status |
 |---|---|---|
-| task-console 0.2.0 packaging | Imports `PySide6.QtNetwork` but does not depend on `python3-pyside6.qtnetwork`. It fails when installed without task-launcher (found in the arm64 chroot). | Fixed in PROPOSED 0.2.1~alpha1; needs approval |
-| Launcher tile (Devices) | `090-devices.toml` tries `/usr/local/bin/task-console` before `/usr/bin/task-console`. A stale pip copy would win. | Proposed for launcher 0.3.8 (needs approval). The installer warns about shadowing copies. |
-| task-mesh 0.3.1 | The installed notifier differs from the 0.3.1 package (the maintained audible alert). `dpkg --verify` reports it. | PROPOSED 0.3.2~alpha1 ships it; needs approval |
+| task-console 0.2.0 packaging | Imports `PySide6.QtNetwork` but does not depend on `python3-pyside6.qtnetwork`. It fails when installed without task-launcher (found in the arm64 chroot). | Fixed in 0.2.1~alpha1 (approved for testing 2026-11-23) |
+| Launcher tile (Devices) | 0.3.7 tries `/usr/local/bin/task-console` before `/usr/bin/task-console`, so a stale pip copy wins. | Fixed in launcher 0.3.8 (prefers `/usr/bin`); approved for testing 2026-11-23 |
+| task-mesh 0.3.1 | The installed notifier differs from the 0.3.1 package (the maintained audible alert). `dpkg --verify` reports it. | 0.3.2~alpha1 ships it (approved for testing 2026-11-23) |
 | Packaging metadata | Placeholder maintainer e-mail, `Source:` URLs TBD, lintian errors caused by them | Needs maintainer decision / licence audit |
-| Launcher on Windows | 0.3.7 does not import on Windows (`os.geteuid`). The patch exists. Under Wine the frozen build refuses to start because Wine reports an elevated admin. | Untested on Windows |
+| Launcher on Windows | 0.3.7 did not import on Windows (`os.geteuid`); fixed in 0.3.8. Under Wine the frozen build refuses to start because Wine reports an elevated admin. | Untested on Windows |
 | Installer | Dry run only. It has never run on a real Pi. | By design until a clean-Pi test is approved |
 | Hardware acceptance | SDR 0.2.4 audio, Medical Reader fix (launcher 0.3.7), Maps 0.1.1 | Pending physical tests |

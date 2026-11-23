@@ -8,8 +8,11 @@ works without python3-task-comms. Cards never contain message content.
 
 import json
 import os
+import tempfile
 import time
 from pathlib import Path
+
+from task_launcher import paths
 
 SCHEMA = 1
 STALE_AFTER_S = 10
@@ -21,7 +24,7 @@ CARD_FOR_PROBE = {"mesh": "task-mesh", "direwolf": "task-aprs", "rtl-sdr": "task
 
 def status_dir() -> Path:
     v = os.environ.get("XDG_RUNTIME_DIR")
-    base = Path(v) if v and os.path.isabs(v) else Path("/tmp") / f"task-runtime-{os.getuid()}"
+    base = Path(v) if v and os.path.isabs(v) else (Path("/tmp") if os.name == "posix" else Path(tempfile.gettempdir())) / f"task-runtime-{paths.user_tag()}"
     return base / "task" / "status"
 
 

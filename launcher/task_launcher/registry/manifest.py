@@ -346,7 +346,7 @@ def load_file(path: Path, trust: str) -> Manifest:
         raise ManifestError(f"file larger than {MAX_FILE_BYTES} bytes")
     if lst.st_mode & st.S_IWOTH:
         raise ManifestError("manifest file is world-writable")
-    if trust == "user" and lst.st_uid != os.getuid():
+    if trust == "user" and hasattr(os, "getuid") and lst.st_uid != os.getuid():  # no uid on Windows
         raise ManifestError("user manifest not owned by the current user")
     try:
         text = path.read_bytes().decode("utf-8")

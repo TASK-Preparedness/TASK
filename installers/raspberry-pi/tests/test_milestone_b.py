@@ -8,7 +8,7 @@ import subprocess
 
 import pytest
 
-from conftest import TRIXIE, make_root
+from conftest import DEBIAN_13_6, TRIXIE, make_root
 from task_installer import bundle as B, compat, debver, plan as P, preflight as PF, tui
 from task_installer.catalog import BY_ID
 from task_installer.detect import detect, parse_revision
@@ -241,3 +241,17 @@ def test_every_offline_apt_step_is_guarded(make):
         if s.argv[:2] == ["apt-get", "install"] and not s.expect:
             prev = pl.steps[i - 1]
             assert prev.expect == P.LOCAL_URIS_ONLY and prev.argv[4:] == s.argv[2:]
+
+
+def test_development_pi_baseline_20261122_is_accepted(tmp_path):
+    """Pi 5 Model B Rev 1.0, revision d04170, arm64, Debian 13.6 trixie with plain Debian os-release (ID=debian)."""
+    root = make_root(tmp_path, model="pi5", os_release=DEBIAN_13_6)
+    (root / "proc/cpuinfo").write_text("processor\t: 0\nRevision\t: d04170\n")
+    (root / "var/lib/dpkg").mkdir(parents=True, exist_ok=True)
+    (root / "var/lib/dpkg/arch-native").write_text("arm64\n")
+    f = detect(str(root))
+    assert f.dpkg_arch == "arm64"
+    assert (f.os_id, f.os_codename, f.os_version_id) == ("debian", "trixie", "13")
+    assert f.revision == "d04170" and f.revision_family == "pi5" and f.revision_mem_mib == 8192
+    v = compat.evaluate(f)
+    assert v.ok and v.profile == "full" and not v.blockers

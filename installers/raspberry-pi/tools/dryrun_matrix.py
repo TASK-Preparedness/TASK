@@ -23,6 +23,11 @@ from task_installer.detect import detect  # noqa: E402
 REPO = HERE.parents[2]
 TRIXIE = 'PRETTY_NAME="Debian GNU/Linux 13 (trixie)"\nVERSION_ID="13"\nVERSION_CODENAME=trixie\nID=debian\n'
 BOOKWORM = 'PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"\nVERSION_ID="12"\nVERSION_CODENAME=bookworm\nID=debian\n'
+# Stock Debian 13 os-release format with the point release Joshua reported for the development Pi (13.6, ID=debian,
+# no Raspberry Pi OS branding). Reconstructed from Debian's format, not copied from the Pi.
+DEBIAN_13_6 = ('PRETTY_NAME="Debian GNU/Linux 13 (trixie)"\nNAME="Debian GNU/Linux"\nVERSION_ID="13"\nVERSION="13 (trixie)"\n'
+               'VERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.6\nID=debian\nHOME_URL="https://www.debian.org/"\n'
+               'SUPPORT_URL="https://www.debian.org/support"\nBUG_REPORT_URL="https://bugs.debian.org/"\n')
 PI_INSTALLED = {"task-core": "0.3.0", "task-core-compat": "0.3.0", "python3-task-comms": "0.3.1", "task-aprs": "0.1.0",
                 "task-mesh": "0.3.1", "task-launcher": "0.3.7", "task-console": "0.2.0", "task-maps": "0.1.1",
                 "task-resources": "0.2.4", "task-sdr": "0.2.4"}
@@ -30,6 +35,9 @@ NOTIFIER = "/usr/lib/task-mesh/task_mesh/hub/notifier.py"
 
 # id, description, device-tree model, cpuinfo revision, MemTotal kB, dpkg arch, kernel, os-release, extras
 FIXTURES = [
+    ("pi5-dev-baseline-20261122", "The development Pi as reported 2026-11-22: Pi 5 Model B Rev 1.0, revision d04170, arm64, "
+     "Debian 13.6 trixie (ID=debian), T.A.S.K. as installed (modified notifier)",
+     "Raspberry Pi 5 Model B Rev 1.0", "d04170", 8_000_000, "arm64", "aarch64", DEBIAN_13_6, {"installed": PI_INSTALLED}),
     ("pi5-dev", "Pi 5 8 GB, Debian 13 arm64, T.A.S.K. installed as on the development Pi (modified notifier)",
      "Raspberry Pi 5 Model B Rev 1.0", "d04170", 8_000_000, "arm64", "aarch64", TRIXIE, {"installed": PI_INSTALLED}),
     ("pi5-clean", "Pi 5 4 GB, clean Debian 13 arm64", "Raspberry Pi 5 Model B Rev 1.0", "c04170", 4_000_000,

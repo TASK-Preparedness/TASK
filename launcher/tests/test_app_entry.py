@@ -25,7 +25,7 @@ def test_version_and_help():
     env = dict(os.environ, PYTHONPATH=str(LAUNCHER))
     out = subprocess.run([sys.executable, "-m", "task_launcher", "--version"], capture_output=True, text=True,
                          env=env, timeout=60)
-    assert out.stdout.strip() == "task-launcher 0.3.7"
+    assert out.stdout.strip() == "task-launcher 0.3.8"
     out = subprocess.run([sys.executable, "-m", "task_launcher", "--help"], capture_output=True, text=True,
                          env=env, timeout=60)
     for opt in ("--socket", "--windowed", "--maximized", "--fullscreen", "--version"):
@@ -85,7 +85,7 @@ def test_main_runs_and_quits(isolated_home, tmp_path):
     out = subprocess.run([sys.executable, "-c", MAIN_SCRIPT, str(tmp_path / "none.sock")], capture_output=True,
                          text=True, env=env, timeout=60)
     assert "RC 0" in out.stdout, out
-    assert "task-launcher 0.3.7 started" in out.stderr
+    assert "task-launcher 0.3.8 started" in out.stderr
     assert not (isolated_home / ".config/autostart").exists()       # no autostart unless chosen
     log = isolated_home / ".local/state/task-launcher/launcher.log"
     assert log.exists() and oct(log.stat().st_mode & 0o777) == "0o600"

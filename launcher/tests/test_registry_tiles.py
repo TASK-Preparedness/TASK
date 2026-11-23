@@ -46,7 +46,7 @@ def test_devices_available_when_rain_console_present(tmp_path, safe_dir):
     rc = make_exec(safe_dir / "bin", "task-console")
     mdir = tmp_path / "m"
     mdir.mkdir()
-    text = (BUNDLED_APPS_DIR / "090-devices.toml").read_text().replace('"/usr/local/bin/task-console"', f'"{rc}"')
+    text = (BUNDLED_APPS_DIR / "090-devices.toml").read_text().replace('exec = ["/usr/bin/task-console"]', f'exec = ["{rc}"]')
     (mdir / "090-devices.toml").write_text(text)
     reg = make_registry(tmp_path, manifest_dirs=[(mdir, "package")])
     t = reg.get("app:task.devices")

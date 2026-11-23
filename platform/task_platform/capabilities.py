@@ -20,7 +20,7 @@ CAPABILITIES: dict[str, dict[str, str]] = {
     "config":           {"linux": "implemented", "windows": "implemented"},
     "device_discovery": {"linux": "implemented", "windows": "implemented"},
     "offline_resources": {"linux": "implemented", "windows": "implemented"},
-    # mainline launcher 0.3.7 does not import on Windows; installers/windows/patches has the proposed fix
+    # launcher 0.3.8 contains the portability changes; imports and builds its window under Wine only (not Windows)
     "launcher":         {"linux": "verified", "windows": "planned"},
     "notifications":    {"linux": "verified", "windows": "planned"},
     "background_services": {"linux": "verified", "windows": "planned"},

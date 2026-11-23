@@ -34,7 +34,7 @@ Target: **Windows 11 x64**, native PySide6 UI shared with the Raspberry Pi versi
 | Configuration (`config.py`) | TOML under XDG config, atomic save | same TOML under `%APPDATA%\TASK` | implemented / implemented, untested |
 | Device discovery (`discovery.py`) | serial list + known USB IDs (possible/likely/unknown, never opened) | same, from pyserial | implemented / implemented, untested |
 | Offline resources (`resources.py`) | read-only scan + SHA-256 manifest verify | same, Windows roots | implemented / implemented, untested |
-| Launcher | 0.3.7 | proposed 0.3.8 patch (`installers/windows/patches`) | verified / planned (imports and builds its window under Wine only) |
+| Launcher | 0.3.8 | same code (portability changes merged in 0.3.8, approved 2026-11-23) | verified / planned (imports and builds its window under Wine only) |
 
 The table is also code: `task_platform.capabilities.CAPABILITIES`, with a test that
 fails if any Windows entry is marked verified.

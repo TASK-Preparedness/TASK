@@ -6,14 +6,14 @@ was produced with Windows CPython **under Wine** on Linux. Wine is not Windows, 
 
 | File | Purpose |
 |---|---|
-| `patches/launcher-windows-prep.patch` | Proposed launcher 0.3.8 portability fix (not applied to `launcher/`; 0.3.7 stays byte-identical). It touches paths (`%APPDATA%`/`%LOCALAPPDATA%`/`%PROGRAMDATA%` under `TASK`), the privilege check (`IsUserAnAdmin` instead of `os.geteuid`), temp/runtime names (no `/tmp`, no `os.getuid`) and the manifest owner check. Linux behaviour is unchanged: the full launcher suite passes with the patch applied (326 passed, 13 skipped). |
-| `build_windows.py` | Stages git-tracked `launcher/` + `platform/` sources, applies the patch with `git apply --check` first, runs PyInstaller (`task-launcher.spec`, onedir), and optionally NSIS. It refuses to run PyInstaller off Windows. `--use-stage` reuses a stage made with `--stage-only`. |
+| (merged) launcher 0.3.8 | The portability changes are part of `launcher/` since 0.3.8 (approved 2026-11-23). They touch paths (`%APPDATA%`/`%LOCALAPPDATA%`/`%PROGRAMDATA%` under `TASK`), the privilege check (`IsUserAnAdmin` instead of `os.geteuid`), temp/runtime names (no `/tmp`, no `os.getuid`) and the manifest owner check. Linux behaviour is unchanged: the launcher suite passes (326 passed, 13 skipped). |
+| `build_windows.py` | Stages git-tracked `launcher/` (refuses a launcher without the 0.3.8 changes) + `platform/` sources, runs PyInstaller (`task-launcher.spec`, onedir), and optionally NSIS. It refuses to run PyInstaller off Windows. `--use-stage` reuses a stage made with `--stage-only`. |
 | `task-launcher.spec` | PyInstaller spec: windowed, no UAC elevation, no QtWebEngine; bundles `apps.d`, LICENSE and THIRD_PARTY_NOTICES. |
 | `nsis/task-launcher.nsi` | Per-user installer (`RequestExecutionLevel user`, `%LOCALAPPDATA%\Programs\TASK\Launcher`, HKCU uninstall entry). No services, no auto-start, no drivers. Uninstall keeps `%APPDATA%\TASK` and `%LOCALAPPDATA%\TASK`. |
 | `wix/task-launcher.wxs` | Per-user MSI skeleton for managed deployment. The file list is harvested at build time. |
 | `tools/simulate_windows_launcher.py` | Linux CPython with POSIX `os` functions removed and `sys.platform = "win32"`. Catches POSIX assumptions only. |
 | `tools/wine_smoke.py` | Windows CPython (e.g. under Wine): imports every launcher + task_platform module and builds the main window offscreen. |
-| `tests/test_windows_prep.py` | Patch applies cleanly; patch scope; simulated import; build refuses off Windows; NSIS/WiX scripts compile with a dummy payload (`makensis`, `wixl`). |
+| `tests/test_windows_prep.py` | Stage contains the portable launcher; launcher >= 0.3.8; simulated import; build refuses off Windows; NSIS/WiX scripts compile with a dummy payload (`makensis`, `wixl`). |
 
 ## NSIS vs WiX
 
@@ -46,4 +46,4 @@ Inno Setup was not chosen because its licence is not OSI-approved.
 ## Before any Windows claim
 A Windows 11 x64 machine (or VM): run the build natively, start the launcher as an unelevated user,
 install and uninstall with NSIS, check the paths. Also needed: maintainer approval of launcher 0.3.8
-(the patch), code-signing decision, and CI (GitHub Actions `windows-latest`) after publication is approved.
+(done 2026-11-23), code-signing decision, and CI (GitHub Actions `windows-latest`) after publication is approved.

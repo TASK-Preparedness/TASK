@@ -13,7 +13,7 @@
   payload (paths, modes, symlinks, file contents) as the .deb delivered earlier
   (packaging/debian/reference/); verify_debs.py checks that.
 * task-mesh carries the maintained audible-alert notifier, so it cannot be 0.3.1; it is built as the
-  PROPOSED version 0.3.2~alpha1 (needs maintainer approval). ``--verify-mesh-031`` rebuilds 0.3.1 with
+  alpha version 0.3.2~alpha1 (approved 2026-11-23 for packaging/building/isolated testing only). ``--verify-mesh-031`` rebuilds 0.3.1 with
   the pre-audio notifier only to prove the builder reproduces the delivered 0.3.1 payload.
 * Safety gates (build fails): no systemctl/deb-systemd-helper/apt/usermod/autostart in maintainer
   scripts, no autostart or enabled-unit symlinks in the payload, no files under /home, no private
@@ -40,8 +40,10 @@ import build_release as br  # noqa: E402  (Pkg helper that produced the delivere
 
 EPOCH_4C = 1791792000   # 2026-10-12 08:00 UTC (Phase 4C/4F/4G builders)
 EPOCH_4F3 = 1791633600  # 2026-10-10 12:00 UTC (launcher/resources builders)
-MESH_VERSION = "0.3.2~alpha1"   # PROPOSED, needs approval (see docs/APPROVALS-NEEDED.md)
-# PROPOSED, needs approval: 0.2.0 imports PySide6.QtNetwork (core_client.py) but does not depend on it; found by
+EPOCH_MB = 1795476600   # 2026-11-23 18:30 -0500 (changelog date of the approved Milestone B alpha versions)
+# Approved 2026-11-23 for packaging, building and isolated testing only (docs/APPROVALS-NEEDED.md #19-#21).
+MESH_VERSION = "0.3.2~alpha1"
+# 0.2.0 imports PySide6.QtNetwork (core_client.py) but does not depend on it; found by
 # the arm64 chroot "each" scenario (works on the Pi only because task-launcher pulls python3-pyside6.qtnetwork).
 CONSOLE_VERSION = "0.2.1~alpha1"
 MESH_WHEELS = ("meshtastic-2.7.11", "meshcore-2.3.15", "pycayennelpp-2.4.0", "pyserial_asyncio_fast-0.16")
@@ -51,11 +53,11 @@ PACKAGES = {
     "python3-task-comms": ("0.3.1", EPOCH_4C),
     "task-core": ("0.3.0", EPOCH_4C),
     "task-core-compat": ("0.3.0", EPOCH_4C),
-    "task-console": (CONSOLE_VERSION, EPOCH_4C),
+    "task-console": (CONSOLE_VERSION, EPOCH_MB),
     "task-aprs": ("0.1.0", EPOCH_4C),
     "task-sdr": ("0.2.4", EPOCH_4C),
-    "task-mesh": (MESH_VERSION, EPOCH_4C),
-    "task-launcher": ("0.3.7", EPOCH_4F3),
+    "task-mesh": (MESH_VERSION, EPOCH_MB),
+    "task-launcher": ("0.3.8", EPOCH_MB),
     "task-maps": ("0.1.1", EPOCH_4C),
     "task-resources": ("0.2.4", EPOCH_4F3),
 }
@@ -130,14 +132,15 @@ def compat(out):
 CONSOLE_020_CHANGELOG = br.changelog("task-console", "0.2.0", ["Phase 4C: renamed from rain-console 0.1.0; Core socket fallback."])
 CONSOLE_NEW_ENTRY = f"""task-console ({CONSOLE_VERSION}) unstable; urgency=medium
 
-  * PROPOSED (not approved, not Pi-validated). Packaging-only change.
+  * Alpha for volunteer testing; approved 2026-11-23 for packaging,
+    building and isolated testing only. Not Pi-validated. Packaging only.
   * Depends: add python3-pyside6.qtnetwork (>= 6.8), imported by
     task_console.core_client. 0.2.0 failed to start when installed
     without task-launcher (found in an emulated arm64 chroot).
   * deploy/install-console.sh is developer-only and refuses to shadow
     an installed package.
 
- -- {br.MAINT}  Sun, 22 Nov 2026 09:00:00 -0500
+ -- {br.MAINT}  Mon, 23 Nov 2026 18:30:00 -0500
 
 """
 
@@ -146,7 +149,7 @@ def console(out, version=None):
     version = version or CONSOLE_VERSION
     old = version == "0.2.0"
     qt = br.QT if old else br.QT + ", python3-pyside6.qtnetwork (>= 6.8)"
-    br.EPOCH = PACKAGES["task-console"][1]
+    br.EPOCH = EPOCH_4C if old else PACKAGES["task-console"][1]
     p = br.Pkg("task-console", version, f"{br.PY}, {qt}", _desc("task-console"), "admin")
     p.tree(REPO / "console/task_console", "usr/lib/task-console/task_console")
     p.bin("usr/bin/task-console", "task_console.app:main", "/usr/lib/task-console")
@@ -222,10 +225,12 @@ def mesh(out, version=None, notifier=None, changelog_text=None):
     br.run(["sha256sum", "-c", "SHA256SUMS"], cwd=m / "packaging/vendor", stdout=subprocess.DEVNULL)
     deps = [ln.strip().rstrip(",") for ln in (m / "packaging/debian/control").read_text().split("\nDepends:", 1)[1]
             .split("Recommends:")[0].splitlines() if ln.strip() and "${" not in ln]
-    br.EPOCH = PACKAGES["task-mesh"][1]
+    br.EPOCH = EPOCH_4C if version == "0.3.1" else PACKAGES["task-mesh"][1]
     p = br.Pkg("task-mesh", version, ", ".join(deps + ["python3-task-comms (>= 0.3.1)"]), _desc("task-mesh"),
-               "hamradio", {"Recommends": "qt6-qpa-plugins, fonts-dejavu-core",
-                            "Suggests": "notification-daemon | xfce4-notifyd | dunst",
+               "hamradio", {"Recommends": "qt6-qpa-plugins, fonts-dejavu-core" + (
+                                "" if version == "0.3.1" else ", pulseaudio-utils"),   # paplay for the audible alert
+                            "Suggests": "notification-daemon | xfce4-notifyd | dunst" + (
+                                "" if version == "0.3.1" else ", ffmpeg, sound-theme-freedesktop"),
                             "Provides": "rain-mesh", "Replaces": "rain-mesh (<< 0.2.0~)",
                             "Breaks": "rain-mesh (<< 0.2.0~)"})
     lib = "usr/lib/task-mesh"
@@ -360,6 +365,8 @@ def main(argv=None):
     ap.add_argument("--only", nargs="*", default=None)
     ap.add_argument("--verify-mesh-031", metavar="PRE_AUDIO_NOTIFIER",
                     help="also build task-mesh 0.3.1 with this notifier into OUTDIR/verify/ (not for release)")
+    ap.add_argument("--verify-launcher-037", action="store_true",
+                    help="also build task-launcher 0.3.7 from the Milestone A commit into OUTDIR/verify/ (not for release)")
     ap.add_argument("--verify-console-020", action="store_true",
                     help="also build task-console 0.2.0 into OUTDIR/verify/ (not for release)")
     a = ap.parse_args(argv)
@@ -393,6 +400,20 @@ def main(argv=None):
         old_changelog = subprocess.run(["git", "show", "d4d10bd:mesh/packaging/debian/changelog"], cwd=REPO,
                                        check=True, capture_output=True, text=True).stdout
         deb = mesh(vdir, "0.3.1", Path(a.verify_mesh_031), old_changelog)
+        print(f"VERIFY {deb} {hashlib.sha256(deb.read_bytes()).hexdigest()}")
+    if a.verify_launcher_037:
+        vdir = out / "verify"
+        vdir.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory() as tmp:
+            wt = Path(tmp) / "wt"   # temporary detached worktree of the Milestone A commit (its builder uses git)
+            br.run(["git", "worktree", "add", "--detach", "-q", str(wt), "d4d10bd"], cwd=REPO)
+            try:
+                br.run([sys.executable, "-B", str(wt / "launcher/packaging/build_deb.py"), f"{tmp}/o", "--epoch",
+                        str(EPOCH_4F3)], stdout=subprocess.DEVNULL)
+            finally:
+                br.run(["git", "worktree", "remove", "--force", str(wt)], cwd=REPO)
+            deb = vdir / "task-launcher_0.3.7_all.deb"
+            shutil.copy(Path(tmp) / "o" / deb.name, deb)
         print(f"VERIFY {deb} {hashlib.sha256(deb.read_bytes()).hexdigest()}")
     if a.verify_console_020:
         vdir = out / "verify"

@@ -1,3 +1,17 @@
+task-launcher (0.3.8) unstable; urgency=medium
+
+  * Devices tile prefers the packaged /usr/bin/task-console; the
+    developer-only pip copy in /usr/local/bin is now only a fallback, so a
+    stale pip install can no longer shadow the .deb.
+  * Portability groundwork for an EXPERIMENTAL Windows build (untested on
+    Windows; no Windows support claimed): per-platform config/state paths
+    (%APPDATA%/%LOCALAPPDATA% under TASK), privilege check via
+    IsUserAnAdmin where os.geteuid is missing, temp/runtime names without
+    /tmp or os.getuid, manifest owner check only where uids exist. Linux
+    behaviour is unchanged.
+
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Mon, 23 Nov 2026 18:30:00 -0500
+
 task-launcher (0.3.7) unstable; urgency=medium
 
   * Phase 4F.3 crash repair: the idle/auto-lock input tracker is installed

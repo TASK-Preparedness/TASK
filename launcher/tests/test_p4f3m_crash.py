@@ -71,7 +71,7 @@ def test_make_guard_uses_launcher_state_dir(isolated_home):
     from task_launcher.services import resources_embed
     g = resources_embed.make_guard()
     assert g is not None and g.path == paths.state_dir() / "medical-webengine-guard.json"
-    assert g.fp.startswith("task-launcher 0.3.7|task-resources 0.2.4|")
+    assert g.fp.startswith("task-launcher 0.3.8|task-resources 0.2.4|")
 
 
 def test_make_guard_absent_with_older_resources(monkeypatch):

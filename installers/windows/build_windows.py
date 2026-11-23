@@ -8,8 +8,8 @@
     python build_windows.py OUT --nsis                # + per-user NSIS installer (needs makensis on PATH)
     python build_windows.py OUT --use-stage DIR       # reuse a stage (e.g. Windows Python under Wine, no git)
 
-Steps: copy the git-tracked launcher/ and platform/ sources into OUT/stage, apply
-patches/launcher-windows-prep.patch with ``git apply`` (refuses if it does not apply cleanly), run
+Steps: copy the git-tracked launcher/ (0.3.8+, which contains the Windows portability changes) and
+platform/ sources into OUT/stage, run
 PyInstaller with task-launcher.spec ("onedir"), optionally wrap the folder with nsis/task-launcher.nsi,
 then write SHA256SUMS. argv-only subprocess calls. It never signs, uploads or publishes anything.
 """
@@ -23,7 +23,6 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
-PATCH = HERE / "patches/launcher-windows-prep.patch"
 
 
 def tracked(sub):
@@ -45,8 +44,8 @@ def stage(out: Path) -> Path:
     for f in ("LICENSE", "THIRD_PARTY_NOTICES.md"):
         shutil.copy2(REPO / f, st / f)
     shutil.copy2(HERE / "win_entry.py", st / "win_entry.py")
-    subprocess.run(["git", "apply", "--check", str(PATCH)], cwd=st, check=True)
-    subprocess.run(["git", "apply", str(PATCH)], cwd=st, check=True)
+    if "def is_privileged" not in (st / "launcher/task_launcher/paths.py").read_text():
+        raise SystemExit("launcher source lacks the Windows portability changes (needs task-launcher >= 0.3.8)")
     return st
 
 

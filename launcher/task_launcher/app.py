@@ -126,8 +126,9 @@ def show_window(window, mode):
         window.showMaximized()   # within the compositor's work area (labwc panel stays visible)
 
 
-def main(argv=None, *, geteuid=os.geteuid) -> int:
-    if geteuid() == 0:
+def main(argv=None, *, geteuid=None) -> int:
+    from task_launcher import paths as _paths
+    if (geteuid() == 0) if geteuid is not None else _paths.is_privileged():
         print(ROOT_MESSAGE, file=sys.stderr)
         return 1
     args = parse_args(sys.argv[1:] if argv is None else argv)

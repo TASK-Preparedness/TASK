@@ -6,6 +6,6 @@ T.A.S.K. remains the technical name; the shown title is configurable (branding.p
 The launcher never touches hardware: everything device-related goes through task-core.
 """
 
-__version__ = "0.3.7"
+__version__ = "0.3.8"
 # Version of the launcher platform that app manifests compare ``min_platform`` against.
 PLATFORM_VERSION = "0.2.0"

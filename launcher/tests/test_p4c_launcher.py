@@ -21,7 +21,7 @@ TWELVE = ["task.mesh", "task.maps", "task.radio", "task.sdr", "task.library", "t
 
 
 def test_l01_version_and_twelve_task_ids():
-    assert __version__ == "0.3.7"
+    assert __version__ == "0.3.8"
     ids = sorted(re.search(r'^id = "([^"]+)"', p.read_text(), re.M).group(1) for p in BUNDLED_APPS_DIR.glob("*.toml"))
     assert ids == sorted(TWELVE)
 

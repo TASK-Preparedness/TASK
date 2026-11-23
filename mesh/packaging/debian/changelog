@@ -1,7 +1,8 @@
 task-mesh (0.3.2~alpha1) unstable; urgency=medium
 
-  * PROPOSED pre-release (T.A.S.K. Public Alpha, Milestone B); version needs
-    maintainer approval. Not installed anywhere.
+  * Alpha pre-release for volunteer testing (T.A.S.K. Milestone B);
+    approved 2026-11-23 for packaging, building and isolated testing only.
+    UNVERIFIED on Raspberry Pi hardware.
   * Ship the audible Mesh alert that was hand-modified on the development
     Pi as maintained source (hub/notifier.py, SHA-256 2864d242...bbe1a): the
     desktop notification suppresses its own sound and the notifier plays
@@ -12,8 +13,10 @@ task-mesh (0.3.2~alpha1) unstable; urgency=medium
   * Tests: AT-15 crash-safety test uses a frozen reference clock (it failed
     after 2026-10-21 because fixed 2026-09-21 timestamps were pruned by the
     30-day startup retention).
+  * Recommends pulseaudio-utils (paplay, used by the audible alert);
+    Suggests ffmpeg and sound-theme-freedesktop (alert generator script).
 
- -- T.A.S.K. Development Team <TBD-maintainer-email>  Sun, 22 Nov 2026 09:00:00 -0500
+ -- T.A.S.K. Development Team <TBD-maintainer-email>  Mon, 23 Nov 2026 18:30:00 -0500
 
 task-mesh (0.3.1) unstable; urgency=medium
 

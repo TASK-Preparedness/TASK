@@ -4,17 +4,18 @@ manifest_version = 1
 id = "task.devices"
 name = "Devices"
 version = "0.1.0"
-description = "Opens T.A.S.K. Console (task-console 0.1.0) for devices and assignments. Without task-console, a read-only overview from task-core is shown."
+description = "Opens T.A.S.K. Console (task-console) for devices and assignments. Without task-console, a read-only overview from task-core is shown."
 icon = "usb"
 order = 90
 single_instance = true
 
 [launch]
 builtin = "devices"
-# task-console 0.1.0 is pip-installed into the system python3 by install-console.sh, which puts
-# its console script in /usr/local/bin (Debian's pip prefix). /usr/bin is for a future .deb.
-exec = ["/usr/local/bin/task-console"]
-exec_alternatives = [["/usr/bin/task-console"], ["/usr/local/bin/rain-console"]]
+# The task-console .deb (supported) installs /usr/bin/task-console and is preferred (launcher 0.3.8).
+# /usr/local/bin/task-console is the developer-only pip install (console/deploy/install-console.sh);
+# rain-console is the pre-4C legacy name.
+exec = ["/usr/bin/task-console"]
+exec_alternatives = [["/usr/local/bin/task-console"], ["/usr/local/bin/rain-console"]]
 # a second task-console start raises its existing window and exits (console/task_console/app.py)
 on_reactivate = "relaunch"
 

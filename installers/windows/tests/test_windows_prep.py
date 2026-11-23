@@ -19,17 +19,16 @@ def staged(tmp_path_factory):
     return build_windows.stage(tmp_path_factory.mktemp("win"))
 
 
-def test_patch_applies_cleanly_to_current_launcher(staged):
+def test_stage_contains_portable_launcher(staged):
     assert (staged / "launcher/task_launcher/paths.py").read_text().count("def is_privileged") == 1
     assert (staged / "platform/task_platform/discovery.py").exists() and (staged / "LICENSE").exists()
 
 
-def test_patch_touches_only_portability_points():
-    text = build_windows.PATCH.read_text()
-    files = sorted({ln.split()[1][2:] for ln in text.splitlines() if ln.startswith("+++ ")})
-    assert files == ["launcher/task_launcher/app.py", "launcher/task_launcher/paths.py",
-                     "launcher/task_launcher/registry/manifest.py", "launcher/task_launcher/services/meshbadge.py",
-                     "launcher/task_launcher/services/statuscards.py"]
+def test_launcher_version_has_windows_changes():
+    import re
+    src = (build_windows.REPO / "launcher/task_launcher/__init__.py").read_text()
+    major, minor, patch = map(int, re.search(r'__version__ = "(\d+)\.(\d+)\.(\d+)', src).groups())
+    assert (major, minor, patch) >= (0, 3, 8)
 
 
 def test_simulated_windows_import_and_window(staged):

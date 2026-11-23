@@ -26,6 +26,15 @@ EXPECTED_DIFF = {
     "task-mesh_0.3.2~alpha1_all.deb": {"/usr/share/doc/task-mesh/changelog.gz"},
     # verification rebuild of 0.3.1 with the pre-audio notifier: the Pi carries the hand-modified notifier
     "task-mesh_0.3.1_all.deb": {"/usr/lib/task-mesh/task_mesh/hub/notifier.py"},
+    # launcher 0.3.8: Windows portability + /usr/bin/task-console preference (approved 2026-11-23)
+    "task-launcher_0.3.8_all.deb": {"/usr/share/doc/task-launcher/changelog.gz",
+                                    "/usr/share/task-launcher/task_launcher/__init__.py",
+                                    "/usr/share/task-launcher/task_launcher/app.py",
+                                    "/usr/share/task-launcher/task_launcher/paths.py",
+                                    "/usr/share/task-launcher/task_launcher/registry/manifest.py",
+                                    "/usr/share/task-launcher/task_launcher/services/meshbadge.py",
+                                    "/usr/share/task-launcher/task_launcher/services/statuscards.py",
+                                    "/usr/share/task-launcher/apps.d/090-devices.toml"},
     # proposed Depends fix: only the changelog differs in the payload (control Depends differs too)
     "task-console_0.2.1~alpha1_all.deb": {"/usr/share/doc/task-console/changelog.gz"},
 }

@@ -108,7 +108,7 @@ def test_devices_launches_rain_console_when_installed(launcher, tmp_path, safe_d
     m = tmp_path / "m"
     m.mkdir()
     for p in BUNDLED_APPS_DIR.glob("*.toml"):
-        (m / p.name).write_text(p.read_text().replace('"/usr/local/bin/task-console"', f'"{rc}"'))
+        (m / p.name).write_text(p.read_text().replace('exec = ["/usr/bin/task-console"]', f'exec = ["{rc}"]'))
     reg = Registry(manifest_dirs=[(m, "package")], desktop_dirs=[], store=TileStore(tmp_path / "t.json"))
     w = launcher(start=False, registry=reg)
     t = reg.get("app:task.devices")

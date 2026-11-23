@@ -44,8 +44,8 @@ def test_devices_manifest_uses_verified_rain_console_command():
     ms, _ = shipped()
     d = ms["task.devices"]
     assert d.builtin == "devices"
-    assert d.exec == ["/usr/local/bin/task-console"]
-    assert d.exec_alternatives == [["/usr/bin/task-console"], ["/usr/local/bin/rain-console"]]  # 4C legacy fallback
+    assert d.exec == ["/usr/bin/task-console"]          # the .deb is preferred (0.3.8)
+    assert d.exec_alternatives == [["/usr/local/bin/task-console"], ["/usr/local/bin/rain-console"]]  # dev pip, 4C legacy
     assert d.on_reactivate == "relaunch"
     assert d.core_min_version == "0.2.0"
 
