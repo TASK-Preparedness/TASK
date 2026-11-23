@@ -33,5 +33,6 @@ run release-common "$ROOT/release/common"   $PY "${PT[@]}" tests
 run platform    "$ROOT/platform"            $PY "${PT[@]}" tests
 run installer   "$ROOT/installers/raspberry-pi" $PY "${PT[@]}" tests
 run windows-prep "$ROOT/installers/windows" $PY "${PT[@]}" tests   # Linux-side checks only, NOT a Windows test
+run packaging   "$ROOT/packaging/debian" $PY "${PT[@]}" tests   # volunteer guide vs. builder/chroot consistency
 run mesh        "$ROOT/mesh"                sh tools/run_tests_debian.sh -o addopts= -q -rfEs
 exit $status
