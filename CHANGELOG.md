@@ -3,6 +3,27 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
+## [Unreleased] — Volunteer test round 1 (2026-11-23)
+
+Approved on 2026-11-23 for packaging, building and isolated testing only. Nothing was installed on the
+development Pi, and nothing was published.
+
+### Changed
+* **task-launcher 0.3.8**: the Windows portability changes (paths, privilege check, temp names, manifest
+  owner check) are merged into `launcher/`, so `installers/windows/patches/` is gone. The Devices tile prefers
+  the packaged `/usr/bin/task-console`. Linux behaviour is otherwise unchanged (launcher suite 326 passed, 13 skipped).
+* **task-mesh 0.3.2~alpha1** and **task-console 0.2.1~alpha1**: changelogs finalised (alpha, approved for
+  testing). task-mesh now Recommends pulseaudio-utils (paplay, audible alert) and Suggests ffmpeg and sound-theme-freedesktop.
+* Builders: the package root directory mtime is normalised too. Without this, a build started before
+  SOURCE_DATE_EPOCH leaked the build time.
+
+### Added
+* `docs/VOLUNTEER-TESTING.md`: a guide for spare-card Pi 5 / Debian 13 arm64 testers, with a consistency test.
+* `packaging/debian/check_baseline.py` + `reference/pi-dpkg-baseline-20261122.txt`: Depends/version floors
+  checked against the Pi's reported packages (0 violations).
+* Chroot scenarios: rollback to the Pi's previous versions; the volunteer guide's commands.
+* Installer fixture for the development Pi exactly as reported (Pi 5 Rev 1.0, d04170, arm64, Debian 13.6, ID=debian).
+
 ## [Unreleased] — Milestone B (2026-11-22): packaging, installer, Windows groundwork
 
 Nothing here was installed on, or validated on, a Raspberry Pi. Nothing was published.
