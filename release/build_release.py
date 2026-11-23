@@ -119,6 +119,7 @@ class Pkg:
         for p in self.root.rglob("*"):
             if not p.is_symlink():
                 os.utime(p, (EPOCH, EPOCH))
+        os.utime(self.root, (EPOCH, EPOCH))   # "./" too: a build started before EPOCH must not leak the build time
         target = out / f"{self.name}_{self.version}_all.deb"
         env = dict(os.environ, SOURCE_DATE_EPOCH=str(EPOCH))
         run(["dpkg-deb", "--root-owner-group", "-Zxz", "--build", str(self.root), str(target)], env=env,

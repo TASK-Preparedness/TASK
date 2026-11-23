@@ -142,6 +142,7 @@ def main():
         control(root)
         for p in root.rglob("*"):
             os.utime(p, (a.epoch, a.epoch), follow_symlinks=False)
+        os.utime(root, (a.epoch, a.epoch))   # "./" too (matters only if the build runs before the epoch)
         deb = out / f"{PKG}_{VERSION}_all.deb"
         env = dict(os.environ, SOURCE_DATE_EPOCH=str(a.epoch))
         subprocess.run(["dpkg-deb", "--root-owner-group", "-Zxz", "--build", str(root), str(deb)], check=True, env=env)
