@@ -263,6 +263,23 @@ def scenario_all(args, results):
         c.close()
 
 
+def pi_installed_recommends(debs):
+    """Names in the new debs' Recommends that the Pi's reported dpkg baseline lists as installed."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import check_baseline
+    base = check_baseline.load_baseline()
+    ours = {check_baseline.field(d, "Package") for d in debs}
+    names = set()
+    for d in debs:
+        for alt_group in filter(None, (x.strip() for x in check_baseline.field(d, "Recommends").split(","))):
+            for alt in alt_group.split("|"):
+                m = check_baseline.REL.match(alt)
+                if m and m.group(1) not in ours and base.get(m.group(1)):
+                    names.add(m.group(1))
+                    break
+    return sorted(names)
+
+
 def scenario_upgrade(args, results):
     """Delivered set (task-mesh 0.3.1) with the hand-modified notifier -> Milestone B set (0.3.2~alpha1)."""
     if not args.reference_debs:
@@ -277,6 +294,13 @@ def scenario_upgrade(args, results):
         for d in new:
             c.put(d, f"/work/new/{d.name}")
         c.run(["apt-get", "install", "-y"] + [f"/work/ref/{d.name}" for d in ref])
+        # Mirror the Pi: packages the NEW set recommends that the Pi's reported baseline shows installed
+        # (e.g. pulseaudio-utils for task-mesh 0.3.2~alpha1) are installed before the offline upgrade.
+        pi_recs = pi_installed_recommends(new)
+        if pi_recs:
+            c.run(["apt-get", "install", "-y"] + pi_recs)
+        results.append({"check": "upgrade: Pi-installed Recommends of the new set present before upgrade",
+                        "ok": True, "detail": pi_recs})
         notifier = "/usr/lib/task-mesh/task_mesh/hub/notifier.py"
         shutil.copy(args.pi_notifier, c.dir / notifier.lstrip("/"))   # simulate the Pi's hand edit
         # simulate the Pi's migration-created, package-unowned configuration (contents are a placeholder)
