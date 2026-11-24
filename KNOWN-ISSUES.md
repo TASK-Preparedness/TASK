@@ -1,6 +1,6 @@
 # Known issues
 
-Updated 2026-11-23 (public alpha preparation). Hardware status is in HARDWARE.md, test results in TESTING.md.
+Updated 2026-11-24 (public alpha preparation). Hardware status is in HARDWARE.md, test results in TESTING.md.
 
 > **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
 
@@ -38,6 +38,7 @@ Updated 2026-11-23 (public alpha preparation). Hardware status is in HARDWARE.md
 | task-mesh 0.3.1 | The installed notifier differs from the 0.3.1 package (the maintained audible alert). `dpkg --verify` reports it. | 0.3.2~alpha1 ships it (approved 2026-11-23 for packaging and isolated testing; not Pi-validated) |
 | Packaging metadata | Placeholder maintainer e-mail, `Source:` URLs TBD, lintian errors caused by them | Needs maintainer decision / licence audit |
 | Launcher on Windows | 0.3.7 did not import on Windows (`os.geteuid`); fixed in 0.3.8. Under Wine the frozen build refuses to start because Wine reports an elevated admin. | Untested on Windows; no Windows support is claimed |
-| Project-wide license | LICENSE is a pending-approval placeholder; historical GPL headers remain in source | Needs owner decision before publication |
+| Project-wide license | Option A (GPL + separate T.A.S.K. trademark policy) selected 2026-11-24, pending final review of the legal documents. LICENSE remains a placeholder until those texts are approved and substituted | Needs final review of legal documents before publication |
+| task-mesh Recommends | `task-mesh` 0.3.2~alpha1 newly Recommends `pulseaudio-utils` (for `paplay`). A default `apt` install/upgrade on a system that does not have it will want to download `pulseaudio-utils` and `libpulsedsp`. The development Pi already has pulseaudio-utils 17.0+dfsg1-2+rpt1. Offline upgrades without that package need `--no-install-recommends` or a local copy. | Experimental package; not Pi-validated. Documented in INSTALL.md and docs/VOLUNTEER-TESTING.md |
 | Installer | Dry run only. It has never run on a real Pi. | By design until a clean-Pi test is approved |
 | Hardware acceptance | SDR 0.2.4 audio, Medical Reader fix (launcher 0.3.7), Maps 0.1.1 | Pending physical tests |

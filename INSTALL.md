@@ -66,7 +66,16 @@ stop. This alpha is not for that system.
 
 Download the experimental arm64 package archive (or the individual `.deb`
 files) and the `SHA256SUMS` file from the same GitHub Release into one
-directory. Then, in that directory, run:
+directory. For volunteer test round 1 the package archive is
+`TASK-volunteer-test-debs-20261123.zip`, built from `milestone-b` commit
+`902ba33`. Its SHA-256 is:
+
+```
+ba50f7de2e599023e60f0c186a9de144a708ffd6ff83c88a61ee0f508a0fbf4e  TASK-volunteer-test-debs-20261123.zip
+```
+
+Then, in the directory that holds the zip (and after unpacking, in the
+directory that holds the `.deb` files and their own `SHA256SUMS`), run:
 
 ```
 sha256sum -c SHA256SUMS
@@ -83,6 +92,22 @@ sha256sum TASK-*.zip TASK-*.tar.gz TASK-*.deb
 
 Compare the printed hashes to the published `SHA256SUMS` by eye if
 `sha256sum -c` is not available.
+
+The individual packages in that volunteer-test build, each **experimental**
+and **NOT validated on a physical Raspberry Pi**, are:
+
+| Package file | Version | SHA-256 |
+|---|---|---|
+| `python3-task-comms_0.3.1_all.deb` | 0.3.1 | `8956231817cbfe2dd0f285fe5b84b5df4abd408c8e00af40f3a5996d6e4b09e4` |
+| `task-core_0.3.0_all.deb` | 0.3.0 | `a48197329d50197f62cf8b4db87963b4d57c275ba587a2ae5a1b12627385f5e1` |
+| `task-core-compat_0.3.0_all.deb` | 0.3.0 | `3ec1bbfb4b63e55fe73d236d76b8cc2d561c32d8a0883327f718a1486df95da0` |
+| `task-console_0.2.1~alpha1_all.deb` | 0.2.1~alpha1 | `a150b01d34733d1de6b124ae1827238c07a680db75b312209ae428f84a77ddfd` |
+| `task-aprs_0.1.0_all.deb` | 0.1.0 | `640604311eaf3a60e1992a2d3a3459149191a9aee1b621d001a9cb2f05c3a283` |
+| `task-sdr_0.2.4_all.deb` | 0.2.4 | `5bcec72059da184e2a6e53d18f21d2d504a9c143a5234cec86f4801493236a82` |
+| `task-mesh_0.3.2~alpha1_all.deb` | 0.3.2~alpha1 | `1f3bd20de4152e01d8cc2c96bd5a045914b2f152413b832fa62356cc78319e76` |
+| `task-launcher_0.3.8_all.deb` | 0.3.8 | `a8771804ba7d99fc7d2cb78a0ee99a989a343381ff6436c7f43865e223a5e440` |
+| `task-maps_0.1.1_all.deb` | 0.1.1 | `e45652d283c2b9abb94113b618073784beb3a4200e58e2bcaf268e0a512d5b0d` |
+| `task-resources_0.2.4_all.deb` | 0.2.4 | `064aa332db0de2e52e82891f4ab295972331758e91e269ddd32aa6b90cd457e5` |
 
 ## 3. Optional: run the installer in dry-run mode (safe)
 
@@ -109,7 +134,8 @@ The T.A.S.K. `.deb` files are `Architecture: all`. They need Debian 13 arm64
 libraries such as Python 3.13, PySide6 6.8, and (depending on the modules you
 install) numpy, scipy, libzim, SoapySDR/librtlsdr0, gpsd, and Direwolf.
 
-A Complete-style install uses these packages, or the subset you actually want:
+A Complete-style install uses these packages, or the subset you actually want.
+Every package below is **experimental** and **NOT validated on a physical Raspberry Pi**:
 
 | Package | Intended version in this alpha |
 |---|---|
@@ -194,6 +220,14 @@ raw `dpkg -i` because apt can still pull missing Depends.
 These packages do **not** enable or start systemd services. They do **not**
 flash firmware. They do **not** overwrite `/etc/task`, your home directory,
 maps, or ZIM libraries.
+
+`task-mesh` 0.3.2~alpha1 **Recommends** `pulseaudio-utils` (for `paplay`).
+A networked `apt install` of these packages will usually offer to install
+it if it is missing. For a fully offline upgrade on a system that does
+not already have `pulseaudio-utils`, apt may try to download it unless
+you use `--no-install-recommends` or provide the package locally. The
+development Pi already has `pulseaudio-utils` 17.0+dfsg1-2+rpt1. See
+[KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ## 5. Confirm what was installed
 

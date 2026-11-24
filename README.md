@@ -20,10 +20,31 @@ radio data, a receive-only software-defined radio, and an offline library and
 medical reference reader — all usable with no internet connection.
 
 T.A.S.K. is intended to remain **free of charge for everyone**: no
-subscriptions, no paid editions, no feature paywalls. Donations, if offered,
-will be optional. A project-wide license has **not** been approved yet; see
-[LICENSE](LICENSE) (`LICENSE PENDING OWNER APPROVAL`). Do not treat historical
-GPL headers or per-module `LICENSE` files as the final project license.
+subscriptions, no paid editions, no feature paywalls.
+
+**License (pending final review).** The copyright holder has selected
+**Option A: GNU GPL plus a separate T.A.S.K. trademark policy**, subject to
+final review of the exact legal documents and third-party obligations. The
+top-level [LICENSE](LICENSE) file remains a `LICENSE PENDING OWNER APPROVAL`
+placeholder until those approved texts are substituted. The trademark policy
+will be published as [TRADEMARK.md](TRADEMARK.md) after the same review. Those
+files are being drafted separately and are not yet the approved final
+documents. Do not treat this placeholder, or historical GPL headers already
+in the tree, as the approved final texts.
+
+**Project commitments**
+
+* Essential emergency-preparedness functions stay free of charge and
+  usable offline, with no subscription required to use them.
+* Donations, if offered, will be optional.
+* Official T.A.S.K. hardware kits, professional installation, training,
+  support, and custom deployments may be offered by the author. The
+  chosen license does not by itself prevent others from redistributing
+  GPL-covered code; the trademark policy is intended to protect the
+  T.A.S.K. name and official offerings.
+
+An independent Meshtastic bridge is planned as a future milestone. It is
+not a blocker for this experimental alpha.
 
 **Windows is not supported** in this alpha. There is no Windows build, and
 nothing has been tested on Windows. See [WINDOWS.md](WINDOWS.md).
@@ -111,8 +132,9 @@ installs use verified `.deb` packages and `apt`, on a spare card.
   source). Generate it yourself with `scripts/generate-mesh-alert.sh` if you
   want audible alerts. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 * **No Windows support** is claimed or provided.
-* Maintainer contact, donation link, and the project-wide license are still
-  pending owner approval.
+* Maintainer contact and donation link are still pending owner approval.
+  Option A (GPL + trademark policy) is selected, pending final review of
+  the legal documents; [LICENSE](LICENSE) is still a placeholder.
 
 ## Volunteer testing and problem reports
 

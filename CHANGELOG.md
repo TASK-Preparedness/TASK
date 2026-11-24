@@ -3,6 +3,23 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
+## [Unreleased] — Public alpha prep, Option A selected pending review (2026-11-24)
+
+Nothing was published. Nothing was installed on a Raspberry Pi. Legal documents
+are being drafted separately; the top-level LICENSE file remains a placeholder.
+
+### Changed
+* README: Option A (GNU GPL + a separate T.A.S.K. trademark policy) is recorded
+  as the selected direction, pending final review, with project-commitment
+  notes. Pointers to LICENSE and TRADEMARK.md; those files are not filled in
+  here.
+* INSTALL.md, docs/VOLUNTEER-TESTING.md and KNOWN-ISSUES.md now carry the
+  volunteer-test 2026-11-23 package versions and SHA-256 values, and document
+  the task-mesh `pulseaudio-utils` Recommends limitation. Every package is
+  labelled experimental and not validated on a physical Raspberry Pi.
+* `docs/ARCHITECTURE.md`: a private-network example access-point address replaced
+  with TEST-NET-1 `192.0.2.1`.
+
 ## [Unreleased] — Public experimental alpha preparation (2026-11-23)
 
 Nothing here was installed on, or validated on, a Raspberry Pi. Nothing was

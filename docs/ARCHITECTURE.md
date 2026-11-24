@@ -171,7 +171,7 @@ Userspace packages used by the appliance (gpsd, Direwolf, nginx, NetworkManager,
 
 ## Networking, later
 
-The Pi can hold an access point at `192.0.2.1` with no upstream network. Guests reach the portal and nothing else. gpsd, Direwolf, and the core socket are not exposed on that network. Captive-portal behavior is best-effort.
+The Pi can hold an access point at `192.0.2.1` (an example address from TEST-NET-1, RFC 5737) with no upstream network. Guests reach the portal and nothing else. gpsd, Direwolf, and the core socket are not exposed on that network. Captive-portal behavior is best-effort.
 
 ## Resilience, later
 

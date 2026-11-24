@@ -1,14 +1,17 @@
 # T.A.S.K. volunteer test — round 1 (alpha, 2026-11-23)
 
-> **UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST.** These are **alpha** packages. So far they have
-> only been tested in an **emulated** Debian 13 arm64 environment on a PC, never on a real Raspberry Pi.
-> You are the first real-hardware test. Expect problems.
+> **UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST.** These are **experimental alpha** packages.
+> They are **NOT validated on a physical Raspberry Pi.** So far they have only been tested in an
+> **emulated** Debian 13 arm64 environment on a PC, never on a real Raspberry Pi. You are the
+> first real-hardware test. Expect problems.
 >
 > * **No RF transmission.** Do not connect any radio, Meshtastic node, SDR or GPS for this round,
 >   and do not enable any transmit setting. This round tests install, start and removal only.
 > * **No Windows support** is claimed or provided. This test is for Raspberry Pi only.
 > * These packages are not published and not an official release. Please don't share them further.
-> * Licence terms for T.A.S.K. are still being decided. The packages keep their existing notices.
+> * License: Option A (GNU GPL plus a separate T.A.S.K. trademark policy) has been selected,
+>   pending final review of the legal documents. The packages keep their existing notices
+>   until those documents are approved and substituted.
 
 ## Who should test
 
@@ -45,7 +48,14 @@ Expected: **no output**. If anything is listed, stop and use a fresh card.
 
 ## 1. Check the download
 
-You receive `TASK-volunteer-test-debs-20261123.zip` and its SHA-256 value from the maintainer.
+You receive `TASK-volunteer-test-debs-20261123.zip` and its SHA-256 value from the maintainer
+(or from the published `SHA256SUMS` file). The expected SHA-256 of that zip, from the
+2026-11-23 volunteer-test build, is:
+
+```
+ba50f7de2e599023e60f0c186a9de144a708ffd6ff83c88a61ee0f508a0fbf4e  TASK-volunteer-test-debs-20261123.zip
+```
+
 Put the zip in your home folder, then run:
 
 ```
@@ -54,7 +64,7 @@ cd ~
 ```
 sha256sum TASK-volunteer-test-debs-20261123.zip
 ```
-The 64-character value must match the one you were given **exactly**. If it does not, stop and report it.
+The 64-character value must match the one above **exactly**. If it does not, stop and report it.
 
 ```
 unzip TASK-volunteer-test-debs-20261123.zip
@@ -65,7 +75,22 @@ cd task-volunteer-test
 ```
 sha256sum -c SHA256SUMS
 ```
-Expected: ten lines ending in `OK` and no `FAILED`.
+Expected: ten lines ending in `OK` and no `FAILED`. Those ten files and SHA-256
+values, from the 2026-11-23 volunteer-test build (all **experimental** and **NOT
+validated on a physical Raspberry Pi**), are:
+
+```
+8956231817cbfe2dd0f285fe5b84b5df4abd408c8e00af40f3a5996d6e4b09e4  python3-task-comms_0.3.1_all.deb
+a48197329d50197f62cf8b4db87963b4d57c275ba587a2ae5a1b12627385f5e1  task-core_0.3.0_all.deb
+3ec1bbfb4b63e55fe73d236d76b8cc2d561c32d8a0883327f718a1486df95da0  task-core-compat_0.3.0_all.deb
+a150b01d34733d1de6b124ae1827238c07a680db75b312209ae428f84a77ddfd  task-console_0.2.1~alpha1_all.deb
+640604311eaf3a60e1992a2d3a3459149191a9aee1b621d001a9cb2f05c3a283  task-aprs_0.1.0_all.deb
+5bcec72059da184e2a6e53d18f21d2d504a9c143a5234cec86f4801493236a82  task-sdr_0.2.4_all.deb
+1f3bd20de4152e01d8cc2c96bd5a045914b2f152413b832fa62356cc78319e76  task-mesh_0.3.2~alpha1_all.deb
+a8771804ba7d99fc7d2cb78a0ee99a989a343381ff6436c7f43865e223a5e440  task-launcher_0.3.8_all.deb
+e45652d283c2b9abb94113b618073784beb3a4200e58e2bcaf268e0a512d5b0d  task-maps_0.1.1_all.deb
+064aa332db0de2e52e82891f4ab295972331758e91e269ddd32aa6b90cd457e5  task-resources_0.2.4_all.deb
+```
 
 ## 2. Install
 
@@ -167,6 +192,18 @@ ls -d ~/.config/task-* ~/.local/share/task-* ~/.local/state/task-* 2>/dev/null
 ```
 The Debian packages that apt installed as dependencies (Qt, numpy, …) stay installed. They do no harm.
 Re-flash the card if you want a completely clean system.
+
+## Known limitation: pulseaudio-utils
+
+`task-mesh` 0.3.2~alpha1 **Recommends** `pulseaudio-utils` (for `paplay`, used
+by the audible mesh alert). On a system that does not already have it, a
+normal `apt install` of these packages will offer to install it (several
+hundred kilobytes, plus `libpulsedsp`). That is expected. If you are
+installing or upgrading fully offline and `pulseaudio-utils` is not already
+present, apt may try to download it unless you pass
+`--no-install-recommends` or include `pulseaudio-utils` in a local bundle.
+The development Pi already has `pulseaudio-utils` 17.0+dfsg1-2+rpt1. Audible
+alerts were not exercised in the emulated chroot.
 
 ## What has been tested before you (and what has not)
 
