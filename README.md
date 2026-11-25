@@ -5,7 +5,7 @@ preparedness software for the Raspberry Pi.
 
 > **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
 >
-> This is a proposed `v0.1.0-alpha.1` public snapshot for volunteer testers and
+> This is the `v0.1.0-alpha.1` experimental public alpha for volunteer testers and
 > review. The modules below run daily on the developer's Raspberry Pi 5, and
 > automated tests plus an emulated Debian 13 arm64 chroot have been run on a
 > separate x86_64 build machine. **The public packages, installer, and this
@@ -19,29 +19,10 @@ preparedness: off-grid mesh messaging, offline maps and GPS, amateur/GMRS
 radio data, a receive-only software-defined radio, and an offline library and
 medical reference reader — all usable with no internet connection.
 
-T.A.S.K. is intended to remain **free of charge for everyone**: no
-subscriptions, no paid editions, no feature paywalls.
-
-**License (pending final review).** The copyright holder has selected
-**Option A: GNU GPL plus a separate T.A.S.K. trademark policy**, subject to
-final review of the exact legal documents and third-party obligations. The
-top-level [LICENSE](LICENSE) file remains a `LICENSE PENDING OWNER APPROVAL`
-placeholder until those approved texts are substituted. The trademark policy
-will be published as [TRADEMARK.md](TRADEMARK.md) after the same review. Those
-files are being drafted separately and are not yet the approved final
-documents. Do not treat this placeholder, or historical GPL headers already
-in the tree, as the approved final texts.
-
-**Project commitments**
-
-* Essential emergency-preparedness functions stay free of charge and
-  usable offline, with no subscription required to use them.
-* Donations, if offered, will be optional.
-* Official T.A.S.K. hardware kits, professional installation, training,
-  support, and custom deployments may be offered by the author. The
-  chosen license does not by itself prevent others from redistributing
-  GPL-covered code; the trademark policy is intended to protect the
-  T.A.S.K. name and official offerings.
+T.A.S.K. is **free software** under the GNU GPL, version 3 or later, and
+stays **free of charge for everyone**: no subscriptions, no paid editions, no
+paywalled essential features. See [License](#license) and
+[Project commitments and funding](#project-commitments-and-funding).
 
 An independent Meshtastic bridge is planned as a future milestone. It is
 not a blocker for this experimental alpha.
@@ -132,9 +113,36 @@ installs use verified `.deb` packages and `apt`, on a spare card.
   source). Generate it yourself with `scripts/generate-mesh-alert.sh` if you
   want audible alerts. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 * **No Windows support** is claimed or provided.
-* Maintainer contact and donation link are still pending owner approval.
-  Option A (GPL + trademark policy) is selected, pending final review of
-  the legal documents; [LICENSE](LICENSE) is still a placeholder.
+* Security reports go through GitHub private vulnerability reporting
+  (see [SECURITY.md](SECURITY.md)). General support is via GitHub Issues.
+  There is no donation link in this release.
+
+## Project commitments and funding
+
+These are promises from the project maintainer, Joshua Sturtz, also recorded in [PROJECT-COMMITMENTS.md](PROJECT-COMMITMENTS.md). They are
+**not license terms**. Your rights to the software come from the GPL (see
+[License](#license)), and nothing here adds to or limits them.
+
+* **Free, permanently, for essential preparedness.** The essential emergency
+  preparedness features of T.A.S.K. will stay free of charge, work fully
+  offline, and need no subscription, account or internet connection. That
+  includes mesh messaging, offline maps and GPS, radio data, receive-only SDR,
+  and the offline library and medical reference reader.
+* **No paywalled essential features.** There is no paid edition of the
+  essential features, and none is planned.
+* **Optional donations.** Donations help pay for hardware testing and
+  development. They are always optional, and they never unlock features.
+  This experimental alpha does not include a donation link.
+* **Official commercial services.** Joshua Sturtz may offer official T.A.S.K.
+  hardware kits, professional installation, training, support and custom
+  deployments. These pay for hardware and people's time, not for the software.
+  The software on an official kit is the same free GPL software, with its
+  complete source code and your full GPL rights. Only Joshua Sturtz, or someone
+  he authorizes, may call a kit or service "official" or "certified" (see
+  [TRADEMARK.md](TRADEMARK.md)).
+* **Anyone may build a business on T.A.S.K.** The GPL lets anyone sell copies,
+  kits or services, including renamed versions, as long as they follow the
+  GPL and the trademark policy.
 
 ## Volunteer testing and problem reports
 
@@ -150,10 +158,28 @@ Please redact callsigns, locations, device serial numbers, messages, and
 passwords before posting. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 Security issues: [SECURITY.md](SECURITY.md) (do not open a public issue).
 
+## License
+
+This section is a description of the project's license choice. It is not
+legal advice.
+
+T.A.S.K. is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version (`GPL-3.0-or-later`). It is distributed WITHOUT ANY WARRANTY. See
+[LICENSE](LICENSE) for the full text.
+
+* The `task-mesh` package bundles meshtastic, which is GPL-3.0-only, so that
+  package as a whole is distributed under GPL-3.0.
+* Third-party components keep their own licenses and notices; see
+  [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+* The T.A.S.K. name and logo are covered by [TRADEMARK.md](TRADEMARK.md).
+  That policy does not limit your rights under the GPL.
+
+Copyright (C) 2026 Joshua Sturtz and T.A.S.K. contributors.
+
 ## Repository map
 
 See [docs/REPOSITORY-LAYOUT.md](docs/REPOSITORY-LAYOUT.md). Third-party
 components and their licenses: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 Plans: [ROADMAP.md](ROADMAP.md). History: [CHANGELOG.md](CHANGELOG.md).
-
-Copyright © 2026 Joshua Sturtz and T.A.S.K. contributors.

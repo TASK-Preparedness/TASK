@@ -1,0 +1,18 @@
+# REUSE.toml (REUSE Specification 3.3, https://reuse.software/spec-3.3/)
+# License and copyright for the 17 frozen Phase 1 / R.A.I.N. first-party files
+# (tests/golden/phase1_files.txt). They have no in-file header and are kept
+# byte-identical; most are hash-pinned by tests/golden/*.sha256.json.
+version = 1
+
+[[annotations]]
+path = [
+  "tests/test_capabilities.py", "tests/test_manifests.py", "tests/test_enumerator.py", "tests/test_rules.py",
+  "tests/test_persist.py", "tests/test_boot.py", "tests/test_assign.py", "tests/conftest.py",
+  "tests/test_identity.py", "tests/test_medical_absent.py", "tests/test_auth.py", "tests/test_not_root.py",
+  "tests/test_protocol.py", "tests/test_hotplug_parent_dedup.py",
+  "deploy/rain-smoke.py", "deploy/pi-install.sh", "deploy/update-0.1.1.sh",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Joshua Sturtz"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+SPDX-FileComment = "Frozen Phase 1 / R.A.I.N. files, kept byte-identical by design; licensed like the rest of the project."

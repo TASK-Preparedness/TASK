@@ -11,7 +11,7 @@ at a time and share the output; nothing here changes the Pi.**
 | 3 | Direwolf configuration actually in use and its listening ports | Radio/APRS packaging, Milestone B | (already requested) `ss -ltnp` while Direwolf runs; config path from `ps -o args= -C direwolf` |
 | 4 | Validated arm64 `.deb` builds of every module at the installed versions | TASK-RaspberryPi-Packages | Build on the box (deterministic builders exist), then validate on a clean Debian 13 arm64 system (spare SD card / second Pi) — needs approval |
 | 5 | A clean Debian 13 arm64 environment | Dependency closure for the offline bundle; package install/remove tests | Spare SD card on a Pi, or an emulated arm64 chroot on the build box (dependency resolution only; not a hardware test) |
-| 6 | Hardware acceptance results: SDR 0.2.4, Medical Reader 0.3.7, Maps 0.1.1 (Joshua's 12 tests) | Promoting modules from experimental | Existing checklists in `docs/engineering-history/` when you are ready |
+| 6 | Hardware acceptance results: SDR 0.2.4, Medical Reader 0.3.7, Maps 0.1.1 (Joshua's 12 tests) | Promoting modules from experimental | Checklists were kept in a private engineering-history archive; they are not in this public tree |
 | 7 | Windows 11 x64 test machine | Any Windows claim | Tester-owned PC or VM with USB pass-through |
 | 8 | UV-PRO firmware version and whether a KISS setting exists | Any UV-PRO claim | Read from the radio's menu/app; no Bluetooth changes |
 | 9 | Decisions in docs/APPROVALS-NEEDED.md | Release | Maintainer |

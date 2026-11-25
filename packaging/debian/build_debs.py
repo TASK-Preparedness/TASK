@@ -173,7 +173,7 @@ def aprs(out):
 
 
 def sdr(out):
-    h = REPO / "docs/engineering-history"
+    h = REPO / "sdr/docs"
     p = _pkg("task-sdr", f"{br.PY}, {br.QT}, python3-pyside6.qtmultimedia (>= 6.8), python3-numpy, python3-scipy, "
              "librtlsdr0 (>= 2.0.2), python3-task-comms (>= 0.3.0)", _desc("task-sdr"), "hamradio",
              {"Suggests": "python3-soapysdr, soapysdr0.8-module-rtlsdr, rtl-sdr"})
@@ -189,8 +189,8 @@ def sdr(out):
         "discriminator scaled to 75 kHz deviation; AGC rewritten (RMS target, attack/release, no per-block gain",
         "steps, peak limiter); overlap-save channel FIR (about 3.5x less DSP time); resampler continuity fixed. Sink",
         "restart after device loss. Optional --diag-log JSON diagnostics. Receive only; hardware UNVERIFIED."]),
-        [REPO / "sdr/README.md", h / "phase4g/SDR-STUDIO.md", h / "phase4g-022/SMART-SCANNER.md",
-         h / "phase4g-m3/OVERLAY-FRAMEWORK.md", h / "phase4g-m3/FREQUENCY-AUDIT.md", h / "phase4g-024/AUDIO-PIPELINE.md"])
+        [REPO / "sdr/README.md", h / "SDR-STUDIO.md", h / "SMART-SCANNER.md",
+         h / "OVERLAY-FRAMEWORK.md", h / "FREQUENCY-AUDIT.md", h / "AUDIO-PIPELINE.md"])
     return p.build(out)
 
 

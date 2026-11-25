@@ -17,13 +17,47 @@ what hardware, and what you did not test.
   action, starts services automatically, flashes firmware without explicit
   confirmation, or uses `shell=True`.
 * Report results honestly.
-* A project-wide license has **not** been approved yet (see [LICENSE](LICENSE)).
-  Do not add new SPDX license identifiers that imply a final project license
-  has been chosen. Until the owner decides, leave existing headers as they
-  are, and discuss new files on the pull request. By contributing you agree
-  that the copyright holder may apply the finally approved project license
-  to your contribution; third-party code must keep its own license and
-  notices.
+* Contributions are accepted under the project license, GPL-3.0-or-later,
+  with a DCO sign-off. See [Licensing of contributions](#licensing-of-contributions).
+
+## Licensing of contributions
+
+T.A.S.K. uses **inbound = outbound** licensing. You contribute under the same
+license the project is distributed under, **GPL-3.0-or-later**. You keep the
+copyright in your contribution. There is no copyright assignment.
+
+1. **Sign off every commit** with the
+   [Developer Certificate of Origin 1.1](https://developercertificate.org/).
+   Use `git commit -s`. This adds a line like
+   `Signed-off-by: Your Name <you@example.com>`, which certifies that you wrote
+   the change, or otherwise have the right to submit it under the project's
+   open source license. Use a name and address you are happy to have recorded
+   in public history permanently.
+2. **Put the license header on every new source file**, in the file's own
+   comment syntax:
+   ```
+   # SPDX-License-Identifier: GPL-3.0-or-later
+   # SPDX-FileCopyrightText: <year> <your name>
+   ```
+   Don't change or remove other people's copyright or license notices.
+   Don't add headers to the 17 frozen files listed in `REUSE.toml`; their
+   bytes are pinned by tests.
+3. **Third-party code.**
+   * Only add code under a GPL-3.0-compatible license.
+   * Keep its original copyright and license notice.
+   * Add it to [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+   * Say where it came from in the pull request.
+   * Don't paste code from sources whose license you don't know, including
+     forum posts and AI-chat output that copies existing code.
+   * Never copy Meshtastic protocol definitions (`.proto` files or generated
+     `*_pb2.py`) into T.A.S.K. code outside `mesh/`.
+4. **AI-assisted contributions** are welcome. You are responsible for them as
+   for any other change. Say in the pull request that AI tools were used, and
+   make sure the result doesn't reproduce third-party code.
+5. **Names and logos.** A contribution doesn't grant rights in the T.A.S.K.
+   name or logo. See [TRADEMARK.md](TRADEMARK.md).
+
+There is no Contributor License Agreement. DCO sign-off is the only contributor certification in force.
 
 ## Volunteer testers: how to report problems
 

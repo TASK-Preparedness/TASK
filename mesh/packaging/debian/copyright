@@ -1,10 +1,13 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: task-mesh
-Source: https://example.invalid/task-mesh
+Source: https://github.com/TASK-Preparedness/TASK
 
 Files: *
-Copyright: 2026 T.A.S.K. Mesh Operations contributors
+Copyright: 2026 Joshua Sturtz
 License: GPL-3+
+Comment: T.A.S.K. Mesh imports and bundles meshtastic (GPL-3.0-only), so the
+ package as a whole is distributed under GPL-3.0. The T.A.S.K. source files
+ themselves are GPL-3.0-or-later.
 
 Files: usr/lib/task-mesh/task_mesh/_vendor/meshtastic/*
 Copyright: Meshtastic contributors (https://github.com/meshtastic/python)

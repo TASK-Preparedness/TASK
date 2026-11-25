@@ -1,8 +1,8 @@
 # Support and volunteer reporting
 
-T.A.S.K. is an **experimental alpha**. There is no official support desk yet,
-and no maintainer e-mail has been approved. This page is how volunteer testers
-and users can report problems.
+T.A.S.K. is an **experimental alpha**. There is no official support desk and
+no project email address. This page is how volunteer testers and users can
+report problems.
 
 > **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
 
@@ -29,6 +29,8 @@ and users can report problems.
 
 The public repository is https://github.com/TASK-Preparedness/TASK.
 
+General support is through GitHub Issues. Security reports use GitHub
+private vulnerability reporting, as described in [SECURITY.md](SECURITY.md).
 Please do not open a blank issue; the templates ask for the details that make
 a report usable.
 
@@ -55,5 +57,4 @@ device serial numbers, passwords, and home-directory paths.
   production or working system.
 * We cannot promise a fix date.
 * Windows is not supported in this alpha ([WINDOWS.md](WINDOWS.md)).
-* There is no approved maintainer e-mail or donation platform yet. Those
-  placeholders will be filled in when the owner approves them.
+* There is no donation link in this release.

@@ -9,18 +9,20 @@ RF-safety reports are taken seriously.
 
 Please **do not** open a public issue.
 
-Use GitHub's private vulnerability reporting when it is enabled on
-https://github.com/TASK-Preparedness/TASK (*Security → Report a vulnerability*).
+Report security and RF-safety problems through GitHub's private
+vulnerability reporting on https://github.com/TASK-Preparedness/TASK:
 
-A dedicated security e-mail address will be listed here once the owner
-approves one. Until then, if private GitHub reporting is not yet enabled,
-do not post the details publicly; wait for the publishing checklist to
-enable the private channel, or ask the copyright holder directly if you
-already have a private way to reach them.
+**Security → Report a vulnerability**
 
-Include the affected module and version, hardware, steps to reproduce, and
-the impact. Redact secrets, callsigns, and locations you do not need to
-include.
+(That form is enabled as the first step when the project is published.)
+
+There is no security email address. Do not send reports to a personal
+mailbox, and do not post exploit details in a public issue, discussion,
+or pull request.
+
+Include the affected module and version, hardware, steps to reproduce,
+and the impact. Redact secrets, callsigns, and locations you do not need
+to include.
 
 ## What counts
 
@@ -35,5 +37,4 @@ include.
 
 This experimental alpha: only the current published pre-release and the
 `main` branch of https://github.com/TASK-Preparedness/TASK will receive
-fixes, once they are published. Older unpublished snapshots are not a
-supported security baseline.
+fixes, once they are published.

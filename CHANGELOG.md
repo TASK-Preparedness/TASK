@@ -3,27 +3,49 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
-## [Unreleased] — Public alpha prep, Option A selected pending review (2026-11-24)
+## [Unreleased] — Public experimental alpha, Option A applied (2026-11-24)
 
-Nothing was published. Nothing was installed on a Raspberry Pi. Legal documents
-are being drafted separately; the top-level LICENSE file remains a placeholder.
+Prepared for owner approval. Nothing was published, tagged or pushed.
+Nothing was installed on a Raspberry Pi. The packages have **not** been
+validated on a physical Raspberry Pi.
+
+### Added
+* Option A licensing documents: verbatim GNU GPL v3 ([LICENSE](LICENSE)),
+  [TRADEMARK.md](TRADEMARK.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md),
+  [REUSE.toml](REUSE.toml), [PROJECT-COMMITMENTS.md](PROJECT-COMMITMENTS.md),
+  and [docs/MESH-BRIDGE-MILESTONE.md](docs/MESH-BRIDGE-MILESTONE.md) (a future,
+  non-blocking plan). Own code is GPL-3.0-or-later. The `task-mesh` package
+  as a whole is GPL-3.0 because it bundles meshtastic (GPL-3.0-only).
+  Contributions use DCO sign-off; there is no CLA.
+* [SECURITY.md](SECURITY.md): report vulnerabilities through GitHub private
+  vulnerability reporting. General support is through GitHub Issues. There
+  is no project email address and no donation link in this release.
 
 ### Changed
-* README: Option A (GNU GPL + a separate T.A.S.K. trademark policy) is recorded
-  as the selected direction, pending final review, with project-commitment
-  notes. Pointers to LICENSE and TRADEMARK.md; those files are not filled in
-  here.
-* INSTALL.md, docs/VOLUNTEER-TESTING.md and KNOWN-ISSUES.md now carry the
+* CONTRIBUTING.md records inbound=outbound GPL-3.0-or-later licensing and DCO
+  1.1 sign-off.
+* INSTALL.md, docs/VOLUNTEER-TESTING.md and KNOWN-ISSUES.md carry the
   volunteer-test 2026-11-23 package versions and SHA-256 values, and document
   the task-mesh `pulseaudio-utils` Recommends limitation. Every package is
   labelled experimental and not validated on a physical Raspberry Pi.
 * `docs/ARCHITECTURE.md`: a private-network example access-point address replaced
   with TEST-NET-1 `192.0.2.1`.
+* Internal `docs/engineering-history/` is no longer in the public tree. The
+  five SDR Studio notes that already ship inside the `task-sdr` package are
+  kept under `sdr/docs/`.
+
+### Known limitation (unchanged packages)
+* The already-built volunteer-test `.deb` files, and the packaging source
+  that reproduces their SHA-256 checksums, still contain the placeholder
+  maintainer field `TBD-maintainer-email`. That field is not a contact
+  address. A later approved rebuild can replace it; this alpha does not
+  rebuild those packages.
 
 ## [Unreleased] — Public experimental alpha preparation (2026-11-23)
 
 Nothing here was installed on, or validated on, a Raspberry Pi. Nothing was
-published. The project-wide license remains **pending owner approval**.
+published. At that date the project-wide license was still pending owner
+approval (resolved 2026-11-24; see the section above).
 
 ### Added
 * Public-alpha documentation set for volunteer testers: [SAFETY.md](SAFETY.md),
@@ -33,9 +55,9 @@ published. The project-wide license remains **pending owner approval**.
 * README and related docs now label this tree **EXPERIMENTAL ALPHA — NOT
   VALIDATED ON A PHYSICAL RASPBERRY PI**, and state that Windows is not
   supported.
-* Top-level [LICENSE](LICENSE) is an explicit `LICENSE PENDING OWNER APPROVAL`
-  placeholder. Historical GPL headers and per-module LICENSE files were **not**
-  rewritten.
+* Top-level [LICENSE](LICENSE) was still an explicit `LICENSE PENDING OWNER APPROVAL`
+  placeholder on this date. Historical GPL headers and per-module LICENSE files were **not**
+  rewritten then. Option A was applied the following day.
 
 ### Changed
 * CONTRIBUTING and SECURITY no longer treat GPL-3.0-or-later as an approved

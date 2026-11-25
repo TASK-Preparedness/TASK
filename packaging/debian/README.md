@@ -107,7 +107,7 @@ The chroot's resolved versions (`resolved-packages-arm64.txt`) are what Debian 1
 ## lintian (2.122.0, Debian 13)
 
 Not fixed on purpose: fixing them would change released bytes and maintainer data that needs approval.
-* errors: `bogus-mail-host-in-debian-changelog` / `malformed-contact`: placeholder maintainer `TBD-maintainer-email`.
+* errors: `bogus-mail-host-in-debian-changelog` / `malformed-contact`: placeholder maintainer `TBD-maintainer-email`. The 2026-11-23 volunteer-test packages keep this placeholder so their SHA-256 checksums stay unchanged; user-facing contact is GitHub Issues and private vulnerability reporting, not this field.
 * warnings: `extended-description-line-too-long`, `no-manual-page`, `debian-changelog-line-too-long`,
   `appstream-metadata-validation-failed` (task-mesh metainfo).
 
