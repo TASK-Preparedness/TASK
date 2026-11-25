@@ -3,16 +3,34 @@
 **Tactical Access Support Kit** — free-of-charge, offline-first emergency
 preparedness software for the Raspberry Pi.
 
-> **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.**
+> ## ⚠️ READ FIRST — EXPERIMENTAL ALPHA, SAFETY AND RADIO WARNINGS
+>
+> * **EXPERIMENTAL ALPHA — NOT VALIDATED ON A PHYSICAL RASPBERRY PI.** The
+>   public packages, installer and this source tree have not been installed or
+>   accepted on a clean physical Raspberry Pi. Treat every package as
+>   experimental. Do not rely on T.A.S.K. as your only tool in a real
+>   emergency. T.A.S.K. is not a substitute for emergency services.
+> * **RECEIVE-ONLY BY DEFAULT.** T.A.S.K. must never transmit on any radio
+>   unless a licensed operator explicitly tells it to. Amateur transmit stays
+>   disabled until you enter your own licensed callsign. Transmit-capable
+>   features are experimental. **Do not transmit if you are not licensed and
+>   allowed to.** You are responsible for knowing the law where you are.
+> * **NO AUTOMATIC INSTALL, FIRMWARE FLASHING OR SERVICE START.** The installer
+>   is a dry run only. It never flashes firmware, never takes control of your
+>   radios, and never starts anything automatically.
+> * **UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST.** Any radio, GPS, SDR,
+>   board or feature not listed as tested in [HARDWARE.md](HARDWARE.md) carries
+>   this label. Test on a spare SD card, never on a working system.
+>
+> Read [SAFETY.md](SAFETY.md) and [KNOWN-ISSUES.md](KNOWN-ISSUES.md) before you
+> install anything.
 >
 > This is the `v0.1.0-alpha.1` experimental public alpha for volunteer testers and
 > review. The modules below run daily on the developer's Raspberry Pi 5, and
 > automated tests plus an emulated Debian 13 arm64 chroot have been run on a
 > separate x86_64 build machine. **The public packages, installer, and this
 > source tree have not been installed or accepted on a clean physical
-> Raspberry Pi.** Treat every package as experimental. Do not rely on T.A.S.K.
-> as your only tool in a real emergency. Read [SAFETY.md](SAFETY.md) and
-> [KNOWN-ISSUES.md](KNOWN-ISSUES.md) before you install anything.
+> Raspberry Pi.**
 
 T.A.S.K. turns a Raspberry Pi into a field station for emergencies and
 preparedness: off-grid mesh messaging, offline maps and GPS, amateur/GMRS

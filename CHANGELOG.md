@@ -3,6 +3,21 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
+## [Unreleased] — Prominent safety warnings, history cleanup (2026-11-25)
+
+Prepared for owner approval. Nothing was published, tagged or pushed. The
+approved package files were not rebuilt, and no software was changed.
+
+### Changed
+* README: a "READ FIRST" warnings block at the top states that this is an
+  experimental alpha that is not validated on a physical Raspberry Pi, that
+  T.A.S.K. is receive-only by default and must never transmit unless a licensed
+  operator explicitly tells it to, and that hardware not listed as tested is
+  **UNVERIFIED — REQUIRES PHYSICAL HARDWARE TEST**.
+* The unpublished development commits were rebuilt on top of the existing
+  public `97e2413` commit without the internal `docs/engineering-history/`
+  folder. The tree contents are unchanged.
+
 ## [Unreleased] — Optional Buy Me a Coffee funding (2026-11-24)
 
 Prepared for owner approval. Nothing was published, tagged or pushed.

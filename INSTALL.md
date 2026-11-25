@@ -67,8 +67,9 @@ stop. This alpha is not for that system.
 Download the experimental arm64 package archive (or the individual `.deb`
 files) and the `SHA256SUMS` file from the same GitHub Release into one
 directory. For volunteer test round 1 the package archive is
-`TASK-volunteer-test-debs-20261123.zip`, built from `milestone-b` commit
-`902ba33`. Its SHA-256 is:
+`TASK-volunteer-test-debs-20261123.zip`, built from the source in this
+repository (`packaging/debian/build_debs.py` at tag `v0.1.0-alpha.1` rebuilds
+the same files byte for byte). Its SHA-256 is:
 
 ```
 ba50f7de2e599023e60f0c186a9de144a708ffd6ff83c88a61ee0f508a0fbf4e  TASK-volunteer-test-debs-20261123.zip
