@@ -24,6 +24,8 @@ stays **free of charge for everyone**: no subscriptions, no paid editions, no
 paywalled essential features. See [License](#license) and
 [Project commitments and funding](#project-commitments-and-funding).
 
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/t.a.s.k.prepardness)
+
 An independent Meshtastic bridge is planned as a future milestone. It is
 not a blocker for this experimental alpha.
 
@@ -115,7 +117,7 @@ installs use verified `.deb` packages and `apt`, on a spare card.
 * **No Windows support** is claimed or provided.
 * Security reports go through GitHub private vulnerability reporting
   (see [SECURITY.md](SECURITY.md)). General support is via GitHub Issues.
-  There is no donation link in this release.
+  Optional financial support is described in [Support T.A.S.K.](#support-task).
 
 ## Project commitments and funding
 
@@ -131,8 +133,8 @@ These are promises from the project maintainer, Joshua Sturtz, also recorded in 
 * **No paywalled essential features.** There is no paid edition of the
   essential features, and none is planned.
 * **Optional donations.** Donations help pay for hardware testing and
-  development. They are always optional, and they never unlock features.
-  This experimental alpha does not include a donation link.
+  development. They are entirely optional, and they never unlock features.
+  See [Support T.A.S.K.](#support-task).
 * **Official commercial services.** Joshua Sturtz may offer official T.A.S.K.
   hardware kits, professional installation, training, support and custom
   deployments. These pay for hardware and people's time, not for the software.
@@ -143,6 +145,21 @@ These are promises from the project maintainer, Joshua Sturtz, also recorded in 
 * **Anyone may build a business on T.A.S.K.** The GPL lets anyone sell copies,
   kits or services, including renamed versions, as long as they follow the
   GPL and the trademark policy.
+
+## Support T.A.S.K.
+
+Financial contributions are entirely optional. T.A.S.K. stays free software
+under the GPL, and it stays free of charge for essential preparedness
+features. No software features are, or will be, restricted based on
+financial contributions.
+
+Contributions support development time, equipment, testing, maintenance
+and future improvements.
+
+[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/t.a.s.k.prepardness)
+
+The voluntary funding page is <https://buymeacoffee.com/t.a.s.k.prepardness>.
+GitHub also lists this link from `.github/FUNDING.yml`.
 
 ## Volunteer testing and problem reports
 

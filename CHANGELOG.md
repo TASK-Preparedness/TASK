@@ -3,6 +3,20 @@
 All notable changes to the T.A.S.K. platform repository. Individual Debian
 packages keep their own `changelog` files under each module's `packaging/`.
 
+## [Unreleased] — Optional Buy Me a Coffee funding (2026-11-24)
+
+Prepared for owner approval. Nothing was published, tagged or pushed.
+Nothing was installed on a Raspberry Pi. The approved package files were
+not rebuilt.
+
+### Added
+* Voluntary funding option at <https://buymeacoffee.com/t.a.s.k.prepardness>
+  (URL used exactly as provided). [README.md](README.md) has a Buy Me a
+  Coffee button and a [Support T.A.S.K.](README.md#support-task) section.
+  `.github/FUNDING.yml` lists the same URL. Contributions are entirely
+  optional, do not restrict software features, and support development
+  time, equipment, testing, maintenance and future improvements.
+
 ## [Unreleased] — Public experimental alpha, Option A applied (2026-11-24)
 
 Prepared for owner approval. Nothing was published, tagged or pushed.
@@ -19,7 +33,8 @@ validated on a physical Raspberry Pi.
   Contributions use DCO sign-off; there is no CLA.
 * [SECURITY.md](SECURITY.md): report vulnerabilities through GitHub private
   vulnerability reporting. General support is through GitHub Issues. There
-  is no project email address and no donation link in this release.
+  is no project email address. A donation link was added later the same day
+  (see the section below).
 
 ### Changed
 * CONTRIBUTING.md records inbound=outbound GPL-3.0-or-later licensing and DCO

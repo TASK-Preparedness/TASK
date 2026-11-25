@@ -57,4 +57,6 @@ device serial numbers, passwords, and home-directory paths.
   production or working system.
 * We cannot promise a fix date.
 * Windows is not supported in this alpha ([WINDOWS.md](WINDOWS.md)).
-* There is no donation link in this release.
+* Optional financial support is entirely voluntary and does not unlock
+  features. See [Support T.A.S.K.](README.md#support-task) and
+  <https://buymeacoffee.com/t.a.s.k.prepardness>.

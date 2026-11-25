@@ -17,8 +17,12 @@ This file is not legal advice.
 * **No paywalled essential features.** There is no paid edition of the
   essential features, and none is planned.
 * **Optional donations.** Donations help pay for hardware testing and
-  development. They are always optional, and they never unlock features.
-  This experimental alpha does not include a donation link.
+  development. They are entirely optional, and they never unlock features.
+  No software features are, or will be, restricted based on financial
+  contributions. Contributions support development time, equipment,
+  testing, maintenance and future improvements. The voluntary funding
+  page is <https://buymeacoffee.com/t.a.s.k.prepardness>. See also
+  [Support T.A.S.K.](README.md#support-task) and `.github/FUNDING.yml`.
 * **Official commercial services.** Joshua Sturtz may offer official T.A.S.K.
   hardware kits, professional installation, training, support and custom
   deployments. These pay for hardware and people's time, not for the software.

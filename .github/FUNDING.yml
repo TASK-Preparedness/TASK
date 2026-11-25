@@ -1,0 +1,4 @@
+# Optional financial support for T.A.S.K.
+# GitHub also supports `buy_me_a_coffee: USERNAME`, but a username with dots
+# might be mis-resolved. The custom key keeps the exact URL.
+custom: ["https://buymeacoffee.com/t.a.s.k.prepardness"]
