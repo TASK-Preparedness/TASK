@@ -16,3 +16,12 @@ precedence = "closest"
 SPDX-FileCopyrightText = "2026 Joshua Sturtz"
 SPDX-License-Identifier = "GPL-3.0-or-later"
 SPDX-FileComment = "Frozen Phase 1 / R.A.I.N. files, kept byte-identical by design; licensed like the rest of the project."
+
+# Third-party GPL source redistributed for compliance (not T.A.S.K.'s own code). Not installed
+# by any package. See mesh/packaging/vendor-source/meshtastic-protobufs-da60cee/REGENERATE.md
+[[annotations]]
+path = ["mesh/packaging/vendor-source/meshtastic-protobufs-da60cee/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "Meshtastic contributors"
+SPDX-License-Identifier = "GPL-3.0-only"
+SPDX-FileComment = "Unmodified upstream files from meshtastic/protobufs commit da60cee584c6dc1efbb4a3809b98666505179b85 and meshtastic/python tag 2.7.11. nanopb.proto originates from the nanopb project (zlib license upstream); it carries no header in the file and is redistributed as shipped by meshtastic/protobufs."

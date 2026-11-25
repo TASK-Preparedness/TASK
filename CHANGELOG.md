@@ -18,6 +18,16 @@ approved package files were not rebuilt, and no software was changed.
   public `97e2413` commit without the internal `docs/engineering-history/`
   folder. The tree contents are unchanged.
 
+### Added
+* Source (not installed, not in any package) for the generated Meshtastic
+  protobuf Python files inside the bundled `meshtastic` 2.7.11 wheel:
+  `mesh/packaging/vendor-source/meshtastic-protobufs-da60cee/`. It holds the
+  upstream `.proto` and `.options` files from meshtastic/protobufs commit
+  `da60cee584c6dc1efbb4a3809b98666505179b85` (tag `v2.7.26`), the upstream
+  regeneration script, and `verify_descriptors.py`, which regenerates the
+  files and confirms 25 of 25 serialized descriptors match the wheel. See its
+  `REGENERATE.md`. Notices were extended; no license terms changed.
+
 ## [Unreleased] — Optional Buy Me a Coffee funding (2026-11-24)
 
 Prepared for owner approval. Nothing was published, tagged or pushed.

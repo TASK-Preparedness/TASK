@@ -20,6 +20,7 @@ metadata or its Debian `copyright` file on 2026-11-24.
 |---|---|---|---|---|
 | meshtastic (Python library) | 2.7.11 | `mesh/packaging/vendor/` wheel; installed inside the `task-mesh` package (`task_mesh/_vendor/`) | Meshtastic Developers / Meshtastic contributors | **GPL-3.0-only** |
 | Meshtastic protocol definitions (generated `meshtastic/protobuf/*_pb2.py`, inside the meshtastic wheel) | as in 2.7.11 | inside the wheel above | Meshtastic contributors | GPL-3.0 (meshtastic/protobufs repository `LICENSE`) |
+| Meshtastic protocol definition sources (`.proto`, `.options`) matching those generated files: meshtastic/protobufs commit `da60cee584c6dc1efbb4a3809b98666505179b85` (tag `v2.7.26`), with the upstream regeneration script | that commit | `mesh/packaging/vendor-source/meshtastic-protobufs-da60cee/` (source only; not installed, not in any Debian package) | Meshtastic contributors | GPL-3.0 (upstream `LICENSE` kept in that folder); `nanopb.proto` comes from the nanopb project (zlib license upstream) |
 | meshcore (meshcore_py) | 2.3.15 | `mesh/packaging/vendor/`; inside `task-mesh` | Copyright (c) 2025 Florent de Lamotte | MIT |
 | pycayennelpp | 2.4.0 | `mesh/packaging/vendor/`; inside `task-mesh` | Copyright (c) 2018-2021 Sebastian Meiling | MIT |
 | pyserial-asyncio-fast | 0.16 | `mesh/packaging/vendor/`; inside `task-mesh` | Copyright (c) 2015-2021 pySerial-team | BSD-3-Clause |
@@ -37,7 +38,9 @@ whole is distributed under **GPL-3.0** (version 3 only, because meshtastic doesn
 offer "or later"). T.A.S.K.'s own Mesh source files are still
 GPL-3.0-or-later. When you redistribute `task-mesh`, you must provide the
 complete Corresponding Source under GPLv3: this repository at the matching
-tag, plus the meshtastic 2.7.11 source.
+tag, plus the meshtastic 2.7.11 source. The protobuf definitions behind the generated
+`*_pb2.py` files are in `mesh/packaging/vendor-source/meshtastic-protobufs-da60cee/`
+(see its `REGENERATE.md`).
 
 ## 2. Run-time dependencies installed from Debian (not included in this repository)
 
